@@ -1,0 +1,167 @@
+/*
+	IMPORTS
+	////////////////////////////////////////////////////////////////////////////
+*/
+
+@import "colors"; 
+
+/*
+	NAVBAR STYLING
+	////////////////////////////////////////////////////////////////////////////
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	margin-block-start: 0;
+    margin-block-end: 0;
+	padding-inline-start: 0;
+}
+
+#nav-bar {
+	position: absolute;
+	left: 50%;
+	top: 20px;
+	transform: translateX(-50%);
+	width: calc(100% - 46px);
+	height: 126px;
+	background-color: $white;
+	border-bottom: 3px solid $black;
+	z-index: 998;
+}
+
+a.logo-link {
+	text-decoration: none;
+	color: inherit;
+	display: inline-block;
+}
+
+@media (hover) {
+	a.logo-link:hover > ul#logo-list li div.door {
+		background-color: $green;
+		transition: 0.2s ease-in-out;
+	}
+	
+	a.logo-link:hover > ul#logo-list li div.knob {
+		background-color: $black;
+		transition: 0.2s ease-in-out;
+	}
+		
+}
+
+.logo {
+	font-family: priori-sans, sans-serif;
+	font-style: normal;
+	font-weight: 700;
+}
+
+.logo h1 {
+	font-size: 60px;
+	margin-left: 7px;
+}
+
+#firstName {
+	width: 120px;
+	height: 60px;
+	border: 3px solid $black;
+	margin-left: -3px;
+	display: block;
+}
+
+#lastName {
+	width: 120px;
+	height: 60px;
+	border: 3px solid $black;
+	margin-left: -3px
+}
+
+ul#logo-list {
+	list-style: none;
+	float: left;
+	margin-top: -3px;
+}
+
+ul#logo-list li {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;	
+}
+
+.door {
+	width: 40px;
+	height: 60px;
+	background-color: $black;
+	border: 3px solid $black;
+	margin-left: -3px;
+}
+
+.knob {
+	width: 8px;
+	height: 8px;
+	background-color: $white;
+	border-radius: 100%;
+	position: absolute;
+	bottom: 27px;
+	right: 6px;
+}
+
+ul#nav-bar-ul {
+	list-style: none;
+	display: inline-block;
+	float: right;
+	margin-top: 45px;
+	font-family: priori-sans, sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 36px;
+}
+
+ul#nav-bar-ul li {
+	display: inline;
+	margin-right: 40px;
+}
+
+ul#nav-bar-ul li a {
+	text-decoration: none;
+	color: $black;
+	position: relative;
+}
+
+.underline::before {
+	content: "";
+	width: 0;
+	top: 20px;
+	left: -10px;
+	position: absolute;
+	border-bottom: 20px solid $green;
+	transition: all 0.3s ease-in-out;
+	z-index: -1;	
+}
+
+@media (hover) {
+	.underline:hover:before {
+		transform: scale(1);
+		width: 130%;
+	}
+}
+
+.active-underline::before {
+	content: "";
+	width: 130%;
+	top: 20px;
+	left: -10px;
+	position: absolute;
+	border-bottom: 20px solid $green;
+	z-index: -1;
+}
+
+.nav-bar-icon {
+	float: right;
+	margin-right: 20px;
+	margin-top: 40px;
+	display: none;
+}
+
+.mobile-only {
+	display: none;
+}

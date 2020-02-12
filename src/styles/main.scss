@@ -4,6 +4,7 @@
 */
 
 @import "reset";
+@import "global";
 @import "colors"; 
 
 /*
@@ -12,24 +13,25 @@
 */
 
 #page-borders {
+	.border {
+		background-color: inherit;
+		transition: 0.3s ease-in-out;
+	}
+	
 	.green-border {
 		background-color: $green;
-		transition: 0.3s ease-in-out;
 	}
 	
 	.los-dos-border {
 		background-color: #ffbbbb;
-		transition: 0.3s ease-in-out;
 	}
 	
 	.tb-border {
 		background-color: #febe11;
-		transition: 0.3s ease-in-out;
 	}
 	
 	.gemini-border {
 		background-color: #0FA5A1;
-		transition: 0.3s ease-in-out;
 	}
 	
 	#top {
@@ -109,7 +111,6 @@
 	}
 }
 
-
 /*
 	NAVBAR STYLING
 	////////////////////////////////////////////////////////////////////////////
@@ -132,7 +133,6 @@
 		display: inline-block;
 		
 		.logo {
-			font-family: priori-sans, sans-serif;
 			font-style: normal;
 			font-weight: 700;
 			
@@ -205,7 +205,6 @@
 		display: inline-block;
 		float: right;
 		margin-top: 45px;
-		font-family: priori-sans, sans-serif;
 		font-style: normal;
 		font-weight: 700;
 		font-size: 36px;

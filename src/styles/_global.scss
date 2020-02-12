@@ -1,5 +1,17 @@
+::selection {
+  background: #62e6ac;
+}
+::-moz-selection {
+  background: #62e6ac;
+}
+
 body {
 	font-family: priori-sans, sans-serif;
+}
+
+iframe {
+	border-width: 0px;
+	border-style: none;
 }
 
 #page-content {

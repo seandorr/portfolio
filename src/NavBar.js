@@ -16,7 +16,7 @@ const NavBar = () => {
 				<li><a className="underline" href="/About">About</a></li>
 				<li><a className="underline" href="/Contact">Contact</a></li>
 			</ul>
-				<a href="javascript:void(0);" className="nav-bar-icon" onclick="mobileNavBar()"></a>
+				<a href="javascript:void(0);" className="nav-bar-icon" onClick="mobileNavBar()"></a>
 		</nav>
 	);
 }

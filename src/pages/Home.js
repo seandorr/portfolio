@@ -10,6 +10,7 @@ const Home = () => {
 				serviceOne={"Logo & Branding"}
 				serviceTwo={"Web Design & Dev"}
 				image={"/images/gemini-hero.jpg"}
+				border={"#0FA5A1"}
 			/>
 			<ProjectGridItem 
 				id={"2"}
@@ -17,6 +18,7 @@ const Home = () => {
 				serviceOne={"Web Design"}
 				serviceTwo={"Iconography"}
 				image={""}
+				border={"#F08E21"}
 			/>
 			<ProjectGridItem 
 				id={"3"}
@@ -24,6 +26,7 @@ const Home = () => {
 				serviceOne={"WIP"}
 				serviceTwo={""}
 				image={""}
+				border={"#9686F5"}
 			/>
 			<ProjectGridItem 
 				id={"4"}
@@ -31,6 +34,7 @@ const Home = () => {
 				serviceOne={"Logo Design"}
 				serviceTwo={"Branding"}
 				image={""}
+				border={"#ffbbbb"}
 			/>
 			<ProjectGridItem 
 				id={"5"}
@@ -38,6 +42,7 @@ const Home = () => {
 				serviceOne={"Web Design"}
 				serviceTwo={"Front-End Dev"}
 				image={""}
+				border={"#febe11"}
 			/>
 			<ProjectGridItem 
 				id={"6"}
@@ -45,6 +50,7 @@ const Home = () => {
 				serviceOne={"Social Posts"}
 				serviceTwo={"Custom Illustrations"}
 				image={""}
+				border={"#E63D87"}
 			/>
 		</div>
 	);

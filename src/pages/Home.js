@@ -9,11 +9,19 @@ const Home = () => {
 				companyTitle={"Gemini Diversified Services"}
 				serviceOne={"Logo & Branding"}
 				serviceTwo={"Web Design & Dev"}
-				image={"/images/gemini-hero.jpg"}
+				image={"gemini-hero.jpg"}
 				border={"#0FA5A1"}
 			/>
 			<ProjectGridItem 
 				id={"2"}
+				companyTitle={"Los Dos Creative"}
+				serviceOne={"Logo Design"}
+				serviceTwo={"Branding"}
+				image={"losdos-logo.svg"}
+				border={"#ffbbbb"}
+			/>
+			<ProjectGridItem 
+				id={"3"}
 				companyTitle={"Eye Medical Clinic"}
 				serviceOne={"Web Design"}
 				serviceTwo={"Iconography"}
@@ -21,20 +29,12 @@ const Home = () => {
 				border={"#F08E21"}
 			/>
 			<ProjectGridItem 
-				id={"3"}
+				id={"4"}
 				companyTitle={"codeBase"}
 				serviceOne={"WIP"}
 				serviceTwo={""}
 				image={""}
 				border={"#9686F5"}
-			/>
-			<ProjectGridItem 
-				id={"4"}
-				companyTitle={"Los Dos Creative"}
-				serviceOne={"Logo Design"}
-				serviceTwo={"Branding"}
-				image={""}
-				border={"#ffbbbb"}
 			/>
 			<ProjectGridItem 
 				id={"5"}

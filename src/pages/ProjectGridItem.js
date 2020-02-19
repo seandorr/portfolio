@@ -21,7 +21,7 @@ class ProjectGridItem extends React.Component {
 			<a className="grid-item" id={`grid-item-${this.props.id}`} href="#" onMouseOver={() => this.changeBorder()} onMouseOut={() => this.changeBorderBack()}>
 				<h1 className="company-title">{this.props.companyTitle}</h1>
 				<h1 className="hidden">{this.props.serviceOne}<br />+<br />{this.props.serviceTwo}</h1>
-				<img id={`grid-project-${this.props.id}`} src={this.props.image} />
+				<img id={`grid-project-${this.props.id}`} src={`/images/${this.props.image}`} />
 			</a>
 		);
 	}

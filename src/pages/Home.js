@@ -22,11 +22,11 @@ const Home = () => {
 			/>
 			<ProjectGridItem 
 				id={"3"}
-				companyTitle={"Eye Medical Clinic"}
-				serviceOne={"Web Design"}
-				serviceTwo={"Iconography"}
-				image={""}
-				border={"#F08E21"}
+				companyTitle={"Choibap"}
+				serviceOne={"Menu Design"}
+				serviceTwo={"Custom Illustrations"}
+				image={"choibap-illustration.svg"}
+				border={"#F9EA7D"}
 			/>
 			<ProjectGridItem 
 				id={"4"}
@@ -38,14 +38,6 @@ const Home = () => {
 			/>
 			<ProjectGridItem 
 				id={"5"}
-				companyTitle={"Targetbase"}
-				serviceOne={"Web Design"}
-				serviceTwo={"Front-End Dev"}
-				image={""}
-				border={"#febe11"}
-			/>
-			<ProjectGridItem 
-				id={"6"}
 				companyTitle={"Miller Public Relations"}
 				serviceOne={"Social Posts"}
 				serviceTwo={"Custom Illustrations"}

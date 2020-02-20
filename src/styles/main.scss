@@ -18,22 +18,6 @@
 		transition: 0.3s ease-in-out;
 	}
 	
-	.green-border {
-		background-color: $main;
-	}
-	
-	.los-dos-border {
-		background-color: #ffbbbb;
-	}
-	
-	.tb-border {
-		background-color: #febe11;
-	}
-	
-	.gemini-border {
-		background-color: #0FA5A1;
-	}
-	
 	#top {
 		position: fixed;
 		top: 0;
@@ -201,8 +185,6 @@
 	}
 	
 	ul#nav-bar-ul {
-		list-style: none;
-		display: inline-block;
 		float: right;
 		margin-top: 45px;
 		font-style: normal;
@@ -297,7 +279,7 @@
 			font-weight: 700;
 			font-size: 24px;
 			position: absolute;
-			top: 0px;
+			top: 0;
 			left: 0;
 		}
 	}
@@ -306,14 +288,14 @@
 		grid-column: 1 / 3;
 		grid-row: 1 / 2;
 		transition: 0.3s ease-in-out;
-	}
-	
-	#grid-project-1 {
-		width: 100%;
-		max-width: 500px;
-		height: auto;
-		border-radius: 10px;
-		box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+
+		#grid-project-1 {
+			width: 100%;
+			max-width: 500px;
+			height: auto;
+			border-radius: 10px;
+			box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+		}
 	}
 	
 	@media (hover) {
@@ -335,12 +317,12 @@
 		grid-row: 1 / 3;
 		margin-left: -3px;
 		transition: 0.3s ease-in-out;
-	}
-	
-	#grid-project-2 {
-		width: 100%;
-		max-width: 175px;
-		height: auto;
+
+		#grid-project-2 {
+			width: 100%;
+			max-width: 175px;
+			height: auto;
+		}
 	}
 	
 	@media (hover) {
@@ -361,12 +343,12 @@
 		grid-column: 1 / 2;
 		grid-row: 2 / 4;
 		margin-top: -3px;
-	}
-	
-	#grid-project-3 {
-		width: 100%;
-		max-width: 350px;
-		height: auto;
+
+		#grid-project-3 {
+			width: 100%;
+			max-width: 350px;
+			height: auto;
+		}
 	}
 	
 	@media (hover) {
@@ -389,12 +371,12 @@
 		margin: -3px 0 0 -3px;
 		transition: 0.3s ease-in-out;
 		padding: 0 20px;
-	}
-	
-	#grid-project-4 {
-		width: 100%;
-		max-width: 350px;
-		height: auto;
+
+		#grid-project-4 {
+			width: 100%;
+			max-width: 350px;
+			height: auto;
+		}
 	}
 	
 	@media (hover) {
@@ -417,14 +399,14 @@
 		margin: -3px 0 0 -3px;
 		transition: 0.3s ease-in-out;
 		padding: 0 20px;
-	}
-	
-	#grid-project-5 {
-		width: 100%;
-		max-width: 500px;
-		height: auto;
-		border-radius: 10px;
-		box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+
+		#grid-project-5 {
+			width: 100%;
+			max-width: 500px;
+			height: auto;
+			border-radius: 10px;
+			box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+		}
 	}
 	
 	@media (hover) {

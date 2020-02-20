@@ -26,23 +26,23 @@ const Home = () => {
 				serviceOne={"Menu Design"}
 				serviceTwo={"Custom Illustrations"}
 				image={"choibap-illustration.svg"}
-				border={"#F9EA7D"}
+				border={"#263F90"}
 			/>
 			<ProjectGridItem 
 				id={"4"}
-				companyTitle={"codeBase"}
-				serviceOne={"WIP"}
-				serviceTwo={""}
-				image={""}
+				companyTitle={"Sandbox"}
+				serviceOne={"Hover Effects"}
+				serviceTwo={"Code Snippets"}
+				image={"sandbox.svg"}
 				border={"#9686F5"}
 			/>
 			<ProjectGridItem 
 				id={"5"}
-				companyTitle={"Miller Public Relations"}
-				serviceOne={"Social Posts"}
-				serviceTwo={"Custom Illustrations"}
-				image={""}
-				border={"#E63D87"}
+				companyTitle={"Targetbase"}
+				serviceOne={"Web Design"}
+				serviceTwo={"Front-End Dev"}
+				image={"targetbase-hero.jpg"}
+				border={"#febe11"}
 			/>
 		</div>
 	);

@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
 	return (
@@ -11,10 +12,42 @@ const NavBar = () => {
 				</ul>
 			</a>
 			<ul className="nav-bar-links" id="nav-bar-ul">
-				<li><a className="underline active-underline mobile-only" href="https://seandorr.com">Projects</a></li>
-				<li><a className="underline" href="/Wip">WIP</a></li>
-				<li><a className="underline" href="/About">About</a></li>
-				<li><a className="underline" href="/Contact">Contact</a></li>
+				<li>
+					<NavLink 
+						to="/" 
+						activeClassName="active-underline" 
+						className="underline mobile-only" 
+					>
+						Projects
+					</NavLink>
+				</li>
+				<li>
+					<NavLink 
+						to="/Wip" 
+						activeClassName="active-underline" 
+						className="underline"
+					>
+						WIP
+					</NavLink>
+				</li>
+				<li>
+					<NavLink 
+						to="/About" 
+						activeClassName="active-underline" 
+						className="underline"
+					>
+						About
+					</NavLink>
+				</li>
+				<li>
+					<NavLink 
+						to="/Contact" 
+						activeClassName="active-underline" 
+						className="underline"
+					>
+						Contact
+					</NavLink>
+				</li>
 			</ul>
 				<a href="javascript:void(0);" className="nav-bar-icon" onClick="mobileNavBar()"></a>
 		</nav>

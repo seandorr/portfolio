@@ -6,7 +6,7 @@ import Wip from './pages/Wip';
 import About from './pages/About';
 import Contact from './pages/Contact';
 
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 class App extends Component {
 	render() {
@@ -16,7 +16,7 @@ class App extends Component {
 				<NavBar />
 				
 				<div id="page-content">
-					<BrowserRouter>
+					
 						<Switch>
 							<Route 
 								exact 
@@ -36,7 +36,6 @@ class App extends Component {
 								component={Contact} 
 							/>
 						</Switch>
-					</BrowserRouter>
 				</div>
 			</>
 		);

@@ -4,14 +4,17 @@ import { NavLink } from 'react-router-dom';
 class NavBar extends React.Component {
 
 	mobileNavBar() {
-		let navUL = document.getElementById("nav-bar-ul");
-		let navBar = document.getElementById("nav-bar");
-		if (navUL.className === "nav-bar-links") {
-			navUL.classList.add("responsive");
-			navBar.style.position = "fixed";
+		let getNavUL = document.getElementById("nav-bar-ul");
+		let getMobileNav = document.getElementById("mobileNav");
+		let getCloseBtn = document.querySelector(".close-btn");
+		if (getNavUL.className === "nav-bar-links") {
+			getNavUL.classList.add("responsive");
+			getMobileNav.style.width = "100%";
+			getCloseBtn.style.opacity = "1";
 			} else {
-				navUL.className = "nav-bar-links";
-				navBar.style.position = "absolute";
+				getNavUL.className = "nav-bar-links";
+				getMobileNav.style.width = "0%";
+				getCloseBtn.style.opacity = "0";
 			}
 	}
 

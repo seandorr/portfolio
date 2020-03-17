@@ -14,28 +14,27 @@ class App extends Component {
 			<>
 				<Borders />
 				<NavBar />
-				
-				<div id="page-content">
 					
-						<Switch>
-							<Route 
-								exact 
-								path="/" 
-								component={Home} 
-							/>
-							<Route 
-								path="/wip" 
-								component={Wip} 
-							/>
-							<Route 
-								path="/about" 
-								component={About} 
-							/>
-							<Route 
-								path="/contact" 
-								component={Contact} 
-							/>
-						</Switch>
+				<div id="page-content">
+					<Switch>
+						<Route 
+							exact 
+							path="/" 
+							component={Home} 
+						/>
+						<Route 
+							path="/wip" 
+							component={Wip} 
+						/>
+						<Route 
+							path="/about" 
+							component={About} 
+						/>
+						<Route 
+							path="/contact" 
+							component={Contact} 
+						/>
+					</Switch>
 				</div>
 			</>
 		);

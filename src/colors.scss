@@ -1,0 +1,19 @@
+$main-color: #e5d1c1;
+$secondary-color: #333;
+$light-color: #fff;
+$yellow-color: #cccc72;
+$red-color: #e85757;
+$blue-color: #71ccbe;
+$purple-color: #c672cc;
+$green-color: #80cc72;
+
+:export {
+  mainColor: $main-color;
+  secondaryColor: $secondary-color;
+  lightColor: $light-color;
+  yellowColor: $yellow-color;
+  redColor: $red-color;
+  blueColor: $blue-color;
+  purpleColor: $purple-color;
+  greenColor: $green-color;
+}

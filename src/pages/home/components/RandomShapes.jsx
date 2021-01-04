@@ -12,20 +12,18 @@ export const RandomShapes = () => {
     return Math.floor(Math.random() * numberOfShapeItems);
   };
 
-  console.log("window", document.documentElement.clientWidth);
+  const getRandomRGBColor = () => {
+    return Math.floor(Math.random() * 255);
+  };
 
   for (let counter = 1; counter <= numberOfShapeItems; counter++) {
-    console.log(randomSizeArray.push(getRandomNumber()));
     randomSizeArray.push(getRandomNumber());
     randomXPositionArray.push(getRandomNumber());
     randomYPositionArray.push(getRandomNumber());
 
     const randomWidth = randomSizeArray[getRandomNumber()];
-
     const randomHeight = randomSizeArray[getRandomNumber()];
-
     const randomXPosition = randomXPositionArray[getRandomNumber()];
-
     const randomYPosition = randomXPositionArray[getRandomNumber()];
 
     shapeArray[counter] = (
@@ -37,11 +35,7 @@ export const RandomShapes = () => {
           height: ${`${
             randomHeight !== undefined ? randomHeight : getRandomNumber()
           }px`};
-          background-color: ${`rgba(${Math.floor(
-            Math.random() * 255
-          )}, ${Math.floor(Math.random() * 255)}, ${Math.floor(
-            Math.random() * 255
-          )}, 0.3)`};
+          background-color: ${`rgba(${getRandomRGBColor()}, ${getRandomRGBColor()}, ${getRandomRGBColor()}, 0.3)`};
           position: absolute;
           left: ${`${
             randomXPosition !== undefined ? randomXPosition : getRandomNumber()
@@ -50,9 +44,7 @@ export const RandomShapes = () => {
             randomYPosition !== undefined ? randomYPosition : getRandomNumber()
           }%`};
           transition: 40s ease-in-out;
-          transform: ${`translate(${Math.floor(
-            Math.random() * numberOfShapeItems
-          )}%, ${getRandomNumber()}%)`};
+          transform: ${`translate(${getRandomNumber()}%, ${getRandomNumber()}%)`};
         `}
       />
     );

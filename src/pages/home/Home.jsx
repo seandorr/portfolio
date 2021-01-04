@@ -1,31 +1,41 @@
-/** @jsxImportSource @emotion/react */
 import React, { Suspense } from "react";
-import PropTypes from "prop-types";
-import { useTranslation } from "react-i18next";
+// import { RandomShapes } from "./components/RandomShapes";
+import ProjectPreview from "../../components/projectPreview/ProjectPreview";
+import projectData from "./utils/constants/projectData";
+import NavBar from "../../components/navigation/NavBar";
 import "./home.scss";
-import { RandomShapes } from "./components/RandomShapes";
 
-const Home = () => {
-  const [t, i18n] = useTranslation("common");
-
+const Home = (props) => {
   return (
     <Suspense fallback="loading">
-      <div className="hero">
+      {/* <div className="hero">
         <div className="hero-content__container">
-          <RandomShapes />
-          {/* <div className="text-container">
-            <h1>{t("welcome.title")}</h1>
-          </div>
-          <div className="btn-container">
-            <button onClick={() => i18n.changeLanguage("es")}>es</button>
-            <button onClick={() => i18n.changeLanguage("en")}>en</button>
-          </div> */}
+          <RandomShapes />       
         </div>
-      </div>
+      </div> */}
+      <NavBar />
+      {Object.values(projectData).map((projects) => {
+        const {
+          projectId,
+          projectImage,
+          projectImageAlt,
+          projectName,
+          projectTags,
+          projectLink,
+        } = projects;
+        return (
+          <ProjectPreview
+            projectId={projectId}
+            projectImage={projectImage}
+            projectImageAlt={projectImageAlt}
+            projectName={projectName}
+            projectTags={projectTags}
+            projectLink={projectLink}
+          />
+        );
+      })}
     </Suspense>
   );
 };
-
-Home.propTypes = {};
 
 export default Home;

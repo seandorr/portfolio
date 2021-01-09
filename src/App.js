@@ -1,8 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+import NavBar from "./components/navigation/NavBar";
 import Home from "./pages/home/Home";
 
 const App = () => {
-  return <Home />;
+  const [translation, i18n] = useTranslation("home");
+  const [activeTranslationBtn, setActiveTranslationBtn] = useState("english");
+
+  const handleOnClickSpanishBtn = () => {
+    i18n.changeLanguage("es");
+    setActiveTranslationBtn("spanish");
+  };
+
+  const handleOnClickEnglishBtn = () => {
+    i18n.changeLanguage("en");
+    setActiveTranslationBtn("english");
+  };
+  return (
+    <>
+      <NavBar
+        activeTranslationBtn={activeTranslationBtn}
+        handleOnClickSpanishBtn={handleOnClickSpanishBtn}
+        handleOnClickEnglishBtn={handleOnClickEnglishBtn}
+        translation={translation}
+      />
+      <Home translation={translation} />
+    </>
+  );
 };
 
 export default App;

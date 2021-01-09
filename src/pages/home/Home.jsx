@@ -2,10 +2,10 @@ import React, { Suspense } from "react";
 // import { RandomShapes } from "./components/RandomShapes";
 import ProjectPreview from "../../components/projectPreview/ProjectPreview";
 import projectData from "./utils/constants/projectData";
-import NavBar from "../../components/navigation/NavBar";
 import "./home.scss";
 
 const Home = (props) => {
+  const { translation } = props;
   return (
     <Suspense fallback="loading">
       {/* <div className="hero">
@@ -13,24 +13,15 @@ const Home = (props) => {
           <RandomShapes />       
         </div>
       </div> */}
-      <NavBar />
       {Object.values(projectData).map((projects) => {
-        const {
-          projectId,
-          projectImage,
-          projectImageAlt,
-          projectName,
-          projectTags,
-          projectLink,
-        } = projects;
+        const { projectId, projectName, projectImage, projectLink } = projects;
         return (
           <ProjectPreview
             projectId={projectId}
-            projectImage={projectImage}
-            projectImageAlt={projectImageAlt}
             projectName={projectName}
-            projectTags={projectTags}
+            projectImage={projectImage}
             projectLink={projectLink}
+            translation={translation}
           />
         );
       })}

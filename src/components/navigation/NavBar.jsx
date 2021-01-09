@@ -1,20 +1,13 @@
-import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
+import React from "react";
 import "./navbar.scss";
 
-const NavBar = () => {
-  const [t, i18n] = useTranslation("home");
-  const [activeTranslationBtn, setActiveTranslationBtn] = useState("english");
-
-  const handleOnClickSpanishBtn = () => {
-    i18n.changeLanguage("es");
-    setActiveTranslationBtn("spanish");
-  };
-
-  const handleOnClickEnglishBtn = () => {
-    i18n.changeLanguage("en");
-    setActiveTranslationBtn("english");
-  };
+const NavBar = (props) => {
+  const {
+    activeTranslationBtn,
+    handleOnClickSpanishBtn,
+    handleOnClickEnglishBtn,
+    translation,
+  } = props;
 
   return (
     <div id="navbar">
@@ -24,10 +17,10 @@ const NavBar = () => {
         </a>
         <div className="nav-items-container">
           <a className="nav-item" href="/about">
-            {t("navbar.about")}
+            {translation("navbar.about")}
           </a>
           <a className="nav-item" href="/contact">
-            {t("navbar.contact")}
+            {translation("navbar.contact")}
           </a>
           <div className="nav-item btn-container">
             <button

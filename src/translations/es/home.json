@@ -1,6 +1,36 @@
 {
   "navbar": {
-    "about": "Sobre Mi",
+    "about": "Acerca de Mi",
     "contact": "Contacto"
-  }
+  },
+  "project": {
+    "gemini": {
+      "title": "Gemini Diversified Services",
+      "tags": {
+        "logo": "logotipo",
+        "branding": "marca",
+        "webDesign": "diseño web",
+        "frontEnd": "front-end",
+        "HTML": "HTML",
+        "SCSS": "SCSS",
+        "JS": "JS"
+      },
+      "imageAlt": "diseño web de gemini"
+    },
+    "targetbase": {
+      "title": "Targetbase",
+      "tags": {
+        "branding": "marca",
+        "webDesign": "diseño web",
+        "frontEnd": "front-end",
+        "wordpress": "wordpress",
+        "PHP": "PHP",
+        "HTML": "HTML",
+        "CSS": "CSS",
+        "JS": "JS"
+      },
+      "imageAlt": "diseño web de targetbase"
+    }
+  },
+  "viewButton": "Ver Proyecto"
 }

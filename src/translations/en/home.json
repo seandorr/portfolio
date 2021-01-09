@@ -2,5 +2,35 @@
   "navbar": {
     "about": "About",
     "contact": "Contact"
-  }
+  },
+  "project": {
+    "gemini": {
+      "title": "Gemini Diversified Services",
+      "tags": {
+        "logo": "logo",
+        "branding": "branding",
+        "webDesign": "web design",
+        "frontEnd": "front-end",
+        "HTML": "HTML",
+        "SCSS": "SCSS",
+        "JS": "JS"
+      },
+      "imageAlt": "gemini web design"
+    },
+    "targetbase": {
+      "title": "Targetbase",
+      "tags": {
+        "branding": "branding",
+        "webDesign": "web design",
+        "frontEnd": "front-end",
+        "wordpress": "wordpress",
+        "PHP": "PHP",
+        "HTML": "HTML",
+        "SCSS": "SCSS",
+        "JS": "JS"
+      },
+      "imageAlt": "targetbase web design"
+    }
+  },
+  "viewButton": "View Project"
 }

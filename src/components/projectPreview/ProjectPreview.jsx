@@ -5,12 +5,15 @@ import FilterTag from "../filterTag/FilterTag";
 const ProjectPreview = (props) => {
   const {
     projectId,
-    projectImage,
-    projectImageAlt,
     projectName,
-    projectTags,
+    projectImage,
     projectLink,
+    translation,
   } = props;
+
+  const tags = translation(`project.${projectName}.tags`, {
+    returnObjects: true,
+  });
 
   return (
     <div className="content-grid project-preview" id={`proj-${projectId}`}>
@@ -18,18 +21,24 @@ const ProjectPreview = (props) => {
         <img
           className="proj-img"
           src={`/images/${projectImage}`}
-          alt={projectImageAlt}
+          alt={translation(`project.${projectName}.imageAlt`)}
         />
       </div>
       <div className="content" id="col-right">
-        <h1>{projectName}</h1>
+        <h1>{translation(`project.${projectName}.title`)}</h1>
         <div className="filter-tag-container">
-          {projectTags.map((tag) => {
-            return <FilterTag tag={tag} />;
+          {Object.values(tags).map((tag) => {
+            return (
+              <FilterTag
+                tag={tag}
+                projectName={projectName}
+                translation={translation}
+              />
+            );
           })}
         </div>
         <a className="btn" href={projectLink}>
-          View Project
+          {translation(`viewButton`)}
         </a>
       </div>
     </div>
@@ -40,7 +49,7 @@ ProjectPreview.propTypes = {
   projectId: PropTypes.number,
   projectImage: PropTypes.string,
   projectImageAlt: PropTypes.string,
-  projectName: PropTypes.string,
+  projectTitle: PropTypes.string,
   projectTags: PropTypes.array,
   projectLink: PropTypes.string,
 };
@@ -49,7 +58,7 @@ ProjectPreview.defaultProps = {
   projectId: undefined,
   projectImage: undefined,
   projectImageAlt: undefined,
-  projectName: undefined,
+  projectTitle: undefined,
   projectTags: undefined,
   projectLink: undefined,
 };

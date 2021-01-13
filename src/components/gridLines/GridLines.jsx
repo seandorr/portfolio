@@ -1,14 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./gridlines.scss";
 
 const GridLines = (props) => {
-  const { color } = props;
+  const { projectColor } = props;
   return (
     <div className="gridline-container">
       <div
         id="color-column"
         className="gridline"
-        style={{ backgroundColor: color }}
+        style={{ backgroundColor: projectColor }}
       ></div>
       <div className="gridline"></div>
       <div className="gridline"></div>
@@ -17,6 +18,12 @@ const GridLines = (props) => {
   );
 };
 
-GridLines.propTypes = {};
+GridLines.propTypes = {
+  projectColor: PropTypes.string,
+};
+
+GridLines.defaultProps = {
+  projectColor: undefined,
+};
 
 export default GridLines;

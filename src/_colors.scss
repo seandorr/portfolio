@@ -1,19 +1,13 @@
-$main-color: #e5d1c1;
-$secondary-color: #333;
 $light-color: #fff;
-$yellow-color: #cccc72;
-$red-color: #e85757;
-$blue-color: #71ccbe;
-$purple-color: #c672cc;
-$green-color: #80cc72;
+$dark-medium-color: #d1d1d1;
+$dark-color: #000;
+$gemini-color: #0fa5a1;
+$targetbase-color: #ffb902;
 
 :export {
-  mainColor: $main-color;
-  secondaryColor: $secondary-color;
   lightColor: $light-color;
-  yellowColor: $yellow-color;
-  redColor: $red-color;
-  blueColor: $blue-color;
-  purpleColor: $purple-color;
-  greenColor: $green-color;
+  darkMediumColor: $dark-medium-color;
+  darkColor: $dark-color;
+  geminiColor: $gemini-color;
+  targetbaseColor: $targetbase-color;
 }

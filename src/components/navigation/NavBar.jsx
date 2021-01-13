@@ -7,12 +7,13 @@ const NavBar = (props) => {
     handleOnClickSpanishBtn,
     handleOnClickEnglishBtn,
     translation,
+    projectColor,
   } = props;
 
   return (
     <div id="navbar">
       <div className="navbar-content">
-        <a className="logo" href="/">
+        <a className="logo" style={{ backgroundColor: projectColor }} href="/">
           Sean Dorr
         </a>
         <div className="nav-items-container">

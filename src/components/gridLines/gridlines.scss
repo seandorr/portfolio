@@ -1,0 +1,41 @@
+@import "../../main.scss";
+
+.gridline-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+
+  @include tablet {
+    height: 100vh;
+    flex-direction: row;
+    position: fixed;
+    box-shadow: none;
+  }
+
+  .gridline {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include tablet {
+      flex-direction: row;
+      width: 25%;
+      height: auto;
+      border-right: 1px solid #c9c9c9;
+    }
+  }
+
+  .gridline:last-child {
+    border-right: none;
+  }
+
+  #color-column {
+    transition: 0.5s ease-in-out;
+  }
+}

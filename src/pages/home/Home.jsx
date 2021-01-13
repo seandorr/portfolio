@@ -14,16 +14,7 @@ const Home = (props) => {
         </div>
       </div> */}
       {Object.values(projectData).map((projects) => {
-        const { projectId, projectName, projectImage, projectLink } = projects;
-        return (
-          <ProjectPreview
-            projectId={projectId}
-            projectName={projectName}
-            projectImage={projectImage}
-            projectLink={projectLink}
-            translation={translation}
-          />
-        );
+        return <ProjectPreview projects={projects} translation={translation} />;
       })}
     </Suspense>
   );

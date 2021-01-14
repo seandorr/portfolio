@@ -6,6 +6,7 @@ import i18next from "i18next";
 import "./i18n";
 import home_en from "./translations/en/home.json";
 import home_es from "./translations/es/home.json";
+import "./styles/main.scss";
 
 i18next.init({
   interpolation: { escapeValue: false },

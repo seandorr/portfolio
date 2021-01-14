@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: $box-shadow;
 
   @include tablet {
     height: 100vh;
@@ -27,7 +27,7 @@
       flex-direction: row;
       width: 25%;
       height: auto;
-      border-right: 1px solid #c9c9c9;
+      border-right: 1px solid $dark-medium-color;
     }
   }
 

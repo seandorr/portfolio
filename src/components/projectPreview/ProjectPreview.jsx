@@ -3,20 +3,19 @@ import PropTypes from "prop-types";
 import FilterTag from "../filterTag/FilterTag";
 
 const ProjectPreview = (props) => {
-  const {
-    projectId,
-    projectName,
-    projectImage,
-    projectLink,
-    translation,
-  } = props;
+  const { projects, translation } = props;
+
+  const { projectId, projectName, projectImage, projectLink } = projects;
 
   const tags = translation(`project.${projectName}.tags`, {
     returnObjects: true,
   });
 
   return (
-    <div className="content-grid project-preview" id={`proj-${projectId}`}>
+    <div
+      className={`content-grid project-preview ${projectName}`}
+      id={`proj-${projectId}`}
+    >
       <div className="content" id="col-left">
         <img
           className="proj-img"

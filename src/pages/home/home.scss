@@ -62,8 +62,8 @@
         font-size: 18px;
         margin: 25px 25px 0 0;
         padding: 10px;
-        background-color: #d1d1d1;
-        border-radius: 10px;
+        background-color: $dark-medium-color;
+        border-radius: $border-radius;
       }
     }
 
@@ -76,7 +76,7 @@
 
   #col-right {
     padding-bottom: 100px;
-    border-bottom: 1px solid #c9c9c9;
+    border-bottom: 1px solid $dark-medium-color;
 
     @include tablet {
       padding-bottom: 0;
@@ -97,8 +97,8 @@
   width: 100%;
   min-width: 320px;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
   margin-bottom: 25px;
 
   @include tablet {

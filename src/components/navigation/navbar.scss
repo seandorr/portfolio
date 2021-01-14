@@ -1,3 +1,5 @@
+@import "../../main.scss";
+
 #navbar {
   width: 100%;
   position: fixed;
@@ -10,10 +12,10 @@
     justify-content: space-between;
 
     .logo {
-      color: #fff;
+      color: $light-color;
       font-size: 36px;
       padding: 5px 10px;
-      border-radius: 10px;
+      border-radius: $border-radius;
       transition: 0.3s ease-in-out;
     }
 
@@ -29,35 +31,35 @@
           .translation-btn {
             font-size: 18px;
             padding: 10px;
-            background-color: #fff;
-            border: 2px solid #000;
+            background-color: $light-color;
+            border: 2px solid $dark-color;
             transition: 0.3s ease-in-out;
             cursor: pointer;
 
             &:first-of-type {
-              border-radius: 10px 0 0 10px;
+              border-radius: $border-radius 0 0 $border-radius;
 
               &.active {
-                box-shadow: -3px 0 3px rgba(0, 0, 0, 0.3);
+                box-shadow: -3px 0 3px rgba($dark-color, 0.3);
               }
             }
 
             &:last-of-type {
-              border-radius: 0 10px 10px 0;
+              border-radius: 0 $border-radius $border-radius 0;
               margin-left: -2px;
 
               &.active {
-                box-shadow: 3px 0 3px rgba(0, 0, 0, 0.3);
+                box-shadow: 3px 0 3px rgba($dark-color, 0.3);
               }
             }
 
             &:hover {
-              background-color: #d1d1d1;
+              background-color: $dark-medium-color;
             }
 
             &.active {
-              background-color: #000;
-              color: #fff;
+              background-color: $dark-color;
+              color: $light-color;
             }
 
             &:focus {

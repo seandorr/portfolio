@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import GetBrowserSize from "./GetBrowserSize";
 
-const GetProjectColor = () => {
+const GetProjectColor = (projectName) => {
   const [, setScrollPosition] = useState(undefined);
   const [projectColor, setProjectColor] = useState("#0FA5A1");
 
@@ -10,6 +10,7 @@ const GetProjectColor = () => {
 
   useEffect(() => {
     const projects = document.getElementsByClassName("project-preview");
+    console.log(projects[1]);
 
     const positions = [];
     for (let i = 0; i < projects.length; i++) {

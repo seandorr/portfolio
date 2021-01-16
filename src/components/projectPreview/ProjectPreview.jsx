@@ -5,7 +5,13 @@ import FilterTag from "../filterTag/FilterTag";
 const ProjectPreview = (props) => {
   const { projects, translation } = props;
 
-  const { projectId, projectName, projectImage, projectLink } = projects;
+  const {
+    projectId,
+    projectName,
+    projectImage,
+    projectComponent,
+    projectLink,
+  } = projects;
 
   const tags = translation(`project.${projectName}.tags`, {
     returnObjects: true,
@@ -17,11 +23,14 @@ const ProjectPreview = (props) => {
       id={`proj-${projectId}`}
     >
       <div className="content" id="col-left">
-        <img
-          className="proj-img"
-          src={`/images/${projectImage}`}
-          alt={translation(`project.${projectName}.imageAlt`)}
-        />
+        {projectImage && (
+          <img
+            className="proj-img"
+            src={`/images/${projectImage}`}
+            alt={translation(`project.${projectName}.imageAlt`)}
+          />
+        )}
+        {projectComponent && projectComponent}
       </div>
       <div className="content" id="col-right">
         <h1>{translation(`project.${projectName}.title`)}</h1>

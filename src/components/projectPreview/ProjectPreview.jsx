@@ -45,7 +45,7 @@ const ProjectPreview = (props) => {
             );
           })}
         </div>
-        <a className="btn" href={projectLink}>
+        <a className="project-link__button" href={projectLink}>
           {translation(`viewButton`)}
         </a>
       </div>

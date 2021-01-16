@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import ProjectPreview from "../../components/projectPreview/ProjectPreview";
+import ProjectPreview from "./projectPreview/ProjectPreview";
 import "./home.scss";
 
 const Home = (props) => {

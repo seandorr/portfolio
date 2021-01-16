@@ -43,10 +43,21 @@
       }
     }
 
-    .btn {
-      font-size: 18px;
+    .project-link {
       float: left;
       margin-top: 50px;
+
+      &.link {
+        &::after {
+          width: 100%;
+        }
+
+        &:hover {
+          &::after {
+            width: 50%;
+          }
+        }
+      }
     }
   }
 

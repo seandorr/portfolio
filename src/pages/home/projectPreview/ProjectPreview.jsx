@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import FilterTag from "../filterTag/FilterTag";
+import FilterTag from "../../../components/filterTag/FilterTag";
 
 const ProjectPreview = (props) => {
   const { project, translation } = props;
@@ -45,7 +45,7 @@ const ProjectPreview = (props) => {
             );
           })}
         </div>
-        <a className="btn" href={projectLink}>
+        <a className="link project-link" href={projectLink}>
           {translation(`viewButton`)}
         </a>
       </div>

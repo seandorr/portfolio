@@ -2,9 +2,9 @@
 
 #navbar {
   width: 100%;
+  background-color: $light-color;
   position: fixed;
   z-index: 999;
-  background-color: $light-color;
 
   @include tablet {
     background-color: transparent;

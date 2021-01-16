@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 import "./gridlines.scss";
 
 const GridLines = (props) => {
-  const { projectColor } = props;
+  const { activeProjectColor } = props;
   return (
     <div className="gridline-container">
       <div
         id="color-column"
         className="gridline"
-        style={{ backgroundColor: projectColor }}
+        style={{ backgroundColor: activeProjectColor }}
       ></div>
       <div className="gridline"></div>
       <div className="gridline"></div>

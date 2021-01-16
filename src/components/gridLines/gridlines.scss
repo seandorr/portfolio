@@ -6,13 +6,12 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  box-shadow: $box-shadow;
+  z-index: -1;
 
   @include tablet {
     height: 100vh;
     flex-direction: row;
     position: fixed;
-    box-shadow: none;
   }
 
   .gridline {

@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import ProjectPreview from "../../components/projectPreview/ProjectPreview";
+import ProjectPreview from "./projectPreview/ProjectPreview";
 import projectData from "./utils/constants/projectData";
 import GetProjectColor from "../../utils/functions/GetProjectColor";
 import "./home.scss";

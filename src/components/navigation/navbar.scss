@@ -44,6 +44,20 @@
           }
         }
 
+        &.nav-link {
+          &.link {
+            &::after {
+              width: 0;
+            }
+
+            &:hover {
+              &::after {
+                width: 100%;
+              }
+            }
+          }
+        }
+
         &.btn-container {
           position: fixed;
           right: 25px;

@@ -31,10 +31,10 @@ const NavBar = (props) => {
           Sean Dorr
         </a>
         <div className="nav-items-container">
-          <a className="nav-item" href="/about">
+          <a className="nav-item link nav-link" href="/about">
             {translation("navbar.about")}
           </a>
-          <a className="nav-item" href="/contact">
+          <a className="nav-item link nav-link" href="/contact">
             {translation("navbar.contact")}
           </a>
           <div className="nav-item btn-container">

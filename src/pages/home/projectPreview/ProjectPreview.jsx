@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import FilterTag from "../../../components/filterTag/FilterTag";
 
 const ProjectPreview = (props) => {
-  const { projects, translation } = props;
+  const { project, translation } = props;
 
   const {
     projectId,
@@ -11,7 +11,7 @@ const ProjectPreview = (props) => {
     projectImage,
     projectComponent,
     projectLink,
-  } = projects;
+  } = project;
 
   const tags = translation(`project.${projectName}.tags`, {
     returnObjects: true,

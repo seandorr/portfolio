@@ -66,9 +66,9 @@ const App = () => {
 
   return (
     <>
-      <GridLines projectColor={activeProjectColor} />
+      <GridLines activeProjectColor={activeProjectColor} />
       <NavBar
-        projectColor={activeProjectColor}
+        activeProjectColor={activeProjectColor}
         activeTranslationBtn={activeTranslationBtn}
         handleOnClickSpanishBtn={handleOnClickSpanishBtn}
         handleOnClickEnglishBtn={handleOnClickEnglishBtn}

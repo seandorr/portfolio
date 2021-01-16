@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
+import baseStyles from "../../../../styles/_baseStyles.scss";
 
 export const GenerateRandomShapes = (props) => {
   const { projectPreview } = props;
@@ -46,6 +47,7 @@ export const GenerateRandomShapes = (props) => {
               : getRandomSizeAndPosition()
           }px`};
           background-color: ${`rgba(${getRandomRGBColor()}, ${getRandomRGBColor()}, ${getRandomRGBColor()}, 0.3)`};
+          border-radius: ${projectPreview ? baseStyles.borderRadius : "none"};
           position: absolute;
           left: ${`${
             randomXPosition !== undefined

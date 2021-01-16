@@ -9,16 +9,16 @@ const NavBar = (props) => {
     handleOnClickSpanishBtn,
     handleOnClickEnglishBtn,
     translation,
-    projectColor,
+    activeProjectColor,
   } = props;
 
   const logoStyles = css`
     &.logo {
       color: ${colors.lightColor};
-      background-color: ${projectColor};
+      background-color: ${activeProjectColor};
 
       &:hover {
-        color: ${projectColor};
+        color: ${activeProjectColor};
         background-color: ${colors.lightColor};
       }
     }

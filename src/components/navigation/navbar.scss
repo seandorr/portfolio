@@ -36,8 +36,13 @@
       background-color: $light-color;
 
       .nav-item {
-        margin-left: 20px;
         font-size: 18px;
+
+        &:not(:first-child) {
+          &:not(:last-child) {
+            margin: 0 20px;
+          }
+        }
 
         &.btn-container {
           position: fixed;

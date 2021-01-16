@@ -4,10 +4,19 @@
     "contact": "Contacto"
   },
   "project": {
+    "randomShapes": {
+      "title": "El Azar",
+      "tags": {
+        "frontEnd": "front-end",
+        "react": "react",
+        "JSX": "JSX",
+        "emotion": "emotion"
+      },
+      "imageAlt": "formas aleatorias "
+    },
     "gemini": {
       "title": "Gemini Diversified Services",
       "tags": {
-        "logo": "logotipo",
         "branding": "marca",
         "webDesign": "diseño web",
         "frontEnd": "front-end",
@@ -20,7 +29,6 @@
     "targetbase": {
       "title": "Targetbase",
       "tags": {
-        "branding": "marca",
         "webDesign": "diseño web",
         "frontEnd": "front-end",
         "wordpress": "wordpress",

@@ -4,10 +4,19 @@
     "contact": "Contact"
   },
   "project": {
+    "randomShapes": {
+      "title": "Randomization",
+      "tags": {
+        "frontEnd": "front-end",
+        "react": "react",
+        "JSX": "JSX",
+        "emotion": "emotion"
+      },
+      "imageAlt": "random shapes"
+    },
     "gemini": {
       "title": "Gemini Diversified Services",
       "tags": {
-        "logo": "logo",
         "branding": "branding",
         "webDesign": "web design",
         "frontEnd": "front-end",
@@ -20,7 +29,6 @@
     "targetbase": {
       "title": "Targetbase",
       "tags": {
-        "branding": "branding",
         "webDesign": "web design",
         "frontEnd": "front-end",
         "wordpress": "wordpress",

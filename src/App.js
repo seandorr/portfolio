@@ -3,9 +3,9 @@ import { useTranslation } from "react-i18next";
 import GridLines from "./components/gridLines/GridLines";
 import NavBar from "./components/navigation/NavBar";
 import Home from "./pages/home/Home";
-import projectData from "./pages/home/utils/constants/projectData";
+import projectPreviewData from "./pages/home/utils/constants/projectPreviewData";
 
-const PROJECTS = Object.values(projectData);
+const PROJECTS = Object.values(projectPreviewData);
 
 const App = () => {
   const [translation, i18n] = useTranslation("home");
@@ -17,6 +17,8 @@ const App = () => {
     width: window.innerWidth,
     height: window.innerHeight,
   });
+
+  console.log(PROJECTS);
 
   useEffect(() => {
     const handleResize = () => {

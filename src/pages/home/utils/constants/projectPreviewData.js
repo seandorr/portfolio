@@ -2,7 +2,7 @@ import React from "react";
 import RandomShapesPreview from "../../randomShapes/RandomShapesPreview";
 import colors from "../../../../styles/_colors.scss";
 
-const projectData = {
+const projectPreviewData = {
   randomShapes: {
     projectId: 1,
     projectName: "randomShapes",
@@ -26,4 +26,4 @@ const projectData = {
   },
 };
 
-export default projectData;
+export default projectPreviewData;

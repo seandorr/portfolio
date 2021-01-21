@@ -4,6 +4,8 @@ import GridLines from "./components/gridLines/GridLines";
 import NavBar from "./components/navigation/NavBar";
 import Home from "./pages/home/Home";
 import projectPreviewData from "./pages/home/utils/constants/projectPreviewData";
+import useScrollDirection from "./utils/customHooks/useScrollDirection";
+import useWindowSize from "./utils/customHooks/useWindowSize";
 
 const PROJECTS = Object.values(projectPreviewData);
 
@@ -13,27 +15,6 @@ const App = () => {
   const [activeProjectColor, setActiveProjectColor] = useState(
     PROJECTS[0].projectColor
   );
-  const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
-
-  console.log(PROJECTS);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   const handleOnClickSpanishBtn = () => {
     i18n.changeLanguage("es");
@@ -45,11 +26,19 @@ const App = () => {
     setActiveTranslationBtn("english");
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-  }, []);
+  const getScrollDirection = useScrollDirection();
+  const getWindowHeight = useWindowSize().height;
+  const getWindowWidth = useWindowSize().width;
 
-  const calculatedWindowHeight = windowSize.height / 1.5;
+  let calculatedWindowHeight;
+
+  if (getScrollDirection === "down" && getWindowWidth >= 768) {
+    calculatedWindowHeight = getWindowHeight - 100;
+  } else if (getScrollDirection === "up" && getWindowWidth >= 768) {
+    calculatedWindowHeight = getWindowHeight - 200;
+  } else {
+    calculatedWindowHeight = 800;
+  }
 
   const handleScroll = () => {
     const indexOfProjectCurrentlyInView = Math.floor(
@@ -65,6 +54,10 @@ const App = () => {
       setActiveProjectColor(PROJECTS[lastProject].projectColor);
     }
   };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  }, [handleScroll]);
 
   return (
     <>

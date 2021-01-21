@@ -3,25 +3,39 @@ import RandomShapesPreview from "../../randomShapes/RandomShapesPreview";
 import colors from "../../../../styles/_colors.scss";
 
 const projectPreviewData = {
-  randomShapes: {
+  nominapress: {
     projectId: 1,
+    projectName: "nominapress",
+    projectImage: "nominapress.svg",
+    projectColor: colors.nominapressColor,
+    projectLink: "#",
+  },
+  randomShapes: {
+    projectId: 2,
     projectName: "randomShapes",
     projectComponent: <RandomShapesPreview />,
     projectColor: colors.randomShapesColor,
     projectLink: "#",
   },
   gemini: {
-    projectId: 2,
+    projectId: 3,
     projectName: "gemini",
     projectImage: "gemini-hero.jpg",
     projectColor: colors.geminiColor,
     projectLink: "#",
   },
   targetbase: {
-    projectId: 3,
+    projectId: 4,
     projectName: "targetbase",
     projectImage: "targetbase-hero.jpg",
     projectColor: colors.targetbaseColor,
+    projectLink: "#",
+  },
+  losDosCreative: {
+    projectId: 5,
+    projectName: "losDosCreative",
+    projectImage: "losdos.jpg",
+    projectColor: colors.losDosCreativeColor,
     projectLink: "#",
   },
 };

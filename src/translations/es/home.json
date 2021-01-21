@@ -4,8 +4,20 @@
     "contact": "Contacto"
   },
   "project": {
+    "nominapress": {
+      "title": "Nominapress",
+      "tags": {
+        "frontEnd": "front-end",
+        "react": "react",
+        "JSX": "JSX",
+        "SCSS": "SCSS",
+        "emotion": "emotion",
+        "design": "diseño"
+      },
+      "imageAlt": "nominapress web design"
+    },
     "randomShapes": {
-      "title": "El Azar",
+      "title": "Aleatorización",
       "tags": {
         "frontEnd": "front-end",
         "react": "react",
@@ -38,6 +50,14 @@
         "JS": "JS"
       },
       "imageAlt": "diseño web de targetbase"
+    },
+    "losDosCreative": {
+      "title": "Los Dos Creative",
+      "tags": {
+        "logo": "logotipo",
+        "branding": "marca"
+      },
+      "imageAlt": "logotipo de los dos creative"
     }
   },
   "viewButton": "Ver Proyecto"

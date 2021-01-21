@@ -4,6 +4,18 @@
     "contact": "Contact"
   },
   "project": {
+    "nominapress": {
+      "title": "Nominapress",
+      "tags": {
+        "frontEnd": "front-end",
+        "react": "react",
+        "JSX": "JSX",
+        "SCSS": "SCSS",
+        "emotion": "emotion",
+        "design": "design"
+      },
+      "imageAlt": "nominapress web design"
+    },
     "randomShapes": {
       "title": "Randomization",
       "tags": {
@@ -38,6 +50,14 @@
         "JS": "JS"
       },
       "imageAlt": "targetbase web design"
+    },
+    "losDosCreative": {
+      "title": "Los Dos Creative",
+      "tags": {
+        "logo": "logo",
+        "branding": "branding"
+      },
+      "imageAlt": "los dos creative logo"
     }
   },
   "viewButton": "View Project"

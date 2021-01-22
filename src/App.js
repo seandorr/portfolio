@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { Switch, Route } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import GridLines from "./components/gridLines/GridLines";
 import NavBar from "./components/navigation/NavBar";
 import Home from "./pages/home/Home";
+import About from "./pages/about/About";
+import Contact from "./pages/contact/Contact";
 import projectPreviewData from "./pages/home/utils/constants/projectPreviewData";
 import useScrollDirection from "./utils/customHooks/useScrollDirection";
 import useWindowSize from "./utils/customHooks/useWindowSize";
@@ -69,7 +72,17 @@ const App = () => {
         handleOnClickEnglishBtn={handleOnClickEnglishBtn}
         translation={translation}
       />
-      <Home translation={translation} projects={PROJECTS} />
+      <Switch>
+        <Route path="/" exact>
+          <Home translation={translation} projects={PROJECTS} />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/contact">
+          <Contact />
+        </Route>
+      </Switch>
     </>
   );
 };

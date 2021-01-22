@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
+import { Link } from "react-router-dom";
 import colors from "../../styles/_colors.scss";
 import "./navbar.scss";
 
@@ -27,16 +28,16 @@ const NavBar = (props) => {
   return (
     <div id="navbar">
       <div className="navbar-content">
-        <a className="logo" css={logoStyles} href="/">
+        <Link to="/" className="logo" css={logoStyles}>
           Sean Dorr
-        </a>
+        </Link>
         <div className="nav-items-container">
-          <a className="nav-item link nav-link" href="/about">
+          <Link to="/about" className="nav-item link nav-link">
             {translation("navbar.about")}
-          </a>
-          <a className="nav-item link nav-link" href="/contact">
+          </Link>
+          <Link to="/contact" className="nav-item link nav-link">
             {translation("navbar.contact")}
-          </a>
+          </Link>
           <div className="nav-item btn-container">
             <button
               className={`translation-btn ${

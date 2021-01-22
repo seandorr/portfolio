@@ -4,9 +4,7 @@ import useWindowSize from "../../utils/customHooks/useWindowSize";
 import useScrollDirection from "../../utils/customHooks/useScrollDirection";
 import "./home.scss";
 
-const Home = (props) => {
-  const { translation, projects, setActiveProjectColor } = props;
-
+const Home = ({ translation, projects, setActiveProjectColor }) => {
   const getScrollDirection = useScrollDirection();
   const getWindowHeight = useWindowSize().height;
   const getWindowWidth = useWindowSize().width;
@@ -20,36 +18,32 @@ const Home = (props) => {
     calculatedWindowHeight = 800;
   }
 
-  const handleScroll = () => {
-    const indexOfProjectCurrentlyInView = Math.floor(
-      window.scrollY / calculatedWindowHeight
-    );
-
-    if (indexOfProjectCurrentlyInView < projects.length) {
-      setActiveProjectColor(
-        projects[indexOfProjectCurrentlyInView].projectColor
-      );
-    } else {
-      const lastProject = projects.length - 1;
-      setActiveProjectColor(projects[lastProject].projectColor);
-    }
-  };
-
-  const handleProjectColors = () => {
-    if (window.scrollY <= 1) {
-      setActiveProjectColor(projects[0].projectColor);
-    } else {
-      window.addEventListener("scroll", handleScroll);
-    }
-  };
-
-  const handleOnLoad = () => {
-    handleProjectColors();
-  };
-
   useEffect(() => {
-    window.onload = handleOnLoad();
-  }, [handleOnLoad]);
+    const handleScroll = () => {
+      const indexOfProjectCurrentlyInView = Math.floor(
+        window.scrollY / calculatedWindowHeight
+      );
+
+      if (indexOfProjectCurrentlyInView < projects.length) {
+        setActiveProjectColor(
+          projects[indexOfProjectCurrentlyInView].projectColor
+        );
+      } else {
+        const lastProject = projects.length - 1;
+        setActiveProjectColor(projects[lastProject].projectColor);
+      }
+    };
+
+    const handleProjectColors = () => {
+      if (window.scrollY <= 1) {
+        setActiveProjectColor(projects[0].projectColor);
+      } else {
+        window.addEventListener("scroll", handleScroll);
+      }
+    };
+
+    handleProjectColors();
+  }, [calculatedWindowHeight, projects, setActiveProjectColor]);
 
   return (
     <Suspense fallback="loading">

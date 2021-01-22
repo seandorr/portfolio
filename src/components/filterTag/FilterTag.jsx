@@ -1,9 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const FilterTag = (props) => {
-  const { tag } = props;
-
+const FilterTag = ({ tag }) => {
   return <span className="filter-tag">{tag}</span>;
 };
 

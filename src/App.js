@@ -13,9 +13,7 @@ const PROJECTS = Object.values(projectPreviewData);
 const App = () => {
   const [translation, i18n] = useTranslation("home");
   const [activeTranslationBtn, setActiveTranslationBtn] = useState("english");
-  const [activeProjectColor, setActiveProjectColor] = useState(
-    PROJECTS[0].projectColor
-  );
+  const [activeProjectColor, setActiveProjectColor] = useState(undefined);
 
   const handleOnClickSpanishBtn = () => {
     i18n.changeLanguage("es");

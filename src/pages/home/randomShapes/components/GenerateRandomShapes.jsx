@@ -2,9 +2,7 @@
 import { jsx, css } from "@emotion/react";
 import baseStyles from "../../../../styles/_baseStyles.scss";
 
-export const GenerateRandomShapes = (props) => {
-  const { projectPreview } = props;
-
+export const GenerateRandomShapes = ({ projectPreview }) => {
   let numberOfShapeItems;
   if (projectPreview) {
     numberOfShapeItems = 30;

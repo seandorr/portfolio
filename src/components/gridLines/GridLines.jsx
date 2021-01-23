@@ -19,11 +19,11 @@ const GridLines = (props) => {
 };
 
 GridLines.propTypes = {
-  projectColor: PropTypes.string,
+  activeProjectColor: PropTypes.string,
 };
 
 GridLines.defaultProps = {
-  projectColor: undefined,
+  activeProjectColor: undefined,
 };
 
 export default GridLines;

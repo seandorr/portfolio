@@ -1,73 +1,78 @@
 @import "../../styles/main.scss";
 
-.content-grid {
-  height: 700px;
-  min-height: 600px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  margin: 150px 25px 100px 25px;
+.projects-container {
+  transition: transform 0.25s;
+  will-change: transform;
 
-  @include tablet {
-    height: 100vh;
-    flex-direction: row;
-    margin: 0;
-  }
-
-  .content {
-    width: 100%;
-    text-align: center;
+  .content-grid {
+    height: 700px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 150px 25px 100px 25px;
 
     @include tablet {
-      width: 50%;
-      margin: 0 50px;
-    }
-
-    h1 {
-      text-align: left;
-    }
-
-    .filter-tag-container {
-      display: flex;
+      height: 100vh;
       flex-direction: row;
-      flex-wrap: wrap;
-
-      .filter-tag {
-        font-size: 18px;
-        margin: 25px 25px 0 0;
-        padding: 10px;
-        background-color: $dark-medium-color;
-        border-radius: $border-radius;
-      }
+      margin: 0;
     }
 
-    .project-link {
-      float: left;
-      margin-top: 50px;
+    .content {
+      width: 100%;
+      text-align: center;
 
-      &.link {
-        &::after {
-          width: 100%;
+      @include tablet {
+        width: 50%;
+        margin: 0 50px;
+      }
+
+      h1 {
+        text-align: left;
+      }
+
+      .filter-tag-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .filter-tag {
+          font-size: 18px;
+          margin: 25px 25px 0 0;
+          padding: 10px;
+          background-color: $dark-medium-color;
+          border-radius: $border-radius;
         }
+      }
 
-        &:hover {
+      .project-link {
+        float: left;
+        margin-top: 50px;
+
+        &.link {
           &::after {
-            width: 50%;
+            width: 100%;
+          }
+
+          &:hover {
+            &::after {
+              width: 50%;
+            }
           }
         }
       }
     }
-  }
 
-  #col-right {
-    padding-bottom: 100px;
-    border-bottom: 1px solid $dark-medium-color;
+    #col-right {
+      padding-bottom: 100px;
+      border-bottom: 1px solid $dark-medium-color;
 
-    @include tablet {
-      padding-bottom: 0;
-      border-bottom: none;
+      @include tablet {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
     }
   }
 }

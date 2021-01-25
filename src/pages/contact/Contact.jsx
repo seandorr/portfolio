@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Contact = ({ setActiveProjectColor }) => {
-  setActiveProjectColor("red");
+  useEffect(() => {
+    setActiveProjectColor("red");
+  }, [setActiveProjectColor]);
+
   return <div style={{ height: "300vh" }}>contact</div>;
 };
 

@@ -49,7 +49,13 @@ const Home = ({ translation, projects, setActiveProjectColor }) => {
     <Suspense fallback="loading">
       <div className="projects-container">
         {projects.map((project) => {
-          return <ProjectPreview project={project} translation={translation} />;
+          return (
+            <ProjectPreview
+              key={project.projectId}
+              project={project}
+              translation={translation}
+            />
+          );
         })}
       </div>
     </Suspense>

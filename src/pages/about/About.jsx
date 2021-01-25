@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const About = ({ setActiveProjectColor }) => {
-  setActiveProjectColor("green");
+  useEffect(() => {
+    setActiveProjectColor("green");
+  }, [setActiveProjectColor]);
+
   return <div style={{ height: "300vh" }}>about</div>;
 };
 

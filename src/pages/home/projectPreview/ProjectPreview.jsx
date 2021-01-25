@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import FilterTag from "../../../components/filterTag/FilterTag";
+import generateRandomKey from "../../../utils/functions/generateRandomKey";
 
 const ProjectPreview = ({ project, translation }) => {
   const {
@@ -36,6 +37,7 @@ const ProjectPreview = ({ project, translation }) => {
           {Object.values(tags).map((tag) => {
             return (
               <FilterTag
+                key={generateRandomKey()}
                 tag={tag}
                 projectName={projectName}
                 translation={translation}

@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
 import baseStyles from "../../../../styles/_baseStyles.scss";
+import generateRandomKey from "../../../../utils/functions/generateRandomKey";
 
 export const GenerateRandomShapes = ({ projectPreview }) => {
   let numberOfShapeItems;
@@ -60,6 +61,7 @@ export const GenerateRandomShapes = ({ projectPreview }) => {
           transition: 40s ease-in-out;
           transform: ${`translate(${getRandomSizeAndPosition()}%, ${getRandomSizeAndPosition()}%)`};
         `}
+        key={generateRandomKey()}
       />
     );
   }

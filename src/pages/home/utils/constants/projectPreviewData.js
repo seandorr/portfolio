@@ -31,13 +31,6 @@ const projectPreviewData = {
     projectColor: colors.targetbaseColor,
     projectLink: "#",
   },
-  losDosCreative: {
-    projectId: 5,
-    projectName: "losDosCreative",
-    projectImage: "losdos.jpg",
-    projectColor: colors.losDosCreativeColor,
-    projectLink: "#",
-  },
 };
 
 export default projectPreviewData;

@@ -2,7 +2,6 @@ import React, { useEffect, Suspense } from "react";
 import ProjectPreview from "./projectPreview/ProjectPreview";
 import useWindowSize from "../../utils/customHooks/useWindowSize";
 import useScrollDirection from "../../utils/customHooks/useScrollDirection";
-import generateRandomKey from "../../utils/functions/generateRandomKey";
 import "./home.scss";
 
 const Home = ({ translation, projects, setActiveProjectColor }) => {
@@ -52,7 +51,7 @@ const Home = ({ translation, projects, setActiveProjectColor }) => {
         {projects.map((project) => {
           return (
             <ProjectPreview
-              key={generateRandomKey()}
+              key={project.projectId}
               project={project}
               translation={translation}
             />

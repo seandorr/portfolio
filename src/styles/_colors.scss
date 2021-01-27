@@ -2,9 +2,14 @@ $light-color: #fff;
 $dark-medium-color: #d1d1d1;
 $dark-color: #000;
 $nominapress-color: #233869;
-$random-shapes-color: purple;
+$random-shapes-color: #c672cc;
 $gemini-color: #0fa5a1;
 $targetbase-color: #ffb902;
+
+$music-library-color-1: #e85757;
+$music-library-color-2: #71ccbe;
+$music-library-color-3: #c672cc;
+$music-library-color-4: #e5d1c1;
 
 :export {
   lightColor: $light-color;
@@ -14,4 +19,8 @@ $targetbase-color: #ffb902;
   randomShapesColor: $random-shapes-color;
   geminiColor: $gemini-color;
   targetbaseColor: $targetbase-color;
+  musicLibraryColor1: $music-library-color-1;
+  musicLibraryColor2: $music-library-color-2;
+  musicLibraryColor3: $music-library-color-3;
+  musicLibraryColor4: $music-library-color-4;
 }

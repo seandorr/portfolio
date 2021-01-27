@@ -4,6 +4,18 @@
     "contact": "Contacto"
   },
   "project": {
+    "musicLibrary": {
+      "title": "Biblioteca de Música",
+      "tags": {
+        "frontEnd": "front-end",
+        "react": "react",
+        "JSX": "JSX",
+        "SCSS": "SCSS",
+        "emotion": "emotion",
+        "design": "diseño"
+      },
+      "imageAlt": "diseño web de una biblioteca de música"
+    },
     "nominapress": {
       "title": "Nominapress",
       "tags": {
@@ -14,7 +26,7 @@
         "emotion": "emotion",
         "design": "diseño"
       },
-      "imageAlt": "nominapress web design"
+      "imageAlt": "diseño web de nominapress"
     },
     "randomShapes": {
       "title": "Aleatorización",

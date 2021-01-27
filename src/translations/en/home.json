@@ -4,6 +4,18 @@
     "contact": "Contact"
   },
   "project": {
+    "musicLibrary": {
+      "title": "Music Library",
+      "tags": {
+        "frontEnd": "front-end",
+        "react": "react",
+        "JSX": "JSX",
+        "SCSS": "SCSS",
+        "emotion": "emotion",
+        "design": "design"
+      },
+      "imageAlt": "music library design"
+    },
     "nominapress": {
       "title": "Nominapress",
       "tags": {

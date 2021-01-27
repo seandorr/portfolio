@@ -43,6 +43,10 @@ const Home = ({ translation, projects, setActiveProjectColor }) => {
     };
 
     handleProjectColors();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, [calculatedWindowHeight, projects, setActiveProjectColor]);
 
   return (

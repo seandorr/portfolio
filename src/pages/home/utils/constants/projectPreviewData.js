@@ -1,5 +1,5 @@
 import React from "react";
-import RandomShapesPreview from "../../randomShapes/RandomShapesPreview";
+import RandomShapesPreview from "../../RandomShapes/RandomShapesPreview";
 import colors from "../../../../styles/_colors.scss";
 
 const projectPreviewData = {

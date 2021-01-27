@@ -1,5 +1,5 @@
 import React, { useEffect, Suspense } from "react";
-import ProjectPreview from "./projectPreview/ProjectPreview";
+import ProjectPreview from "./ProjectPreview/ProjectPreview";
 import useWindowSize from "../../utils/customHooks/useWindowSize";
 import useScrollDirection from "../../utils/customHooks/useScrollDirection";
 import "./home.scss";

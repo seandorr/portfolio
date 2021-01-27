@@ -35,22 +35,24 @@ const App = () => {
         handleOnClickEnglishBtn={handleOnClickEnglishBtn}
         translation={translation}
       />
-      <Switch>
-        <Route path="/" exact>
-          <Home
-            translation={translation}
-            projects={PROJECTS}
-            setActiveProjectColor={setActiveProjectColor}
-            activeProjectColor={activeProjectColor}
-          />
-        </Route>
-        <Route path="/about">
-          <About setActiveProjectColor={setActiveProjectColor} />
-        </Route>
-        <Route path="/contact">
-          <Contact setActiveProjectColor={setActiveProjectColor} />
-        </Route>
-      </Switch>
+      <div className="page-content">
+        <Switch>
+          <Route path="/" exact>
+            <Home
+              translation={translation}
+              projects={PROJECTS}
+              setActiveProjectColor={setActiveProjectColor}
+              activeProjectColor={activeProjectColor}
+            />
+          </Route>
+          <Route path="/about">
+            <About setActiveProjectColor={setActiveProjectColor} />
+          </Route>
+          <Route path="/contact">
+            <Contact setActiveProjectColor={setActiveProjectColor} />
+          </Route>
+        </Switch>
+      </div>
     </Router>
   );
 };

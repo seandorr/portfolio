@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import FilterTag from "../../../components/filterTag/FilterTag";
+import FilterTag from "../../../components/FilterTag/FilterTag";
 import generateRandomKey from "../../../utils/functions/generateRandomKey";
 
 const ProjectPreview = ({ project, translation }) => {

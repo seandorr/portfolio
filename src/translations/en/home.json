@@ -4,6 +4,18 @@
     "contact": "Contact"
   },
   "project": {
+    "musicLibrary": {
+      "title": "Music Library",
+      "tags": {
+        "frontEnd": "front-end",
+        "react": "react",
+        "JSX": "JSX",
+        "SCSS": "SCSS",
+        "emotion": "emotion",
+        "design": "design"
+      },
+      "imageAlt": "music library design"
+    },
     "nominapress": {
       "title": "Nominapress",
       "tags": {
@@ -50,14 +62,6 @@
         "JS": "JS"
       },
       "imageAlt": "targetbase web design"
-    },
-    "losDosCreative": {
-      "title": "Los Dos Creative",
-      "tags": {
-        "logo": "logo",
-        "branding": "branding"
-      },
-      "imageAlt": "los dos creative logo"
     }
   },
   "viewButton": "View Project"

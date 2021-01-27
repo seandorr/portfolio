@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import GridLines from "./components/gridLines/GridLines";
+import GridLines from "./components/GridLines/GridLines";
 import NavBar from "./components/navigation/NavBar";
-import Home from "./pages/home/Home";
-import About from "./pages/about/About";
-import Contact from "./pages/contact/Contact";
-import projectPreviewData from "./pages/home/utils/constants/projectPreviewData";
+import Home from "./pages/Home/Home";
+import projectPreviewData from "./pages/Home/utils/constants/projectPreviewData";
+import About from "./pages/About/About";
+import Contact from "./pages/Contact/Contact";
 
 const PROJECTS = Object.values(projectPreviewData);
 
@@ -35,22 +35,24 @@ const App = () => {
         handleOnClickEnglishBtn={handleOnClickEnglishBtn}
         translation={translation}
       />
-      <Switch>
-        <Route path="/" exact>
-          <Home
-            translation={translation}
-            projects={PROJECTS}
-            setActiveProjectColor={setActiveProjectColor}
-            activeProjectColor={activeProjectColor}
-          />
-        </Route>
-        <Route path="/about">
-          <About setActiveProjectColor={setActiveProjectColor} />
-        </Route>
-        <Route path="/contact">
-          <Contact setActiveProjectColor={setActiveProjectColor} />
-        </Route>
-      </Switch>
+      <div className="page-content">
+        <Switch>
+          <Route path="/" exact>
+            <Home
+              translation={translation}
+              projects={PROJECTS}
+              setActiveProjectColor={setActiveProjectColor}
+              activeProjectColor={activeProjectColor}
+            />
+          </Route>
+          <Route path="/about">
+            <About setActiveProjectColor={setActiveProjectColor} />
+          </Route>
+          <Route path="/contact">
+            <Contact setActiveProjectColor={setActiveProjectColor} />
+          </Route>
+        </Switch>
+      </div>
     </Router>
   );
 };

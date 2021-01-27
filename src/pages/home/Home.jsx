@@ -1,5 +1,5 @@
 import React, { useEffect, Suspense } from "react";
-import ProjectPreview from "./projectPreview/ProjectPreview";
+import ProjectPreview from "./ProjectPreview/ProjectPreview";
 import useWindowSize from "../../utils/customHooks/useWindowSize";
 import useScrollDirection from "../../utils/customHooks/useScrollDirection";
 import "./home.scss";
@@ -43,6 +43,10 @@ const Home = ({ translation, projects, setActiveProjectColor }) => {
     };
 
     handleProjectColors();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, [calculatedWindowHeight, projects, setActiveProjectColor]);
 
   return (

@@ -7,6 +7,14 @@ body {
   font-family: "Menlo", -apple-system, sans-serif;
 }
 
+.page-content {
+  margin: 25px;
+
+  @include tablet {
+    margin: 0;
+  }
+}
+
 h1 {
   font-size: 36px;
   font-weight: 400;

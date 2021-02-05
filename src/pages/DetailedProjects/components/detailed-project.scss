@@ -1,0 +1,32 @@
+@import "../../../styles/main.scss";
+
+.project-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+  padding-top: 150px;
+  height: 300vh;
+
+  .project-details-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.page-container {
+  height: 300vh;
+
+  .about-project-container {
+    width: 100%;
+    padding: 500px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    h1 {
+      color: $light-color;
+    }
+  }
+}
+

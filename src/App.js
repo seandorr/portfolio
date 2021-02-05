@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import GridLines from "./components/GridLines/GridLines";
-import NavBar from "./components/navigation/NavBar";
+import NavBar from "./components/Navbar/NavBar";
 import Home from "./pages/Home/Home";
 import projectPreviewData from "./pages/Home/utils/constants/projectPreviewData";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import DetailedProject from "./pages/DetailedProjects/components/DetailedProject";
 
 const PROJECTS = Object.values(projectPreviewData);
 
@@ -27,7 +28,7 @@ const App = () => {
 
   return (
     <Router>
-      <GridLines activeProjectColor={activeProjectColor} />
+      <ScrollToTop />
       <NavBar
         activeProjectColor={activeProjectColor}
         activeTranslationBtn={activeTranslationBtn}
@@ -51,6 +52,14 @@ const App = () => {
           <Route path="/contact">
             <Contact setActiveProjectColor={setActiveProjectColor} />
           </Route>
+          {PROJECTS.map((project) => {
+            const { projectLink } = project;
+            return (
+              <Route path={`/${projectLink}`}>
+                <DetailedProject translation={translation} project={project} setActiveProjectColor={setActiveProjectColor}/>
+              </Route>
+            );
+          })}
         </Switch>
       </div>
     </Router>

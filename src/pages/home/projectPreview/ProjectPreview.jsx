@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import FilterTag from "../../../components/FilterTag/FilterTag";
 import generateRandomKey from "../../../utils/functions/generateRandomKey";
 
@@ -45,9 +46,9 @@ const ProjectPreview = ({ project, translation }) => {
             );
           })}
         </div>
-        <a className="link project-link" href={projectLink}>
+        <Link to={projectLink} className="link project-link">
           {translation(`viewButton`)}
-        </a>
+        </Link>
       </div>
     </div>
   );

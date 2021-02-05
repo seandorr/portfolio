@@ -7,6 +7,7 @@
     "musicLibrary": {
       "title": "Music Library",
       "tags": {
+        "WIP": "WIP",
         "frontEnd": "front-end",
         "react": "react",
         "JSX": "JSX",

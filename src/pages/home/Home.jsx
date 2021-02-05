@@ -1,10 +1,11 @@
 import React, { useEffect, Suspense } from "react";
+import GridLines from "../../components/GridLines/GridLines";
 import ProjectPreview from "./ProjectPreview/ProjectPreview";
 import useWindowSize from "../../utils/customHooks/useWindowSize";
 import useScrollDirection from "../../utils/customHooks/useScrollDirection";
 import "./home.scss";
 
-const Home = ({ translation, projects, setActiveProjectColor }) => {
+const Home = ({ translation, projects, setActiveProjectColor, activeProjectColor }) => {
   const getScrollDirection = useScrollDirection();
   const getWindowHeight = useWindowSize().height;
   const getWindowWidth = useWindowSize().width;
@@ -51,6 +52,7 @@ const Home = ({ translation, projects, setActiveProjectColor }) => {
 
   return (
     <Suspense fallback="loading">
+      <GridLines activeProjectColor={activeProjectColor}/>
       <div className="projects-container">
         {projects.map((project) => {
           return (

@@ -56,7 +56,12 @@ const App = () => {
             const { projectLink } = project;
             return (
               <Route path={`/${projectLink}`}>
-                <DetailedProject translation={translation} project={project} setActiveProjectColor={setActiveProjectColor}/>
+                <DetailedProject
+                  translation={translation}
+                  projects={PROJECTS}
+                  project={project}
+                  setActiveProjectColor={setActiveProjectColor}
+                />
               </Route>
             );
           })}

@@ -7,8 +7,9 @@ const projectPreviewData = {
     projectId: 1,
     projectName: "musicLibrary",
     projectImage: "music-library.svg",
-    projectColor: colors.musicLibraryColor2,
+    projectColor: colors.musicLibraryColor1,
     projectLink: "music-library",
+    gitLink: "https://github.com/seandorr",
   },
   nominapress: {
     projectId: 2,

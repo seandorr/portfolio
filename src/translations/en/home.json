@@ -65,5 +65,7 @@
       "imageAlt": "targetbase web design"
     }
   },
-  "viewButton": "View Project"
+  "viewButton": "View Project",
+  "prevButton": "Previous",
+  "nextButton": "Next"
 }

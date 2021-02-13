@@ -65,5 +65,7 @@
       "imageAlt": "diseño web de targetbase"
     }
   },
-  "viewButton": "Ver Proyecto"
+  "viewButton": "Ver Proyecto",
+  "prevButton": "Previo",
+  "nextButton": "Próximo"
 }

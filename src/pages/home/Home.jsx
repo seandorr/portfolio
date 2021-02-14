@@ -5,7 +5,12 @@ import useWindowSize from "../../utils/customHooks/useWindowSize";
 import useScrollDirection from "../../utils/customHooks/useScrollDirection";
 import "./home.scss";
 
-const Home = ({ translation, projects, setActiveProjectColor, activeProjectColor }) => {
+const Home = ({
+  translation,
+  projects,
+  setActiveProjectColor,
+  activeProjectColor,
+}) => {
   const getScrollDirection = useScrollDirection();
   const getWindowHeight = useWindowSize().height;
   const getWindowWidth = useWindowSize().width;
@@ -52,7 +57,7 @@ const Home = ({ translation, projects, setActiveProjectColor, activeProjectColor
 
   return (
     <Suspense fallback="loading">
-      <GridLines activeProjectColor={activeProjectColor}/>
+      <GridLines activeProjectColor={activeProjectColor} />
       <div className="projects-container">
         {projects.map((project) => {
           return (

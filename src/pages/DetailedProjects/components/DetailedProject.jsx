@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import FilterTag from "../../../components/FilterTag/FilterTag";
@@ -16,12 +16,14 @@ const DetailedProject = ({
   const {
     projectName,
     projectColor,
-    projectImage,
     gitLink,
     projectId,
     projectDetailedComponent,
   } = project;
-  setActiveProjectColor(projectColor);
+
+  useEffect(() => {
+    setActiveProjectColor(projectColor);
+  }, [projectColor, setActiveProjectColor]);
 
   let previousProject = projects[projectId - 2];
   let nextProject = projects[projectId];
@@ -66,6 +68,7 @@ const DetailedProject = ({
                 className="project-git-link link"
                 href={gitLink}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Git Repo
               </a>
@@ -77,7 +80,7 @@ const DetailedProject = ({
           {isObjectWithValues(descriptionBullets) && (
             <ul className="project-about-details-list">
               {Object.values(descriptionBullets).map((bullet) => {
-                return <li>{bullet}</li>;
+                return <li key={generateRandomKey()}>{bullet}</li>;
               })}
             </ul>
           )}
@@ -132,7 +135,7 @@ const DetailedProject = ({
 
 DetailedProject.propTypes = {
   translation: PropTypes.func,
-  project: PropTypes.arrayOf(Object).isRequired,
+  project: PropTypes.objectOf(Object).isRequired,
   setActiveProjectColor: PropTypes.func,
 };
 

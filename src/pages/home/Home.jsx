@@ -2,7 +2,6 @@ import React, { useEffect, Suspense } from "react";
 import GridLines from "../../components/GridLines/GridLines";
 import ProjectPreview from "./ProjectPreview/ProjectPreview";
 import useWindowSize from "../../utils/customHooks/useWindowSize";
-import useScrollDirection from "../../utils/customHooks/useScrollDirection";
 import "./home.scss";
 
 const Home = ({
@@ -11,34 +10,29 @@ const Home = ({
   setActiveProjectColor,
   activeProjectColor,
 }) => {
-  const getScrollDirection = useScrollDirection();
   const getWindowHeight = useWindowSize().height;
   const getWindowWidth = useWindowSize().width;
-
-  let calculatedWindowHeight;
-  if (getScrollDirection === "down" && getWindowWidth >= 768) {
-    calculatedWindowHeight = getWindowHeight - 100;
-  } else if (getScrollDirection === "up" && getWindowWidth >= 768) {
-    calculatedWindowHeight = getWindowHeight - 200;
-  } else {
-    calculatedWindowHeight = 800;
-  }
+  const isMobileSize = getWindowWidth < 768;
 
   useEffect(() => {
     const handleScroll = () => {
       const indexOfProjectCurrentlyInView = Math.floor(
-        window.scrollY / calculatedWindowHeight
+        window.scrollY / (getWindowHeight / 1.2)
       );
 
-      if (indexOfProjectCurrentlyInView < projects.length) {
-        setActiveProjectColor(
-          projects[indexOfProjectCurrentlyInView].projectColor
-        );
-      } else {
-        const lastProject = projects.length - 1;
-        setActiveProjectColor(projects[lastProject].projectColor);
+      if (projects[indexOfProjectCurrentlyInView] !== undefined) {
+        if (indexOfProjectCurrentlyInView < projects.length) {
+          setActiveProjectColor(
+            projects[indexOfProjectCurrentlyInView].projectColor
+          );
+        } else {
+          const lastProject = projects.length - 1;
+          setActiveProjectColor(projects[lastProject].projectColor);
+        }
       }
     };
+
+    window.addEventListener("scroll", handleScroll);
 
     const handleProjectColors = () => {
       if (window.scrollY <= 1) {
@@ -53,11 +47,11 @@ const Home = ({
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [calculatedWindowHeight, projects, setActiveProjectColor]);
+  }, [getWindowHeight, projects, setActiveProjectColor]);
 
   return (
     <Suspense fallback="loading">
-      <GridLines activeProjectColor={activeProjectColor} />
+      {!isMobileSize && <GridLines activeProjectColor={activeProjectColor} />}
       <div className="projects-container">
         {projects.map((project) => {
           return (

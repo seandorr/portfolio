@@ -3,6 +3,7 @@ import { jsx, css } from "@emotion/react";
 import PropTypes from "prop-types";
 import colors from "../../../../styles/_colors.scss";
 import MusicLibraryActiveItemContent from "./MusicLibraryActiveItemContent";
+import useWindowSize from "../../../../utils/customHooks/useWindowSize";
 
 const MusicLibraryItem = (props) => {
   const {
@@ -15,21 +16,34 @@ const MusicLibraryItem = (props) => {
     setActiveItem,
   } = props;
 
+  const getWindowWidth = useWindowSize().width;
+  const largeScreenSize = getWindowWidth >= 768;
+
   const handleOnClickItem = (value) => {
     setActiveItem((prevactiveMenuItem) => {
       return prevactiveMenuItem !== value ? value : value;
     });
   };
 
+  const largeScreenStyles = css`
+    background-color: ${colors[color]};
+
+    &.active-item {
+      width: calc(100% - ${80 * (numberOfItems - 1)}px);
+    }
+  `;
+
+  const smallScreenStyles = css`
+    background-color: ${colors[color]};
+
+    &.active-item {
+      height: calc(100% - ${80 * (numberOfItems - 1)}px);
+    }
+  `;
+
   return (
     <div
-      css={css`
-        background-color: ${colors[color]};
-
-        &.active-item {
-          width: calc(100% - ${80 * (numberOfItems - 1)}px);
-        }
-      `}
+      css={largeScreenSize ? largeScreenStyles : smallScreenStyles}
       className={`music-library__item ${
         activeItem && musicLibraryItems[activeItem].value === value
           ? "active-item"
@@ -46,6 +60,7 @@ const MusicLibraryItem = (props) => {
           activeItem={activeItem}
           value={value}
           color={color}
+          largeScreenSize={largeScreenSize}
         />
       </div>
     </div>

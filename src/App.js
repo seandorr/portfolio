@@ -8,6 +8,7 @@ import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import DetailedProject from "./pages/DetailedProjects/components/DetailedProject";
+import generateRandomKey from "./utils/functions/generateRandomKey";
 
 const PROJECTS = Object.values(projectPreviewData);
 
@@ -55,12 +56,13 @@ const App = () => {
           {PROJECTS.map((project) => {
             const { projectLink } = project;
             return (
-              <Route path={`/${projectLink}`}>
+              <Route path={`/${projectLink}`} key={generateRandomKey()}>
                 <DetailedProject
                   translation={translation}
                   projects={PROJECTS}
                   project={project}
                   setActiveProjectColor={setActiveProjectColor}
+                  key={generateRandomKey()}
                 />
               </Route>
             );

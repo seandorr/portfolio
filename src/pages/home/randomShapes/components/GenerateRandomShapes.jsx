@@ -2,8 +2,9 @@
 import { jsx, css } from "@emotion/react";
 import baseStyles from "../../../../styles/_baseStyles.scss";
 import useWindowSize from "../../../../utils/customHooks/useWindowSize";
+import generateRandomKey from "../../../../utils/functions/generateRandomKey";
 
-export const GenerateRandomShapes = ({ type, key }) => {
+export const GenerateRandomShapes = ({ type }) => {
   const getWindowWidth = useWindowSize().width;
 
   let numberOfShapeItems;
@@ -63,7 +64,7 @@ export const GenerateRandomShapes = ({ type, key }) => {
           transition: 40s ease-in-out;
           transform: ${`translate(${getRandomSizeAndPosition()}%, ${getRandomSizeAndPosition()}%)`};
         `}
-        key={key}
+        key={generateRandomKey()}
       />
     );
   }

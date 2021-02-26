@@ -25,6 +25,7 @@
         "JSX": "JSX",
         "SCSS": "SCSS",
         "emotion": "emotion",
+        "translations": "i18n",
         "design": "diseño"
       },
       "imageAlt": "diseño web de nominapress"

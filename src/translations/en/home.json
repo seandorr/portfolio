@@ -15,7 +15,8 @@
         "emotion": "emotion",
         "design": "design"
       },
-      "imageAlt": "music library design"
+      "imageAlt": "music library design",
+      "description": "You know this feeling when you discover a great song for the first time? This project aims to deliver this feeling by sharing tailored Spotify playlists ranging through all genres. I built the navigation in a way to resemble how you would flip through vinyls in a box or CDs on a shelf, which is all too familiar to a music lover."
     },
     "nominapress": {
       "title": "Nominapress",
@@ -25,9 +26,17 @@
         "JSX": "JSX",
         "SCSS": "SCSS",
         "emotion": "emotion",
+        "translations": "i18n",
         "design": "design"
       },
-      "imageAlt": "nominapress web design"
+      "imageAlt": "nominapress web design",
+      "description": "I continue to work full-time at Nominapress. We develop and maintain a human resources management app. Some notable features that I have worked on are:",
+      "descriptionBullets": {
+        "bullet1": "Facial recognition login",
+        "bullet2": "Job application board",
+        "bullet3": "Scheduling shifts",
+        "bullet4": "Time off requests"
+      }
     },
     "randomShapes": {
       "title": "Randomization",

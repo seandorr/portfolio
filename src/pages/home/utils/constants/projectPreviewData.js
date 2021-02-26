@@ -1,6 +1,7 @@
 import React from "react";
-import RandomShapesPreview from "../../RandomShapes/RandomShapesPreview";
+import RandomShapes from "../../RandomShapes/RandomShapes";
 import colors from "../../../../styles/_colors.scss";
+import MusicLibrary from "../../MusicLibrary/MusicLibrary";
 
 const projectPreviewData = {
   musicLibrary: {
@@ -10,6 +11,7 @@ const projectPreviewData = {
     projectColor: colors.musicLibraryColor1,
     projectLink: "music-library",
     gitLink: "https://github.com/seandorr",
+    projectDetailedComponent: <MusicLibrary />,
   },
   nominapress: {
     projectId: 2,
@@ -21,9 +23,10 @@ const projectPreviewData = {
   randomShapes: {
     projectId: 3,
     projectName: "randomShapes",
-    projectComponent: <RandomShapesPreview />,
+    projectComponent: <RandomShapes type="preview" />,
     projectColor: colors.randomShapesColor,
     projectLink: "random-shapes",
+    projectDetailedComponent: <RandomShapes type="detailed" />,
   },
   gemini: {
     projectId: 4,

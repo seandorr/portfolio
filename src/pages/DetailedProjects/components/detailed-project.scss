@@ -1,12 +1,24 @@
 @import "../../../styles/main.scss";
 
 .detailed-project-container {
-  margin: 0 50px;
   margin-top: 100px;
+
+  @include tablet {
+    margin-top: 130px;
+  }
   .project-details-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-gap: 25px;
+    margin: 0;
+
+    @include tablet {
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: auto auto;
+      grid-gap: 50px;
+      margin: 0 50px;
+    }
 
     .project-details-grid-item {
       border-radius: $border-radius;
@@ -28,6 +40,15 @@
 
       &.info {
         background-color: $dark-medium-color;
+
+        .project-about-details-list {
+          margin-top: 1rem;
+          li {
+            list-style: square;
+            margin-left: 1rem;
+            padding: 0.5rem 0;
+          }
+        }
       }
 
       &.stack {
@@ -47,12 +68,40 @@
       }
     }
   }
+
+  #project-view {
+    position: sticky;
+    top: 0;
+    padding-bottom: 50vh;
+
+    &.unstick {
+      position: relative !important;
+      top: auto !important;
+      margin-top: 200px !important;
+      padding-bottom: 0 !important;
+    }
+  }
+
+  // #project-view {
+  //   &.sticky {
+  //     position: sticky;
+  //     top: 0;
+  //     padding-bottom: 50vh;
+  //   }
+  // }
+
   footer {
     &.project-nav-links {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 50px;
-      margin: 50px 0;
+      grid-template-columns: 1fr;
+      grid-gap: 25px;
+      margin: 25px 0;
+
+      @include tablet {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+        margin: 50px;
+      }
 
       .project-nav-link {
         display: flex;

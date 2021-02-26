@@ -5,6 +5,8 @@ import "./detailed-project.scss";
 import FilterTag from "../../../components/FilterTag/FilterTag";
 import generateRandomKey from "../../../utils/functions/generateRandomKey";
 import { Tilt } from "../../../components/CustomTilt/CustomTilt";
+import { isObjectWithValues } from "../../../utils/validators/objectValidator";
+import MusicLibrary from "../../Home/MusicLibrary/MusicLibrary";
 
 const DetailedProject = ({
   translation,
@@ -33,33 +35,63 @@ const DetailedProject = ({
     nextProject = projects[0];
   }
 
-  // useEffect(() => {
-  //   const handleMargins = () => {
-  //     const scrollPosition = window.scrollY;
-  //     const calcMargins = 50 - scrollPosition;
+  useEffect(() => {
+    const handleMargins = () => {
+      const scrollPosition = window.scrollY;
+      const getProject = document.querySelector("#project-view");
+      const projOffsetTop = getProject.offsetTop;
+      const whenToChangeMargin = projOffsetTop - 50;
+      const whenProjReachesTopOfBrowser = scrollPosition - projOffsetTop;
+      const hasProjReachesTopOfBrowser = whenProjReachesTopOfBrowser >= 0;
+      const whenToRemoveSticky = projOffsetTop + 150 === scrollPosition;
 
-  //     console.log("calcMargins", calcMargins);
-  //     if (calcMargins >= 0) {
-  //       setMargins(calcMargins);
-  //     } else {
-  //       setMargins(0);
-  //     }
-  //   };
-  //   window.addEventListener("scroll", handleMargins);
+      // if (hasProjReachesTopOfBrowser) {
+      //   getProject.classList.add("sticky");
+      // }
 
-  //   return () => {
-  //     window.removeEventListener("scroll", handleMargins);
-  //   };
-  // }, [margins]);
+      // if (whenToRemoveSticky > scrollPosition) {
+      //   getProject.classList.remove("sticky");
+      // }
 
-  const aboutStyles = {
-    // margin: `0 ${margins}px`,
-    // backgroundColor: projectColor,
+      if (scrollPosition < whenToChangeMargin) {
+        setMargins(50);
+      } else {
+        const calcSubtractedMargins = whenToChangeMargin - scrollPosition + 50;
+        if (calcSubtractedMargins >= 0) {
+          setMargins(calcSubtractedMargins);
+          getProject.classList.remove("unstick");
+        } else {
+          const calcAddedMargins = scrollPosition - whenToChangeMargin - 50;
+          if (calcAddedMargins > 50) {
+            return;
+          } else {
+            setMargins(calcAddedMargins);
+            getProject.classList.add("unstick");
+          }
+        }
+      }
+    };
+    window.addEventListener("scroll", handleMargins);
+
+    return () => {
+      window.removeEventListener("scroll", handleMargins);
+    };
+  }, [margins]);
+
+  const projectStyles = {
+    margin: `0 ${margins}px`,
   };
 
   const tags = translation(`project.${projectName}.tags`, {
     returnObjects: true,
   });
+
+  const descriptionBullets = translation(
+    `project.${projectName}.descriptionBullets`,
+    {
+      returnObjects: true,
+    }
+  );
 
   const prevProjectLinkStyles = {
     background: `${previousProject.projectColor}`,
@@ -87,14 +119,16 @@ const DetailedProject = ({
               </a>
             )}
           </div>
-
           <p className="project-about-details">
-            You know that feeling when you discover a great song for the first
-            time? This project aims to deliver this feeling by sharing tailored
-            Spotify playlists ranging through all genres. I built the navigation
-            in a way to resemble how you would flip through vinyls in a box or
-            CDs on a shelf, which is all too familiar to a music lover.
+            {translation(`project.${projectName}.description`)}
           </p>
+          {isObjectWithValues(descriptionBullets) && (
+            <ul className="project-about-details-list">
+              {Object.values(descriptionBullets).map((bullet) => {
+                return <li>{bullet}</li>;
+              })}
+            </ul>
+          )}
         </div>
         <div
           className="project-details-grid-item stack"
@@ -113,6 +147,9 @@ const DetailedProject = ({
             })}
           </div>
         </div>
+      </div>
+      <div id="project-view" style={projectStyles}>
+        <MusicLibrary />
       </div>
       <footer className="project-nav-links">
         <Link to={`/${previousProject.projectLink}`}>

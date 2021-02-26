@@ -69,26 +69,13 @@
     }
   }
 
-  #project-view {
-    position: sticky;
-    top: 0;
-    padding-bottom: 50vh;
+  .project-view {
+    margin: 0;
 
-    &.unstick {
-      position: relative !important;
-      top: auto !important;
-      margin-top: 200px !important;
-      padding-bottom: 0 !important;
+    @include tablet {
+      margin: 0 50px;
     }
   }
-
-  // #project-view {
-  //   &.sticky {
-  //     position: sticky;
-  //     top: 0;
-  //     padding-bottom: 50vh;
-  //   }
-  // }
 
   footer {
     &.project-nav-links {

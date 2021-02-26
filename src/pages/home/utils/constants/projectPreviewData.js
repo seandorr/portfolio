@@ -2,6 +2,8 @@ import React from "react";
 import RandomShapes from "../../RandomShapes/RandomShapes";
 import colors from "../../../../styles/_colors.scss";
 import MusicLibrary from "../../MusicLibrary/MusicLibrary";
+import generateRandomKey from "../../../../utils/functions/generateRandomKey";
+import Gemini from "../../Gemini/Gemini";
 
 const projectPreviewData = {
   musicLibrary: {
@@ -23,10 +25,12 @@ const projectPreviewData = {
   randomShapes: {
     projectId: 3,
     projectName: "randomShapes",
-    projectComponent: <RandomShapes type="preview" />,
+    projectComponent: <RandomShapes type="preview" key={generateRandomKey()} />,
     projectColor: colors.randomShapesColor,
     projectLink: "random-shapes",
-    projectDetailedComponent: <RandomShapes type="detailed" />,
+    projectDetailedComponent: (
+      <RandomShapes type="detailed" key={generateRandomKey()} />
+    ),
   },
   gemini: {
     projectId: 4,
@@ -34,6 +38,7 @@ const projectPreviewData = {
     projectImage: "gemini-hero.jpg",
     projectColor: colors.geminiColor,
     projectLink: "gemini",
+    projectDetailedComponent: <Gemini />,
   },
   targetbase: {
     projectId: 5,

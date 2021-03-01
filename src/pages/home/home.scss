@@ -5,19 +5,25 @@
   will-change: transform;
 
   .content-grid {
-    height: 700px;
+    height: auto;
     min-height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    margin: 100px 0;
+
+    &:not(:first-of-type) {
+      margin: 100px 0;
+    }
 
     @include tablet {
       height: 100vh;
       flex-direction: row;
-      margin: 0;
+
+      &:not(:first-of-type) {
+        margin: 0;
+      }
     }
 
     .content {
@@ -27,20 +33,6 @@
       @include tablet {
         width: 50%;
         margin: 0 50px;
-      }
-
-      .filter-tag-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-
-        .filter-tag {
-          font-size: 18px;
-          margin: 25px 25px 0 0;
-          padding: 10px;
-          background-color: $dark-medium-color;
-          border-radius: $border-radius;
-        }
       }
 
       .project-link {

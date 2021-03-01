@@ -7,6 +7,7 @@
     "musicLibrary": {
       "title": "Music Library",
       "tags": {
+        "WIP": "WIP",
         "frontEnd": "front-end",
         "react": "react",
         "JSX": "JSX",
@@ -14,7 +15,8 @@
         "emotion": "emotion",
         "design": "design"
       },
-      "imageAlt": "music library design"
+      "imageAlt": "music library design",
+      "description": "You know this feeling when you discover a great song for the first time? This project aims to deliver this feeling by sharing tailored Spotify playlists ranging through all genres. I built the navigation in a way to resemble how you would flip through vinyls in a box or CDs on a shelf, which is all too familiar to a music lover."
     },
     "nominapress": {
       "title": "Nominapress",
@@ -24,9 +26,17 @@
         "JSX": "JSX",
         "SCSS": "SCSS",
         "emotion": "emotion",
+        "translations": "i18n",
         "design": "design"
       },
-      "imageAlt": "nominapress web design"
+      "imageAlt": "nominapress web design",
+      "description": "I continue to work full-time at Nominapress. We develop and maintain a human resources management app. Some notable features that I have worked on are:",
+      "descriptionBullets": {
+        "bullet1": "Facial recognition login",
+        "bullet2": "Job application board",
+        "bullet3": "Scheduling shifts",
+        "bullet4": "Time off requests"
+      }
     },
     "randomShapes": {
       "title": "Randomization",
@@ -36,7 +46,8 @@
         "JSX": "JSX",
         "emotion": "emotion"
       },
-      "imageAlt": "random shapes"
+      "imageAlt": "random shapes",
+      "description": "I am constantly learning how to better make code more dynamic. I had the idea to try and generate random colors. After I figured this out, I took the concept further and created random shapes of all sizes and colors that animate on random paths. The method uses Math.floor(Math.random() * number) to generate the random attributes."
     },
     "gemini": {
       "title": "Gemini Diversified Services",
@@ -48,7 +59,8 @@
         "SCSS": "SCSS",
         "JS": "JS"
       },
-      "imageAlt": "gemini web design"
+      "imageAlt": "gemini web design",
+      "description": "Gemini Diversified Services is a medical credentialing verification organization (CVO). Gemini wanted to position themselves unique against their competition, yet not stand out too different. Finding the right balance between these proved to be difficult; how far could we push the boundaries? In order to find equilibrium on the site, I used a mix of custom iconography, along with themed images and tag-lines dedicated to their California native sport - Surfing."
     },
     "targetbase": {
       "title": "Targetbase",
@@ -64,5 +76,7 @@
       "imageAlt": "targetbase web design"
     }
   },
-  "viewButton": "View Project"
+  "viewButton": "View Project",
+  "prevButton": "Previous",
+  "nextButton": "Next"
 }

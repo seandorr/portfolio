@@ -1,42 +1,48 @@
 import React from "react";
-import RandomShapesPreview from "../../RandomShapes/RandomShapesPreview";
+import RandomShapes from "../../RandomShapes/RandomShapes";
 import colors from "../../../../styles/_colors.scss";
+import MusicLibrary from "../../MusicLibrary/MusicLibrary";
+import Gemini from "../../Gemini/Gemini";
 
 const projectPreviewData = {
   musicLibrary: {
     projectId: 1,
     projectName: "musicLibrary",
     projectImage: "music-library.svg",
-    projectColor: colors.musicLibraryColor2,
-    projectLink: "#",
+    projectColor: colors.musicLibraryColor1,
+    projectLink: "music-library",
+    gitLink: "https://github.com/seandorr",
+    projectDetailedComponent: <MusicLibrary />,
   },
   nominapress: {
     projectId: 2,
     projectName: "nominapress",
     projectImage: "nominapress.svg",
     projectColor: colors.nominapressColor,
-    projectLink: "#",
+    projectLink: "nominapress",
   },
   randomShapes: {
     projectId: 3,
     projectName: "randomShapes",
-    projectComponent: <RandomShapesPreview />,
+    projectComponent: <RandomShapes type="preview" />,
     projectColor: colors.randomShapesColor,
-    projectLink: "#",
+    projectLink: "random-shapes",
+    projectDetailedComponent: <RandomShapes type="detailed" />,
   },
   gemini: {
     projectId: 4,
     projectName: "gemini",
     projectImage: "gemini-hero.jpg",
     projectColor: colors.geminiColor,
-    projectLink: "#",
+    projectLink: "gemini",
+    projectDetailedComponent: <Gemini />,
   },
   targetbase: {
     projectId: 5,
     projectName: "targetbase",
     projectImage: "targetbase-hero.jpg",
     projectColor: colors.targetbaseColor,
-    projectLink: "#",
+    projectLink: "targetbase",
   },
 };
 

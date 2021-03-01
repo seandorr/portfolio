@@ -7,6 +7,7 @@
     "musicLibrary": {
       "title": "Biblioteca de Música",
       "tags": {
+        "WIP": "trabajo en progreso",
         "frontEnd": "front-end",
         "react": "react",
         "JSX": "JSX",
@@ -24,6 +25,7 @@
         "JSX": "JSX",
         "SCSS": "SCSS",
         "emotion": "emotion",
+        "translations": "i18n",
         "design": "diseño"
       },
       "imageAlt": "diseño web de nominapress"
@@ -64,5 +66,7 @@
       "imageAlt": "diseño web de targetbase"
     }
   },
-  "viewButton": "Ver Proyecto"
+  "viewButton": "Ver Proyecto",
+  "prevButton": "Previo",
+  "nextButton": "Próximo"
 }

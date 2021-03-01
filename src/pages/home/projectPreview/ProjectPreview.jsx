@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import FilterTag from "../../../components/FilterTag/FilterTag";
-import generateRandomKey from "../../../utils/functions/generateRandomKey";
+import { Link } from "react-router-dom";
+import FilterTags from "../../../components/FilterTags/FilterTags";
 
 const ProjectPreview = ({ project, translation }) => {
   const {
@@ -11,10 +11,6 @@ const ProjectPreview = ({ project, translation }) => {
     projectComponent,
     projectLink,
   } = project;
-
-  const tags = translation(`project.${projectName}.tags`, {
-    returnObjects: true,
-  });
 
   return (
     <div
@@ -33,21 +29,14 @@ const ProjectPreview = ({ project, translation }) => {
       </div>
       <div className="content" id="col-right">
         <h1>{translation(`project.${projectName}.title`)}</h1>
-        <div className="filter-tag-container">
-          {Object.values(tags).map((tag) => {
-            return (
-              <FilterTag
-                key={generateRandomKey()}
-                tag={tag}
-                projectName={projectName}
-                translation={translation}
-              />
-            );
-          })}
-        </div>
-        <a className="link project-link" href={projectLink}>
+        <FilterTags
+          translation={translation}
+          projectName={projectName}
+          location="home"
+        />
+        <Link to={projectLink} className="link project-link">
           {translation(`viewButton`)}
-        </a>
+        </Link>
       </div>
     </div>
   );

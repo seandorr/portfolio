@@ -1,0 +1,240 @@
+@import "../../../styles/main.scss";
+
+.gemini-nav-bar {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .logo {
+    margin-left: 20px;
+    position: absolute;
+    left: 0;
+    top: 20px;
+
+    @include tablet {
+      margin-left: 40px;
+      position: relative;
+      top: auto;
+    }
+  }
+
+  ul {
+    width: 100%;
+    visibility: hidden;
+
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: flex-end;
+      visibility: visible;
+    }
+
+    li {
+      margin-left: 0;
+
+      @include tablet {
+        margin-left: 40px;
+      }
+
+      a {
+        color: $dark-color;
+        font-size: 48px;
+        font-weight: 400;
+        font-style: normal;
+        opacity: 0.9;
+
+        @include tablet {
+          font-size: 24px;
+        }
+      }
+
+      @media (hover) {
+        a:hover {
+          text-decoration: underline;
+          opacity: 1;
+        }
+      }
+
+      .active {
+        text-decoration: underline;
+        opacity: 1;
+      }
+    }
+
+    .notHome {
+      @include tablet {
+        margin-right: 40px;
+      }
+    }
+
+    #quote a {
+      color: $dark-color;
+      font-weight: 400;
+
+      @include tablet {
+        color: $light-color;
+        font-weight: 700;
+      }
+    }
+
+    #quote {
+      padding: 0 40px;
+      position: relative;
+    }
+
+    #quote::before {
+      content: "";
+      width: 100%;
+      height: auto;
+      background-color: $gemini-color;
+      box-shadow: $box-shadow;
+      border-radius: 0 0 0 10px;
+      position: absolute;
+      top: -37px;
+      right: 0;
+      z-index: -1;
+
+      @include tablet {
+        height: 100vh;
+      }
+    }
+  }
+
+  .nav-bar-icon {
+    position: absolute;
+    right: 20px;
+    top: 34px;
+    visibility: visible;
+
+    @include tablet {
+      visibility: hidden;
+    }
+  }
+
+  .close-btn {
+    color: $dark-color;
+    font-size: 48px;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 22px;
+    top: 23px;
+    visibility: hidden;
+  }
+}
+
+.nav-bar.responsive {
+  background-color: $light-color;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+}
+
+.nav-bar-ul.responsive {
+  text-align: center;
+  visibility: visible;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nav-bar-icon.responsive {
+  opacity: 0;
+}
+
+.close-btn.responsive {
+  visibility: visible;
+}
+
+.gemini-hero {
+  width: 100%;
+  height: auto;
+  font-family: priori-sans, sans-serif;
+  z-index: 2;
+
+  @include tablet {
+    height: calc(100vh - 100px);
+  }
+
+  .gemini-hero-container {
+    margin: 0 20px 20px 20px;
+    position: relative;
+
+    @include tablet {
+      margin: 0 40px 40px 40px;
+    }
+  }
+
+  .gemini-hero-img {
+    height: calc(100vh - 120px);
+    background-image: url("./assets/hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    min-height: 400px;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    position: relative;
+
+    @include tablet {
+      height: calc(100vh - 140px);
+    }
+
+    .gemini-hero-img-content-container {
+      width: 80%;
+      margin: 0 auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+
+      @include tablet {
+        margin: 40px;
+        left: 0;
+        top: auto;
+        bottom: 20px;
+        transform: none;
+        text-align: left;
+      }
+
+      h1 {
+        font-size: 60px;
+        font-weight: 700;
+        color: $light-color;
+        line-height: 0.88;
+        margin-bottom: 40px;
+      }
+
+      .gemini-btn {
+        color: $light-color;
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        background-color: transparent;
+        border: 2px solid $gemini-color;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
+        padding: 10px;
+        transition: 0.3s ease-in-out;
+
+        @include tablet {
+          font-size: 36px;
+          padding: 20px;
+        }
+
+        &:hover {
+          box-shadow: 0 0 0 4px $gemini-color;
+        }
+      }
+    }
+  }
+}

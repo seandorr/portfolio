@@ -1,0 +1,64 @@
+@import "../../../styles/main.scss";
+
+.detailed-project-container {
+  @include tablet {
+    margin-top: 130px;
+  }
+  .project-details-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-gap: 25px;
+    margin: 0;
+
+    @include tablet {
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: auto auto;
+      grid-gap: 50px;
+      margin: 0 50px;
+    }
+
+    .project-details-grid-item {
+      border-radius: $border-radius;
+      padding: 25px;
+
+      .project-git-link {
+        &.link {
+          &::after {
+            width: 100%;
+          }
+
+          &:hover {
+            &::after {
+              width: 50%;
+            }
+          }
+        }
+      }
+
+      &.info {
+        background-color: $dark-medium-color;
+
+        .project-about-details-list {
+          margin-top: 1rem;
+          li {
+            list-style: square;
+            margin-left: 1rem;
+            padding: 0.5rem 0;
+          }
+        }
+      }
+    }
+  }
+
+  .project-view {
+    margin: 0;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    overflow: hidden;
+
+    @include tablet {
+      margin: 0 50px;
+    }
+  }
+}

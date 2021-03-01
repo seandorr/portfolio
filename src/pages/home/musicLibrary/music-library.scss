@@ -1,65 +1,132 @@
 @import "../../../styles/main.scss";
 
-.music-library__main-container {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  overflow: hidden;
-
-  .music-library__item {
+@include mobile {
+  .music-library__main-container {
+    width: 100%;
     height: 100vh;
-    width: 80px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: -5px 0 20px rgba($dark-color, 0.5);
-    transition: 0.5s ease-in-out;
-    position: relative;
+    flex-direction: column;
 
-    .music-library__item-title-wrapper {
-      position: absolute;
-      top: 50%;
-      left: 40px;
-      transform: translate(-50%, -50%);
-      cursor: pointer;
+    .music-library__item {
+      height: 80px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: -5px 0 20px rgba($dark-color, 0.5);
+      transition: 0.5s ease-in-out;
+      position: relative;
 
-      h1 {
-        font-size: 36px;
-        font-family: sans-serif;
-        &.music-library__item-title {
-          color: $dark-color;
-          width: 100vh;
-          transform: rotate(-90deg);
-          display: flex;
-          justify-content: center;
+      .music-library__item-title-wrapper {
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+
+        h1 {
+          font-size: 36px;
+          &.music-library__item-title {
+            color: $dark-color;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+
+      &.active-item {
+        .music-library__selected-item-content {
+          top: calc(50% + 20px);
+          opacity: 1;
         }
       }
     }
 
-    &.active-item {
-      .music-library__selected-item-content {
-        top: 50%;
-        opacity: 1;
+    .music-library__selected-item-content {
+      position: absolute;
+      left: 50%;
+      top: calc(50% + 40px);
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: 0.8s ease-in-out;
+      transition-delay: 0.2s;
+
+      .spotify-playlist {
+        box-shadow: 0 0 20px 0 rgba($dark-color, 0.5);
+        border-radius: 20px;
+
+        iframe {
+          display: block;
+          border-radius: 20px;
+        }
       }
     }
   }
+}
 
-  .music-library__selected-item-content {
-    position: absolute;
-    left: 50%;
-    top: calc(50% + 20px);
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: 0.8s ease-in-out;
-    transition-delay: 0.2s;
+@include tablet {
+  .music-library__main-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    border-radius: $border-radius;
 
-    .spotify-playlist {
-      box-shadow: 0 0 20px 0 rgba($dark-color, 0.5);
-      border-radius: 20px;
+    .music-library__item {
+      height: 100vh;
+      width: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: -5px 0 20px rgba($dark-color, 0.5);
+      transition: 0.5s ease-in-out;
+      position: relative;
 
-      iframe {
-        display: block;
+      .music-library__item-title-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 40px;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+
+        h1 {
+          font-size: 36px;
+          &.music-library__item-title {
+            color: $dark-color;
+            width: 100vw;
+            transform: rotate(-90deg);
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+
+      &.active-item {
+        .music-library__selected-item-content {
+          top: 50%;
+          opacity: 1;
+        }
+      }
+    }
+
+    .music-library__selected-item-content {
+      position: absolute;
+      left: 50%;
+      top: calc(50% + 20px);
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: 0.8s ease-in-out;
+      transition-delay: 0.2s;
+
+      .spotify-playlist {
+        box-shadow: 0 0 20px 0 rgba($dark-color, 0.5);
         border-radius: 20px;
+
+        iframe {
+          display: block;
+          border-radius: 20px;
+        }
       }
     }
   }

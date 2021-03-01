@@ -1,0 +1,52 @@
+@import "../../../../styles/main.scss";
+
+footer {
+  &.project-nav-links {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 25px;
+    margin: 25px 0;
+
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 50px;
+      margin: 50px;
+    }
+
+    .project-nav-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: $border-radius;
+      position: relative;
+      padding: 50px 0;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        box-shadow: $box-shadow;
+      }
+
+      &.previous {
+        &::before {
+          content: "<--";
+          font-size: 36px;
+          color: $light-color;
+          margin-right: 10px;
+        }
+      }
+
+      &.next {
+        &::after {
+          content: "-->";
+          font-size: 36px;
+          color: $light-color;
+          margin-left: 10px;
+        }
+      }
+
+      h1 {
+        color: $light-color;
+      }
+    }
+  }
+}

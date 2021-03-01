@@ -35,3 +35,11 @@ h1 {
     transition: 0.3s ease-in-out;
   }
 }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}

@@ -8,6 +8,7 @@ const MusicLibraryActiveItemContent = ({
   activeItem,
   value,
   color,
+  largeScreenSize,
 }) => {
   return musicLibraryItems[activeItem].value === value ? (
     <div
@@ -20,7 +21,7 @@ const MusicLibraryActiveItemContent = ({
         title="spotify-playlist"
         src={`https://open.spotify.com/embed?uri=spotify:user:122367656:playlist:${musicLibraryItems[activeItem].playlistURL}`}
         width="300"
-        height="380"
+        height={largeScreenSize ? "380" : "80"}
         frameBorder="0"
         allowtransparency="true"
         allow="encrypted-media"

@@ -2,30 +2,30 @@ const musicLibraryItems = {
   "item-1": {
     id: 1,
     value: "item-1",
-    title: "item one testing",
+    title: "Echo Beach",
     color: "musicLibraryColor2",
-    playlistURL: "6KOYFVXViKSGbIHmgW3u8R",
+    playlistURL: "1Z7Lp0lzHQtdh28yUxddD6",
   },
   "item-2": {
     id: 2,
     value: "item-2",
-    title: "item two",
+    title: "Acceptable Country",
     color: "musicLibraryColor1",
-    playlistURL: "43Di4rrTPMKxbWrBkWe2Mk",
+    playlistURL: "1t7UqZGVLQzmEBdQ5uOQaz",
   },
   "item-3": {
     id: 3,
     value: "item-3",
-    title: "number 3",
+    title: "Unplugged Pop",
     color: "musicLibraryColor4",
     playlistURL: "7u39Z1ivajbKGkszD0V368",
   },
   "item-4": {
     id: 4,
     value: "item-4",
-    title: "best playlist right here",
+    title: "Open Adventure",
     color: "musicLibraryColor3",
-    playlistURL: "7u39Z1ivajbKGkszD0V368",
+    playlistURL: "0ABStwDK1NL8BmIAxgcIb2",
   },
 };
 

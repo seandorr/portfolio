@@ -1,11 +1,14 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
 import baseStyles from "../../../../styles/_baseStyles.scss";
+import useWindowSize from "../../../../utils/customHooks/useWindowSize";
 import generateRandomKey from "../../../../utils/functions/generateRandomKey";
 
-export const GenerateRandomShapes = ({ projectPreview }) => {
+export const GenerateRandomShapes = ({ type }) => {
+  const getWindowWidth = useWindowSize().width;
+
   let numberOfShapeItems;
-  if (projectPreview) {
+  if (type === "preview" || getWindowWidth < 768) {
     numberOfShapeItems = 30;
   } else {
     numberOfShapeItems = 100;
@@ -46,7 +49,7 @@ export const GenerateRandomShapes = ({ projectPreview }) => {
               : getRandomSizeAndPosition()
           }px`};
           background-color: ${`rgba(${getRandomRGBColor()}, ${getRandomRGBColor()}, ${getRandomRGBColor()}, 0.3)`};
-          border-radius: ${projectPreview ? baseStyles.borderRadius : "none"};
+          border-radius: ${baseStyles.borderRadius};
           position: absolute;
           left: ${`${
             randomXPosition !== undefined

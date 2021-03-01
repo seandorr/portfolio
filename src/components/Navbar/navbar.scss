@@ -2,27 +2,13 @@
 
 #navbar {
   width: 100%;
-  position: fixed;
+  position: relative;
+  top: 0;
   overflow: hidden;
   z-index: 10;
 
-  &::after {
-    content: "";
-    background: inherit;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.7);
-    filter: blur(10px);
-    z-index: -1;
-  }
-
   @include tablet {
-    &::after {
-      box-shadow: none;
-    }
+    position: fixed;
   }
 
   .navbar-content {
@@ -48,11 +34,7 @@
       align-items: center;
       padding: 5px 10px;
       border-radius: $border-radius;
-      background-color: transparent;
-
-      @include tablet {
-        background-color: $light-color;
-      }
+      background-color: $light-color;
 
       .nav-item {
         font-size: 18px;

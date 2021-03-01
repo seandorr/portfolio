@@ -35,20 +35,6 @@
         margin: 0 50px;
       }
 
-      .filter-tag-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-
-        .filter-tag {
-          font-size: 18px;
-          margin: 25px 25px 0 0;
-          padding: 10px;
-          background-color: $dark-medium-color;
-          border-radius: $border-radius;
-        }
-      }
-
       .project-link {
         float: left;
         margin-top: 50px;

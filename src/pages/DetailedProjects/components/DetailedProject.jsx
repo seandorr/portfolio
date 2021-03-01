@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-import FilterTag from "../../../components/FilterTag/FilterTag";
 import generateRandomKey from "../../../utils/functions/generateRandomKey";
-import { Tilt } from "../../../components/CustomTilt/CustomTilt";
 import { isObjectWithValues } from "../../../utils/validators/objectValidator";
+import FilterTags from "../../../components/FilterTags/FilterTags";
+import Footer from "../components/Footer/Footer";
 import "./detailed-project.scss";
 
 const DetailedProject = ({
@@ -17,7 +16,6 @@ const DetailedProject = ({
     projectName,
     projectColor,
     gitLink,
-    projectId,
     projectDetailedComponent,
   } = project;
 
@@ -25,35 +23,12 @@ const DetailedProject = ({
     setActiveProjectColor(projectColor);
   }, [projectColor, setActiveProjectColor]);
 
-  let previousProject = projects[projectId - 2];
-  let nextProject = projects[projectId];
-  const lastProject = projects.length - 1;
-  if (previousProject === undefined) {
-    previousProject = projects[lastProject];
-  }
-
-  if (nextProject === undefined) {
-    nextProject = projects[0];
-  }
-
-  const tags = translation(`project.${projectName}.tags`, {
-    returnObjects: true,
-  });
-
   const descriptionBullets = translation(
     `project.${projectName}.descriptionBullets`,
     {
       returnObjects: true,
     }
   );
-
-  const prevProjectLinkStyles = {
-    background: `${previousProject.projectColor}`,
-  };
-
-  const nextProjectLinkStyles = {
-    background: `${nextProject.projectColor}`,
-  };
 
   return (
     <div className="detailed-project-container">
@@ -89,46 +64,17 @@ const DetailedProject = ({
           className="project-details-grid-item stack"
           style={{ backgroundColor: projectColor }}
         >
-          <div className="filter-tag-container">
-            {Object.values(tags).map((tag) => {
-              return (
-                <FilterTag
-                  key={generateRandomKey()}
-                  tag={tag}
-                  projectName={projectName}
-                  translation={translation}
-                />
-              );
-            })}
-          </div>
+          <FilterTags
+            translation={translation}
+            projectName={projectName}
+            location="detailed"
+          />
         </div>
       </div>
       {projectDetailedComponent && (
         <div className="project-view">{projectDetailedComponent}</div>
       )}
-
-      <footer className="project-nav-links">
-        <Link to={`/${previousProject.projectLink}`}>
-          <Tilt>
-            <div
-              className="project-nav-link previous"
-              style={prevProjectLinkStyles}
-            >
-              <h1>{translation("prevButton")}</h1>
-            </div>
-          </Tilt>
-        </Link>
-        <Link to={`/${nextProject.projectLink}`}>
-          <Tilt>
-            <div
-              className="project-nav-link next"
-              style={nextProjectLinkStyles}
-            >
-              <h1>{translation("nextButton")}</h1>
-            </div>
-          </Tilt>
-        </Link>
-      </footer>
+      <Footer projects={projects} project={project} translation={translation} />
     </div>
   );
 };

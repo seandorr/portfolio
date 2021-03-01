@@ -1,0 +1,29 @@
+@import "../../styles/main.scss";
+
+.filter-tag-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .filter-tag {
+    font-size: 18px;
+    margin: 25px 25px 0 0;
+    padding: 10px;
+    background-color: $dark-medium-color;
+    border-radius: $border-radius;
+  }
+
+  &.home {
+    .filter-tag {
+      margin: 25px 25px 0 0;
+      background-color: $dark-medium-color;
+    }
+  }
+
+  &.detailed {
+    .filter-tag {
+      margin: 0 25px 25px 0;
+      background-color: $light-color;
+    }
+  }
+}

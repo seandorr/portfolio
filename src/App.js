@@ -48,7 +48,10 @@ const App = () => {
             />
           </Route>
           <Route path="/about">
-            <About setActiveProjectColor={setActiveProjectColor} />
+            <About
+              setActiveProjectColor={setActiveProjectColor}
+              translation={translation}
+            />
           </Route>
           <Route path="/contact">
             <Contact setActiveProjectColor={setActiveProjectColor} />

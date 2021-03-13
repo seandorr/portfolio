@@ -66,6 +66,12 @@
       "imageAlt": "diseño web de targetbase"
     }
   },
+  "about": {
+    "tags": {
+      "testing": "testing",
+      "another": "another"
+    }
+  },
   "viewButton": "Ver Proyecto",
   "prevButton": "Previo",
   "nextButton": "Próximo"

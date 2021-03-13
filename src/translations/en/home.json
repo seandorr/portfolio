@@ -76,6 +76,17 @@
       "imageAlt": "targetbase web design"
     }
   },
+  "about": {
+    "tags": {
+      "frontEnd": "front-end dev",
+      "designer": "designer",
+      "nativeEnglish": "native english",
+      "advancedSpanish": "advanced spanish",
+      "petOwner": "pet owner",
+      "beerLover": "beer lover",
+      "hiker": "hiker"
+    }
+  },
   "viewButton": "View Project",
   "prevButton": "Previous",
   "nextButton": "Next"

@@ -1,35 +1,59 @@
-import React, { useEffect } from "react";
+/** @jsx jsx */
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { jsx, css } from "@emotion/react";
 import FilterTags from "../../components/FilterTags/FilterTags";
+import colors from "../../styles/_colors.scss";
 import "./about.scss";
 
 const About = ({ translation, setActiveProjectColor }) => {
+  // const [linkHover, setLinkHover] = useState(false);
   useEffect(() => {
-    setActiveProjectColor("#0C4C7A");
+    setActiveProjectColor(colors.aboutColor);
   }, [setActiveProjectColor]);
+
+  const backgroundImg = `${
+    process.env.PUBLIC_URL + `images/sean-headshot.JPG`
+  }`;
+
+  const headshotImgStyles = css`
+    background-image: url(${backgroundImg});
+  `;
+
+  const currenWorkLink = () => {
+    return (
+      <Link
+        className="current-client-link"
+        to="/nominapress"
+        target="_blank"
+        // onMouseEnter={() => setLinkHover(true)}
+        // onMouseLeave={() => setLinkHover(false)}
+      >
+        {translation("about.currentWorkLink")}
+        {/* {linkHover && ( */}
+        <div className="current-client-tooltip-container">
+          <div className="current-client-tooltip">
+            <img
+              className="current-client-tooltip-img"
+              src="images/nominapress.svg"
+            />
+          </div>
+        </div>
+        {/* )} */}
+      </Link>
+    );
+  };
 
   return (
     <div className="about-container">
-      <img
-        className="about-grid-item headshot"
-        src="/images/sean-headshot2.jpeg"
-      />
-      <div className="about-grid-item tags">
+      <div className="about-grid-item headshot" css={headshotImgStyles} />
+      <div className="about-grid-item about">
         <FilterTags translation={translation} location="about" />
-      </div>
-      <div className="about-grid-item about-text">
-        <p>
-          Hi, I’m Sean. I'm a designer and front-end developer based in Madrid,
-          España. I'm currently seeking opportunities in either of these areas,
-          or ideally, a combination of both. I love to create memorable
-          experiences through the use of branding and web design. In my humble
-          opinion, too many brands are following the same 'corporate' layout and
-          making similar strides as their competition. I aim to break down these
-          barriers in a mindful way that highlight the importance of the brand.
-          I'm a life-long student and am always trying to learn new techniques,
-          technologies, and languages. When I'm not working or learning, you can
-          catch me hiking the great outdoors, curating Spotify playlists, and
-          sparking conversations with strangers.
-        </p>
+        <div className="about-paragraph">
+          <span>{translation("about.paragraphPart1")} </span>
+          <span className="work-link-text">{currenWorkLink()}</span>
+          <span>{translation("about.paragraphPart2")}</span>
+        </div>
       </div>
     </div>
   );

@@ -3,15 +3,15 @@ import { GenerateRandomShapes } from "./components/GenerateRandomShapes";
 import "./random-shapes.scss";
 
 const RandomShapesPreview = ({ type }) => {
-  const [reloadComponent, setReloadComponent] = useState(undefined);
+  const [, setReloadComponent] = useState(undefined);
 
   useEffect(() => {
-    setReloadComponent(true);
+    setReloadComponent({});
   }, []);
 
   return (
     <div className="random-shapes__container">
-      <GenerateRandomShapes type={type} reloadComponent />
+      <GenerateRandomShapes type={type} />
     </div>
   );
 };

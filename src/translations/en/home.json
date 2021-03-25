@@ -78,14 +78,20 @@
   },
   "about": {
     "tags": {
-      "frontEnd": "front-end dev",
-      "designer": "designer",
-      "nativeEnglish": "native english",
-      "advancedSpanish": "advanced spanish",
-      "petOwner": "pet owner",
-      "beerLover": "beer lover",
-      "hiker": "hiker"
-    }
+      "frontEnd": "👨‍💻 front-end dev",
+      "visualDesigner": "🖋️ visual designer",
+      "madrid": "📍 madrid",
+      "nativeEnglish": "🇺🇸 native english",
+      "advancedSpanish": "🇪🇸 advanced spanish",
+      "petOwner": "🐶 🐈 pet owner",
+      "musicGuru": "🎵 music guru",
+      "beerLover": "🍺 beer lover",
+      "runner": "🏃 runner",
+      "hiker": "🥾 hiker"
+    },
+    "paragraphPart1": "Hi, I'm Sean. I'm a designer and front-end developer based in Madrid, España. I currently work full-time for a startup, helping to create an HR Management app called ",
+    "currentWorkLink": "Nominapress",
+    "paragraphPart2": ". I am a life-long student and I'm always trying to learn new techniques, technologies, and languages. When I'm not working or learning, you can catch me hiking the great outdoors, curating Spotify playlists, and sparking conversations with strangers."
   },
   "viewButton": "View Project",
   "prevButton": "Previous",

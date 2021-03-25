@@ -68,9 +68,20 @@
   },
   "about": {
     "tags": {
-      "testing": "testing",
-      "another": "another"
-    }
+      "frontEnd": "👨‍💻 desarrollador front-end",
+      "visualDesigner": "🖋️ diseñador visual",
+      "madrid": "📍 madrid",
+      "nativeEnglish": "🇺🇸 nativo de inglés",
+      "advancedSpanish": "🇪🇸 español avanzado",
+      "petOwner": "🐶 🐈 dueño de mascotas",
+      "musicGuru": "🎵 gurú de música",
+      "beerLover": "🍺 amante de cerveza",
+      "runner": "🏃 corredor",
+      "hiker": "🥾 excursionista"
+    },
+    "paragraphPart1": "Hola, soy Sean. Soy un diseñador y desarrollador front-end en Madrid, España. En este momento, estoy trabajando a tiempo completo para una startup, ayudando a crear una aplicación de gestión de HHRR se llama ",
+    "currentWorkLink": "Nominapress",
+    "paragraphPart2": ". Siempre estoy intentando aprender nuevas técnicas, tecnologías, y lenguajes de programación. Cuando no estoy trabajando o aprendiendo, puedes verme en las montañas haciendo senderismo, haciendo listas de Spotify, y hablando con extranjeros."
   },
   "viewButton": "Ver Proyecto",
   "prevButton": "Previo",

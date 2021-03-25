@@ -9,17 +9,14 @@ const FilterTags = ({ translation, projectName, location }) => {
     returnObjects: true,
   });
 
+  const aboutTags = translation("about.tags", {
+    returnObjects: true,
+  });
+
   return (
     <div className={`filter-tag-container ${location}`}>
-      {Object.values(tags).map((tag) => {
-        return (
-          <FilterTag
-            key={generateRandomKey()}
-            tag={tag}
-            projectName={projectName}
-            translation={translation}
-          />
-        );
+      {Object.values(location === "about" ? aboutTags : tags).map((tag) => {
+        return <FilterTag key={generateRandomKey()} tag={tag} />;
       })}
     </div>
   );

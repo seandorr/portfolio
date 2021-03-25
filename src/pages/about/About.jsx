@@ -1,11 +1,62 @@
-import React, { useEffect } from "react";
+/** @jsx jsx */
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { jsx, css } from "@emotion/react";
+import FilterTags from "../../components/FilterTags/FilterTags";
+import colors from "../../styles/_colors.scss";
+import "./about.scss";
 
-const About = ({ setActiveProjectColor }) => {
+const About = ({ translation, setActiveProjectColor }) => {
+  // const [linkHover, setLinkHover] = useState(false);
   useEffect(() => {
-    setActiveProjectColor("green");
+    setActiveProjectColor(colors.aboutColor);
   }, [setActiveProjectColor]);
 
-  return <div style={{ height: "300vh" }}>about</div>;
+  const backgroundImg = `${
+    process.env.PUBLIC_URL + `images/sean-headshot.JPG`
+  }`;
+
+  const headshotImgStyles = css`
+    background-image: url(${backgroundImg});
+  `;
+
+  const currenWorkLink = () => {
+    return (
+      <Link
+        className="current-client-link"
+        to="/nominapress"
+        target="_blank"
+        // onMouseEnter={() => setLinkHover(true)}
+        // onMouseLeave={() => setLinkHover(false)}
+      >
+        {translation("about.currentWorkLink")}
+        {/* {linkHover && ( */}
+        <div className="current-client-tooltip-container">
+          <div className="current-client-tooltip">
+            <img
+              className="current-client-tooltip-img"
+              src="images/nominapress.svg"
+            />
+          </div>
+        </div>
+        {/* )} */}
+      </Link>
+    );
+  };
+
+  return (
+    <div className="about-container">
+      <div className="about-grid-item headshot" css={headshotImgStyles} />
+      <div className="about-grid-item about">
+        <FilterTags translation={translation} location="about" />
+        <div className="about-paragraph">
+          <span>{translation("about.paragraphPart1")} </span>
+          <span className="work-link-text">{currenWorkLink()}</span>
+          <span>{translation("about.paragraphPart2")}</span>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default About;

@@ -3,6 +3,7 @@ import RandomShapes from "../../RandomShapes/RandomShapes";
 import colors from "../../../../styles/_colors.scss";
 import MusicLibrary from "../../MusicLibrary/MusicLibrary";
 import Gemini from "../../Gemini/Gemini";
+import Nominapress from "../../../Nominapress/Nominapress";
 
 const projectPreviewData = {
   musicLibrary: {
@@ -20,6 +21,7 @@ const projectPreviewData = {
     projectImage: "nominapress.svg",
     projectColor: colors.nominapressColor,
     projectLink: "nominapress",
+    projectDetailedComponent: <Nominapress />,
   },
   randomShapes: {
     projectId: 3,

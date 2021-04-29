@@ -1,0 +1,11 @@
+@import "../../styles/main.scss";
+
+.nominapress-container {
+  margin: 50px;
+
+  .nominapress-img {
+    width: 100%;
+    height: auto;
+    border-radius: $border-radius;
+  }
+}

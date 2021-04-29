@@ -13,7 +13,7 @@ import generateRandomKey from "./utils/functions/generateRandomKey";
 const PROJECTS = Object.values(projectPreviewData);
 
 const App = () => {
-  const [translation, i18n] = useTranslation("home");
+  const [translation, i18n] = useTranslation("translation");
   const [activeTranslationBtn, setActiveTranslationBtn] = useState("english");
   const [activeProjectColor, setActiveProjectColor] = useState(undefined);
 

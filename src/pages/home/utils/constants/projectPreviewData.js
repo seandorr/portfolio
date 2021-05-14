@@ -3,6 +3,7 @@ import RandomShapes from "../../RandomShapes/RandomShapes";
 import colors from "../../../../styles/_colors.scss";
 import MusicLibrary from "../../MusicLibrary/MusicLibrary";
 import Gemini from "../../Gemini/Gemini";
+import Targetbase from "../../Targetbase/Targetbase";
 
 const projectPreviewData = {
   musicLibrary: {
@@ -43,6 +44,7 @@ const projectPreviewData = {
     projectImage: "targetbase-hero.jpg",
     projectColor: colors.targetbaseColor,
     projectLink: "targetbase",
+    projectDetailedComponent: <Targetbase />,
   },
 };
 

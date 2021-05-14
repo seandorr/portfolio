@@ -1,0 +1,125 @@
+.targetbase-project {
+  background-color: #333333;
+  height: 100vh;
+  position: relative;
+
+  /*	navbar */
+  .logo {
+    padding-top: 20px;
+    margin-left: 50px;
+    float: left;
+  }
+
+  .navbar {
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+  }
+
+  .navbar ul {
+    list-style-type: none;
+    padding-top: 35px;
+    float: right;
+    margin-right: 50px;
+  }
+
+  .navbar ul li {
+    display: inline-block;
+    padding-left: 30px;
+    font-family: priori-sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+  }
+
+  /*	nav bar hover line effect */
+  .underline::before {
+    content: "";
+    width: 0;
+    bottom: -10px;
+    position: absolute;
+    border-bottom: 5px solid #ffb900;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /*	nav bar hover line effect */
+  .underline:hover:before {
+    transform: scaleX(1);
+    width: 100%;
+  }
+  /*	end navbar */
+
+  h1 {
+    color: #ffb900;
+    font-size: 72px;
+    font-family: priori-sans, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    line-height: 0.9;
+  }
+
+  .section {
+    background-color: #333333;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+  }
+
+  .hero-text::after {
+    content: "";
+    width: 50%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: -20px;
+    position: absolute;
+    border-bottom: 10px solid #ffb900;
+  }
+
+  #hero-image {
+    background-image: url("./assets/background_pattern.svg");
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  #wrapper {
+    position: absolute;
+    right: 0;
+    top: 11%;
+    overflow: hidden;
+  }
+
+  .data-icon {
+    position: relative;
+    right: -50%;
+    animation: rotation 90s linear infinite;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+}

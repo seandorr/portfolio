@@ -1,13 +1,14 @@
 /** @jsx jsx */
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { jsx, css } from "@emotion/react";
+import { motion } from "framer-motion";
 import FilterTags from "../../components/FilterTags/FilterTags";
 import colors from "../../styles/_colors.scss";
 import "./about.scss";
 
 const About = ({ translation, setActiveProjectColor }) => {
-  // const [linkHover, setLinkHover] = useState(false);
+  const [linkHover, setLinkHover] = useState(false);
   useEffect(() => {
     setActiveProjectColor(colors.aboutColor);
   }, [setActiveProjectColor]);
@@ -20,26 +21,50 @@ const About = ({ translation, setActiveProjectColor }) => {
     background-image: url(${backgroundImg});
   `;
 
+  const linkFadeInOut = {
+    initial: {
+      opacity: 0,
+      y: 20,
+      x: "-50%",
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      x: "-50%",
+    },
+    exit: {
+      opacity: 0,
+      y: 20,
+      x: "-50%",
+    },
+  };
+
   const currenWorkLink = () => {
     return (
       <Link
         className="current-client-link"
         to="/nominapress"
         target="_blank"
-        // onMouseEnter={() => setLinkHover(true)}
-        // onMouseLeave={() => setLinkHover(false)}
+        onMouseEnter={() => setLinkHover(true)}
+        onMouseLeave={() => setLinkHover(false)}
       >
         {translation("about.currentWorkLink")}
-        {/* {linkHover && ( */}
-        <div className="current-client-tooltip-container">
-          <div className="current-client-tooltip">
-            <img
-              className="current-client-tooltip-img"
-              src="images/nominapress.svg"
-            />
-          </div>
-        </div>
-        {/* )} */}
+        {linkHover && (
+          <motion.div
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            variants={linkFadeInOut}
+            className="current-client-tooltip-container"
+          >
+            <div className="current-client-tooltip">
+              <img
+                className="current-client-tooltip-img"
+                src="images/nominapress.svg"
+              />
+            </div>
+          </motion.div>
+        )}
       </Link>
     );
   };

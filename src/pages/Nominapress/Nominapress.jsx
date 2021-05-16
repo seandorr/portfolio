@@ -1,28 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import "./nominapress.scss";
 import { facialRecogImages } from "./utils/facialRecogSliderImages";
+import Slideshow from "../../components/Slideshow/Slideshow";
 
-const Nominapress = () => {
-  const [activeImgIndex, setActiveImgIndex] = useState(0);
-  const allImages = facialRecogImages;
-
-  const handleNextButton = () => {
-    if (allImages.length - 1 === activeImgIndex) {
-      setActiveImgIndex(0);
-    } else {
-      setActiveImgIndex(activeImgIndex + 1);
-    }
-  };
-
+const Nominapress = ({ projectColor }) => {
   return (
-    <div className="nominapress-container">
-      <img
-        className="nominapress-img"
-        src={`images/nominapress/${facialRecogImages[activeImgIndex]}`}
-      />
-      <button onClick={handleNextButton}>next</button>
-    </div>
+    <Slideshow
+      imageArray={facialRecogImages}
+      projectDirectory="nominapress"
+      title="Facial Recog"
+      projectColor={projectColor}
+    />
   );
 };
 

@@ -21,7 +21,9 @@ const projectPreviewData = {
     projectImage: "nominapress.svg",
     projectColor: colors.nominapressColor,
     projectLink: "nominapress",
-    projectDetailedComponent: <Nominapress />,
+    projectDetailedComponent: (
+      <Nominapress projectColor={colors.nominapressColor} />
+    ),
   },
   randomShapes: {
     projectId: 3,

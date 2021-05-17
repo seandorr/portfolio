@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useMemo } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { Tilt } from "../../../../components/CustomTilt/CustomTilt";
 import "./footer.scss";
+import useWindowSize from "../../../../utils/customHooks/useWindowSize";
 
 const Footer = ({ projects, project, translation }) => {
   const { projectId } = project;
+
+  const browserWidth = useWindowSize().width;
+  const smallScreen = useMemo(() => browserWidth < 768, [browserWidth]);
 
   let previousProject = projects[projectId - 2];
   let nextProject = projects[projectId];
@@ -34,14 +38,14 @@ const Footer = ({ projects, project, translation }) => {
             className="project-nav-link previous"
             style={prevProjectLinkStyles}
           >
-            <h1>{translation("prevButton")}</h1>
+            {!smallScreen && <h1>{translation("prevButton")}</h1>}
           </div>
         </Tilt>
       </Link>
       <Link to={`/${nextProject.projectLink}`}>
         <Tilt>
           <div className="project-nav-link next" style={nextProjectLinkStyles}>
-            <h1>{translation("nextButton")}</h1>
+            {!smallScreen && <h1>{translation("nextButton")}</h1>}
           </div>
         </Tilt>
       </Link>

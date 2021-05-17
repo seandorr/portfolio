@@ -18,7 +18,7 @@ const projectPreviewData = {
   nominapress: {
     projectId: 2,
     projectName: "nominapress",
-    projectImage: "nominapress.svg",
+    projectImage: "facial-recog-login.jpg",
     projectColor: colors.nominapressColor,
     projectLink: "nominapress",
     projectDetailedComponent: (

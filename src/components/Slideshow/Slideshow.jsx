@@ -11,16 +11,19 @@ const Slideshow = ({
 }) => {
   const [activeImgIndex, setActiveImgIndex] = useState(0);
 
+  const imageArrayLength = imageArray.length;
+  const hasMoreThanOneImage = imageArrayLength > 1;
+
   const handlePreviousButton = () => {
     if (activeImgIndex === 0) {
-      setActiveImgIndex(imageArray.length - 1);
+      setActiveImgIndex(imageArrayLength - 1);
     } else {
       setActiveImgIndex(activeImgIndex - 1);
     }
   };
 
   const handleNextButton = () => {
-    if (imageArray.length - 1 === activeImgIndex) {
+    if (imageArrayLength - 1 === activeImgIndex) {
       setActiveImgIndex(0);
     } else {
       setActiveImgIndex(activeImgIndex + 1);
@@ -28,36 +31,38 @@ const Slideshow = ({
   };
 
   return (
-    <div
-      className={`${className} slideshow-container`}
-      style={{ border: `4px solid ${projectColor}` }}
-    >
+    <div className={`${className} slideshow-container`}>
       {title && (
         <div
           className="slideshow-title"
-          style={{ backgroundColor: projectColor }}
+          style={{ color: projectColor, border: `3px solid ${projectColor}` }}
         >
           {title}
         </div>
       )}
-      <button
-        className="slideshow-button previous"
-        onClick={handlePreviousButton}
-        style={{ color: projectColor }}
-      >
-        &lt;
-      </button>
+      {hasMoreThanOneImage && (
+        <button
+          className="slideshow-button previous"
+          onClick={handlePreviousButton}
+          style={{ color: projectColor, border: `3px solid ${projectColor}` }}
+        >
+          &lt;
+        </button>
+      )}
       <img
         className="slideshow-img"
         src={`images/${projectDirectory}/${imageArray[activeImgIndex]}`}
+        style={{ border: `3px solid ${projectColor}` }}
       />
-      <button
-        className="slideshow-button next"
-        onClick={handleNextButton}
-        style={{ color: projectColor }}
-      >
-        &gt;
-      </button>
+      {hasMoreThanOneImage && (
+        <button
+          className="slideshow-button next"
+          onClick={handleNextButton}
+          style={{ color: projectColor, border: `3px solid ${projectColor}` }}
+        >
+          &gt;
+        </button>
+      )}
     </div>
   );
 };

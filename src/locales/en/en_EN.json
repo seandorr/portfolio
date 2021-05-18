@@ -32,11 +32,13 @@
       "imageAlt": "nominapress web design",
       "description": "I continue to work full-time at Nominapress. We develop and maintain a human resources management app. Some notable features that I have worked on are:",
       "descriptionBullets": {
-        "bullet1": "Facial recognition login",
+        "bullet1": "Facial recognition login / validation",
         "bullet2": "Job application board",
         "bullet3": "Scheduling shifts",
         "bullet4": "Time off requests"
-      }
+      },
+      "facialRecogValidationSlider": "Facial Recog Validation",
+      "facialRecogLoginSlider": "Facial Recog Login"
     },
     "randomShapes": {
       "title": "Randomization",

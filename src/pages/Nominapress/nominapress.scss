@@ -1,0 +1,11 @@
+@import "../../styles/main.scss";
+
+.nominapress-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+
+  @include tablet {
+    gap: 50px;
+  }
+}

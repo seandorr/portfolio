@@ -3,12 +3,11 @@
 footer {
   &.project-nav-links {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 25px;
     margin: 25px 0;
 
     @include tablet {
-      grid-template-columns: 1fr 1fr;
       grid-gap: 50px;
       margin: 50px;
     }

@@ -1,0 +1,62 @@
+@import "../../styles/main.scss";
+
+.slideshow-container {
+  position: relative;
+
+  .slideshow-title {
+    color: $light-color;
+    text-align: center;
+    font-size: 24px;
+    padding: 10px;
+    margin-bottom: -3px;
+    background-color: $light-color;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius $border-radius 0 0;
+  }
+
+  .slideshow-img {
+    margin: 0 auto;
+    display: block;
+    width: calc(100% - 6px);
+    height: auto;
+    border-radius: 0 0 $border-radius $border-radius;
+    overflow: hidden;
+  }
+
+  .slideshow-button {
+    font-size: 36px;
+    width: 40px;
+    height: 40px;
+    background-color: $light-color;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s ease-in-out;
+    box-sizing: content-box;
+
+    &:hover {
+      font-size: 48px;
+      width: 50px;
+      height: 50px;
+    }
+
+    &.previous {
+      left: -20px;
+
+      &:hover {
+        left: -25px;
+      }
+    }
+
+    &.next {
+      right: -20px;
+
+      &:hover {
+        right: -25px;
+      }
+    }
+  }
+}

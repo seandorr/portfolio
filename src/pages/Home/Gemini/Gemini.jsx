@@ -6,7 +6,7 @@ import Hamburger from "./assets/hamburger.svg";
 
 const Gemini = (props) => {
   return (
-    <>
+    <div className="gemini-container">
       <nav className="gemini-nav-bar" id="nav-bar">
         <a href="#" className="logo">
           <img src={GeminiLogo} width="auto" height="60px" />
@@ -59,7 +59,7 @@ const Gemini = (props) => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

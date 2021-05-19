@@ -4,7 +4,6 @@ import NavBar from "./components/Navbar/NavBar";
 import Home from "./pages/Home/Home";
 import projectPreviewData from "./pages/Home/utils/constants/projectPreviewData";
 import About from "./pages/About/About";
-import Contact from "./pages/Contact/Contact";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import DetailedProject from "./pages/DetailedProjects/components/DetailedProject";
 import generateRandomKey from "./utils/functions/generateRandomKey";
@@ -53,9 +52,6 @@ const App = () => {
               setActiveProjectColor={setActiveProjectColor}
               translation={translation}
             />
-          </Route>
-          <Route path="/contact">
-            <Contact setActiveProjectColor={setActiveProjectColor} />
           </Route>
           {PROJECTS.map((project) => {
             const { projectLink } = project;

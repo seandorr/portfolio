@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import FilterTags from "../../components/FilterTags/FilterTags";
 import colors from "../../styles/_colors.scss";
 import "./about.scss";
+import SocialLinks from "./components/SocialLinks";
 
 const About = ({ translation, setActiveProjectColor }) => {
   const [linkHover, setLinkHover] = useState(false);
@@ -71,13 +72,17 @@ const About = ({ translation, setActiveProjectColor }) => {
 
   return (
     <div className="about-container">
-      <div className="about-grid-item headshot" css={headshotImgStyles} />
-      <div className="about-grid-item about">
-        <FilterTags translation={translation} location="about" />
-        <div className="about-paragraph">
-          <span>{translation("about.paragraphPart1")} </span>
-          <span className="work-link-text">{currenWorkLink()}</span>
-          <span>{translation("about.paragraphPart2")}</span>
+      <div className="about-container-grid">
+        <div className="about-grid-item headshot" css={headshotImgStyles} />
+        <div className="about-grid-item about">
+          <FilterTags translation={translation} location="about" />
+
+          <div className="about-paragraph">
+            <span>{translation("about.paragraphPart1")} </span>
+            <span className="work-link-text">{currenWorkLink()}</span>
+            <span>{translation("about.paragraphPart2")}</span>
+          </div>
+          <SocialLinks />
         </div>
       </div>
     </div>

@@ -39,9 +39,6 @@ const NavBar = (props) => {
           >
             {translation("navbar.about")}
           </NavLink>
-          <NavLink to="/contact" className="nav-item link nav-link">
-            {translation("navbar.contact")}
-          </NavLink>
           <div className="nav-item btn-container">
             <button
               className={`translation-btn ${

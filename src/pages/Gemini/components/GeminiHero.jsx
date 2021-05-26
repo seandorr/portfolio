@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./gemini.scss";
 import GeminiLogo from "./assets/gemini-logo.svg";
 import Hamburger from "./assets/hamburger.svg";
+import "./gemini-hero.scss";
 
 const Gemini = (props) => {
   return (

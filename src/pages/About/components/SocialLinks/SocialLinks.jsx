@@ -1,6 +1,8 @@
 import React from "react";
 import SocialLink from "./SocialLink";
-import { socialLinks } from "../utils/constants/socialLinks";
+import { socialLinks } from "../../utils/constants/socialLinks";
+import generateRandomKey from "../../../../utils/functions/generateRandomKey";
+import "./social-links.scss";
 
 const SocialLinks = () => {
   const socialLinksArray = Object.values(socialLinks);
@@ -13,7 +15,11 @@ const SocialLinks = () => {
     >
       {socialLinksArray.map((socialLink) => {
         const { link, icon } = socialLink;
-        return <SocialLink link={link}>{icon}</SocialLink>;
+        return (
+          <SocialLink link={link} key={generateRandomKey()}>
+            {icon}
+          </SocialLink>
+        );
       })}
     </div>
   );

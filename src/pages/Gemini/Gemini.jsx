@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import GeminiHero from "./components/GeminiHero";
+import GeminiHero from "./components/Hero/GeminiHero";
 
 const Gemini = (props) => {
   return <GeminiHero />;

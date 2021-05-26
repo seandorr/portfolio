@@ -5,8 +5,9 @@ import { jsx, css } from "@emotion/react";
 import { motion } from "framer-motion";
 import FilterTags from "../../components/FilterTags/FilterTags";
 import colors from "../../styles/_colors.scss";
+import { linkFadeInOut } from "./utils/constants/linkFadeInOut";
+import SocialLinks from "./components/SocialLinks/SocialLinks";
 import "./about.scss";
-import SocialLinks from "./components/SocialLinks";
 
 const About = ({ translation, setActiveProjectColor }) => {
   const [linkHover, setLinkHover] = useState(false);
@@ -22,30 +23,11 @@ const About = ({ translation, setActiveProjectColor }) => {
     background-image: url(${backgroundImg});
   `;
 
-  const linkFadeInOut = {
-    initial: {
-      opacity: 0,
-      y: 20,
-      x: "-50%",
-    },
-    animate: {
-      opacity: 1,
-      y: 0,
-      x: "-50%",
-    },
-    exit: {
-      opacity: 0,
-      y: 20,
-      x: "-50%",
-    },
-  };
-
   const currenWorkLink = () => {
     return (
       <Link
         className="current-client-link"
         to="/nominapress"
-        target="_blank"
         onMouseEnter={() => setLinkHover(true)}
         onMouseLeave={() => setLinkHover(false)}
       >
@@ -61,7 +43,8 @@ const About = ({ translation, setActiveProjectColor }) => {
             <div className="current-client-tooltip">
               <img
                 className="current-client-tooltip-img"
-                src="images/nominapress.svg"
+                src="images/facial-recog-login.jpg"
+                alt={translation("about.nominapressImageAlt")}
               />
             </div>
           </motion.div>
@@ -71,12 +54,11 @@ const About = ({ translation, setActiveProjectColor }) => {
   };
 
   return (
-    <div className="about-container">
+    <div className="about-container max-width">
       <div className="about-container-grid">
         <div className="about-grid-item headshot" css={headshotImgStyles} />
         <div className="about-grid-item about">
           <FilterTags translation={translation} location="about" />
-
           <div className="about-paragraph">
             <span>{translation("about.paragraphPart1")} </span>
             <span className="work-link-text">{currenWorkLink()}</span>

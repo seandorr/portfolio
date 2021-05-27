@@ -1,9 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 import GeminiHero from "./components/GeminiHero/GeminiHero";
 import GeminiIcons from "./components/GeminiIcons/GeminiIcons";
 
-const Gemini = (props) => {
+const Gemini = () => {
   return (
     <div className="gemini-main-container">
       <GeminiHero />
@@ -11,7 +10,5 @@ const Gemini = (props) => {
     </div>
   );
 };
-
-Gemini.propTypes = {};
 
 export default Gemini;

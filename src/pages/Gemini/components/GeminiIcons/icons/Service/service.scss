@@ -1,0 +1,115 @@
+@import "../../../../../../styles/main.scss";
+
+.service-icon {
+  max-width: 150px;
+  .main-color {
+    fill: $gemini-color;
+    stroke: $dark-color;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+  .opaque-color {
+    opacity: 0.3;
+    fill: $dark-color;
+
+    &.fourth-message {
+      opacity: 0;
+    }
+  }
+  .light-color {
+    fill: $light-color;
+    stroke: $dark-color;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+  }
+  .stroke {
+    fill: none;
+    stroke: $dark-color;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+  }
+
+  &.start-hover-animation {
+    animation: shake 2s ease-in-out infinite;
+
+    @keyframes shake {
+      0% {
+        transform: rotate(0);
+      }
+      10% {
+        transform: rotate(-10deg);
+      }
+      20% {
+        transform: rotate(10deg);
+      }
+      50% {
+        transform: rotate(-5deg);
+      }
+      70% {
+        transform: rotate(5deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    .first-message {
+      animation: firstMessage 2s ease-in-out infinite;
+    }
+
+    @keyframes firstMessage {
+      0% {
+        transform: translateY(0);
+        opacity: 0.3;
+      }
+      100% {
+        transform: translateY(-30px);
+        opacity: 0;
+      }
+    }
+
+    .second-message {
+      animation: secondMessage 2s ease-in-out infinite;
+    }
+
+    @keyframes secondMessage {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-30px);
+      }
+    }
+
+    .third-message {
+      animation: thirdMessage 2s ease-in-out infinite;
+    }
+
+    @keyframes thirdMessage {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-30px);
+      }
+    }
+
+    .fourth-message {
+      animation: fourthMessage 2s ease-in-out infinite;
+      transform: translateY(50px);
+    }
+
+    @keyframes fourthMessage {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(20px);
+        opacity: 0.3;
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import "../../../../../styles/main.scss";
+
+.tech-icon {
+  max-width: 200px;
+  .main-color {
+    fill: $gemini-color;
+    stroke: $dark-color;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+  .opaque-color {
+    opacity: 0.3;
+    fill: $dark-color;
+  }
+  .light-color {
+    fill: $light-color;
+  }
+
+  &.start-hover-animation {
+    .blink {
+      transition: 0.3s ease-in-out;
+      animation: blink 2s step-start 0s infinite;
+
+      &.blink-1 {
+        animation-delay: 0.5s;
+      }
+
+      &.blink-2 {
+        animation-delay: 1s;
+      }
+
+      &.blink-3 {
+        animation-delay: 1.5s;
+      }
+
+      &.blink-4 {
+        animation-delay: 2s;
+      }
+    }
+
+    @keyframes blink {
+      0% {
+        opacity: 1;
+        fill: $light-color;
+      }
+      50% {
+        opacity: 0.3;
+        fill: $dark-color;
+      }
+      100% {
+        opacity: 1;
+        fill: $light-color;
+      }
+    }
+  }
+}

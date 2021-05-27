@@ -1,0 +1,48 @@
+@import "../../../../../styles/main.scss";
+
+.safe-icon {
+  max-width: 200px;
+  .main-color {
+    fill: $gemini-color;
+    stroke: $dark-color;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+  .opaque-color {
+    opacity: 0.3;
+    fill: $dark-color;
+  }
+  .light-color {
+    fill: $light-color;
+    stroke: $dark-color;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+  }
+  .stroke {
+    fill: none;
+    stroke: $dark-color;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+  }
+
+  &.start-hover-animation {
+    .turn-handle {
+      transition: 0.5s ease-in-out;
+      animation: rotate 1.5s step-start infinite;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(-90deg) translate(-70px, -33px);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}

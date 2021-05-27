@@ -1,33 +1,7 @@
 @import "../../../../../../styles/main.scss";
 
-.portal-icon {
-  max-width: 150px;
-  .main-color {
-    fill: $gemini-color;
-    stroke: $dark-color;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-miterlimit: 10;
-  }
-  .opaque-color {
-    opacity: 0.3;
-    fill: $dark-color;
-  }
-  .light-color {
-    fill: $light-color;
-    stroke: $dark-color;
-    stroke-width: 2;
-    stroke-miterlimit: 10;
-  }
-  .stroke {
-    fill: none;
-    stroke: $dark-color;
-    stroke-width: 2;
-    stroke-miterlimit: 10;
-  }
-
-  &.start-hover-animation {
+.active-hover {
+  .portal-icon {
     .nav-bar {
       animation: navbarSize 4s ease-in-out infinite;
       transform-origin: 70px 50px;

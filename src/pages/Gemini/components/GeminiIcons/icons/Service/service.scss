@@ -1,37 +1,7 @@
 @import "../../../../../../styles/main.scss";
 
-.service-icon {
-  max-width: 150px;
-  .main-color {
-    fill: $gemini-color;
-    stroke: $dark-color;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-miterlimit: 10;
-  }
-  .opaque-color {
-    opacity: 0.3;
-    fill: $dark-color;
-
-    &.fourth-message {
-      opacity: 0;
-    }
-  }
-  .light-color {
-    fill: $light-color;
-    stroke: $dark-color;
-    stroke-width: 2;
-    stroke-miterlimit: 10;
-  }
-  .stroke {
-    fill: none;
-    stroke: $dark-color;
-    stroke-width: 2;
-    stroke-miterlimit: 10;
-  }
-
-  &.start-hover-animation {
+.active-hover {
+  .service-icon {
     animation: shake 2s ease-in-out infinite;
 
     @keyframes shake {

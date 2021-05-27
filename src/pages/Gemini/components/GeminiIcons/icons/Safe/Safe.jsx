@@ -1,18 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import "./safe.scss";
 
 const Safe = () => {
-  const [hovering, setHovering] = useState(false);
-
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
       viewBox="0 0 102 102"
-      className={`safe-icon ${hovering ? "start-hover-animation" : ""}`}
-      onMouseEnter={() => setHovering(true)}
-      onMouseLeave={() => setHovering(false)}
+      className="safe-icon"
     >
       <g>
         <path

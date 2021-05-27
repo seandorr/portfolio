@@ -6,29 +6,21 @@ const GeminiIcons = () => {
   const [hoveringOverIcon, setHoveringOverIcon] = useState(false);
   const IconsArray = Object.values(geminiIcons);
 
-  const handleOnHover = (key) => {
-    console.log(
-      "🚀 ~ file: GeminiIcons.jsx ~ line 10 ~ handleOnHover ~ key",
-      key
-    );
-
-    // if ((key) => !key) {
-    //   setHoveringOverIcon(true);
-    // } else {
-
-    //   setHoveringOverIcon(false);
-    // }
+  const handleOnMouseEnter = (key) => {
+    setHoveringOverIcon(key);
   };
 
   return (
-    <div className="icon-grid">
+    <div className="gemini-icon-grid">
       {IconsArray.map(({ icon, key }) => {
         return (
           <div
-            className={`icon ${hoveringOverIcon ? "testing" : ""}`}
+            className={`gemini-icon ${
+              hoveringOverIcon === key ? "active-hover" : ""
+            }`}
             key={key}
-            onMouseEnter={() => handleOnHover(key)}
-            onMouseLeave={() => handleOnHover(key)}
+            onMouseEnter={() => handleOnMouseEnter(key)}
+            onMouseLeave={() => setHoveringOverIcon(false)}
           >
             {icon}
           </div>

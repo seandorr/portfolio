@@ -1,0 +1,30 @@
+@import "../../../../styles/main.scss";
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-gap: 25px;
+  margin: 25px 0;
+
+  @include smallScreen {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 50px;
+    margin: 50px 0;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background-color: $light-color;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+
+    @include smallScreen {
+      padding: 50px;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 @import "../../../../styles/main.scss";
 
-.icon-grid {
+.gemini-icon-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
@@ -14,7 +14,7 @@
     margin: 50px 0;
   }
 
-  .icon {
+  .gemini-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,6 +25,39 @@
 
     @include smallScreen {
       padding: 50px;
+    }
+
+    svg {
+      max-width: 150px;
+
+      .main-color {
+        fill: $gemini-color;
+        stroke: $dark-color;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+      }
+      .opaque-color {
+        opacity: 0.3;
+        fill: $dark-color;
+
+        &.fourth-message {
+          opacity: 0;
+        }
+      }
+      .light-color {
+        fill: $light-color;
+        stroke: $dark-color;
+        stroke-width: 2;
+        stroke-miterlimit: 10;
+      }
+      .stroke {
+        fill: none;
+        stroke: $dark-color;
+        stroke-width: 2;
+        stroke-miterlimit: 10;
+      }
     }
   }
 }

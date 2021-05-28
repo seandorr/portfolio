@@ -3,6 +3,7 @@ import RandomShapes from "../../RandomShapes/RandomShapes";
 import colors from "../../../../styles/_colors.scss";
 import MusicLibrary from "../../MusicLibrary/MusicLibrary";
 import Gemini from "../../Gemini/Gemini";
+import Nominapress from "../../../Nominapress/Nominapress";
 import Targetbase from "../../Targetbase/Targetbase";
 
 const projectPreviewData = {
@@ -18,9 +19,12 @@ const projectPreviewData = {
   nominapress: {
     projectId: 2,
     projectName: "nominapress",
-    projectImage: "nominapress.svg",
+    projectImage: "facial-recog-login.jpg",
     projectColor: colors.nominapressColor,
     projectLink: "nominapress",
+    projectDetailedComponent: (
+      <Nominapress projectColor={colors.nominapressColor} />
+    ),
   },
   randomShapes: {
     projectId: 3,

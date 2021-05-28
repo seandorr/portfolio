@@ -32,11 +32,13 @@
       "imageAlt": "nominapress web design",
       "description": "I continue to work full-time at Nominapress. We develop and maintain a human resources management app. Some notable features that I have worked on are:",
       "descriptionBullets": {
-        "bullet1": "Facial recognition login",
+        "bullet1": "Facial recognition login / validation",
         "bullet2": "Job application board",
         "bullet3": "Scheduling shifts",
         "bullet4": "Time off requests"
-      }
+      },
+      "facialRecogValidationSlider": "Facial Recog Validation",
+      "facialRecogLoginSlider": "Facial Recog Login"
     },
     "randomShapes": {
       "title": "Randomization",
@@ -91,7 +93,8 @@
     },
     "paragraphPart1": "Hi, I'm Sean. I'm a designer and front-end developer based in Madrid, España. I currently work full-time for a startup, helping to create an HR Management app called ",
     "currentWorkLink": "Nominapress",
-    "paragraphPart2": ". I am a life-long student and I'm always trying to learn new techniques, technologies, and languages. When I'm not working or learning, you can catch me hiking the great outdoors, curating Spotify playlists, and sparking conversations with strangers."
+    "paragraphPart2": ". I am a life-long student and I'm always trying to learn new techniques, technologies, and languages. When I'm not working or learning, you can catch me hiking the great outdoors, curating Spotify playlists, and sparking conversations with strangers.",
+    "nominapressImageAlt": "Preview image of Nominapress project"
   },
   "viewButton": "View Project",
   "prevButton": "Previous",

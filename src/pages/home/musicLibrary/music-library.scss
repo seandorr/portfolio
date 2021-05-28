@@ -3,9 +3,11 @@
 @include mobile {
   .music-library__main-container {
     width: 100%;
-    height: 100vh;
+    height: 600px;
     display: flex;
     flex-direction: column;
+    border-radius: $border-radius;
+    overflow: hidden;
 
     .music-library__item {
       height: 80px;
@@ -68,13 +70,13 @@
 @include tablet {
   .music-library__main-container {
     width: 100%;
-    height: 100vh;
+    height: 600px;
     display: flex;
     overflow: hidden;
     border-radius: $border-radius;
 
     .music-library__item {
-      height: 100vh;
+      height: 600px;
       width: 80px;
       display: flex;
       align-items: center;

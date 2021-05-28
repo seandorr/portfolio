@@ -12,12 +12,8 @@ const DetailedProject = ({
   project,
   setActiveProjectColor,
 }) => {
-  const {
-    projectName,
-    projectColor,
-    gitLink,
-    projectDetailedComponent,
-  } = project;
+  const { projectName, projectColor, gitLink, projectDetailedComponent } =
+    project;
 
   useEffect(() => {
     setActiveProjectColor(projectColor);
@@ -31,51 +27,53 @@ const DetailedProject = ({
   );
 
   return (
-    <div className="detailed-project-container">
-      <div className="project-details-grid">
-        <div className="project-details-grid-item info">
-          <div className="row">
-            <h1 className="project-title">
-              {translation(`project.${projectName}.title`)}
-            </h1>
-            {gitLink && (
-              <a
-                className="project-git-link link"
-                href={gitLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Git Repo
-              </a>
+    <>
+      <div className="detailed-project-container max-width">
+        <div className="project-details-grid">
+          <div className="project-details-grid-item info">
+            <div className="row">
+              <h1 className="project-title">
+                {translation(`project.${projectName}.title`)}
+              </h1>
+              {gitLink && (
+                <a
+                  className="project-git-link link"
+                  href={gitLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Git Repo
+                </a>
+              )}
+            </div>
+            <p className="project-about-details">
+              {translation(`project.${projectName}.description`)}
+            </p>
+            {isObjectWithValues(descriptionBullets) && (
+              <ul className="project-about-details-list">
+                {Object.values(descriptionBullets).map((bullet) => {
+                  return <li key={generateRandomKey()}>{bullet}</li>;
+                })}
+              </ul>
             )}
           </div>
-          <p className="project-about-details">
-            {translation(`project.${projectName}.description`)}
-          </p>
-          {isObjectWithValues(descriptionBullets) && (
-            <ul className="project-about-details-list">
-              {Object.values(descriptionBullets).map((bullet) => {
-                return <li key={generateRandomKey()}>{bullet}</li>;
-              })}
-            </ul>
-          )}
+          <div
+            className="project-details-grid-item stack"
+            style={{ backgroundColor: projectColor }}
+          >
+            <FilterTags
+              translation={translation}
+              projectName={projectName}
+              location="detailed"
+            />
+          </div>
         </div>
-        <div
-          className="project-details-grid-item stack"
-          style={{ backgroundColor: projectColor }}
-        >
-          <FilterTags
-            translation={translation}
-            projectName={projectName}
-            location="detailed"
-          />
-        </div>
+        {projectDetailedComponent && (
+          <div className="project-view">{projectDetailedComponent}</div>
+        )}
       </div>
-      {projectDetailedComponent && (
-        <div className="project-view">{projectDetailedComponent}</div>
-      )}
       <Footer projects={projects} project={project} translation={translation} />
-    </div>
+    </>
   );
 };
 

@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import { I18nextProvider } from "react-i18next";
 import i18next from "i18next";
-import home_en from "./translations/en/home.json";
-import home_es from "./translations/es/home.json";
+import english from "./locales/en/en_EN.json";
+import spanish from "./locales/es/es_ES.json";
 import "./styles/main.scss";
 
 i18next.init({
@@ -12,10 +12,10 @@ i18next.init({
   lng: "en",
   resources: {
     en: {
-      home: home_en,
+      translation: english,
     },
     es: {
-      home: home_es,
+      translation: spanish,
     },
   },
 });

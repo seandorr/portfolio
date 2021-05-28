@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import NavBar from "./components/Navbar/NavBar";
 import Home from "./pages/Home/Home";
 import projectPreviewData from "./pages/Home/utils/constants/projectPreviewData";
 import About from "./pages/About/About";
-import Contact from "./pages/Contact/Contact";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import DetailedProject from "./pages/DetailedProjects/components/DetailedProject";
 import generateRandomKey from "./utils/functions/generateRandomKey";
+import useTranslation from "./utils/customHooks/useTranslation";
 
 const PROJECTS = Object.values(projectPreviewData);
 
 const App = () => {
-  const [translation, i18n] = useTranslation("home");
   const [activeTranslationBtn, setActiveTranslationBtn] = useState("english");
   const [activeProjectColor, setActiveProjectColor] = useState(undefined);
+
+  const { translation, i18n } = useTranslation();
 
   const handleOnClickSpanishBtn = () => {
     i18n.changeLanguage("es");
@@ -52,9 +52,6 @@ const App = () => {
               setActiveProjectColor={setActiveProjectColor}
               translation={translation}
             />
-          </Route>
-          <Route path="/contact">
-            <Contact setActiveProjectColor={setActiveProjectColor} />
           </Route>
           {PROJECTS.map((project) => {
             const { projectLink } = project;

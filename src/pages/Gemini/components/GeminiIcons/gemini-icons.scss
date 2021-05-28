@@ -1,0 +1,63 @@
+@import "../../../../styles/main.scss";
+
+.gemini-icon-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-gap: 25px;
+  margin: 25px 0;
+
+  @include smallScreen {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 50px;
+    margin: 50px 0;
+  }
+
+  .gemini-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background-color: $light-color;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+
+    @include smallScreen {
+      padding: 50px;
+    }
+
+    svg {
+      max-width: 150px;
+
+      .main-color {
+        fill: $gemini-color;
+        stroke: $dark-color;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+      }
+      .opaque-color {
+        opacity: 0.3;
+        fill: $dark-color;
+
+        &.fourth-message {
+          opacity: 0;
+        }
+      }
+      .light-color {
+        fill: $light-color;
+        stroke: $dark-color;
+        stroke-width: 2;
+        stroke-miterlimit: 10;
+      }
+      .stroke {
+        fill: none;
+        stroke: $dark-color;
+        stroke-width: 2;
+        stroke-miterlimit: 10;
+      }
+    }
+  }
+}

@@ -1,13 +1,16 @@
 /** @jsx jsx */
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { jsx, css } from "@emotion/react";
+import { motion } from "framer-motion";
 import FilterTags from "../../components/FilterTags/FilterTags";
 import colors from "../../styles/_colors.scss";
+import { linkFadeInOut } from "./utils/constants/linkFadeInOut";
+import SocialLinks from "./components/SocialLinks/SocialLinks";
 import "./about.scss";
 
 const About = ({ translation, setActiveProjectColor }) => {
-  // const [linkHover, setLinkHover] = useState(false);
+  const [linkHover, setLinkHover] = useState(false);
   useEffect(() => {
     setActiveProjectColor(colors.aboutColor);
   }, [setActiveProjectColor]);
@@ -25,34 +28,43 @@ const About = ({ translation, setActiveProjectColor }) => {
       <Link
         className="current-client-link"
         to="/nominapress"
-        target="_blank"
-        // onMouseEnter={() => setLinkHover(true)}
-        // onMouseLeave={() => setLinkHover(false)}
+        onMouseEnter={() => setLinkHover(true)}
+        onMouseLeave={() => setLinkHover(false)}
       >
         {translation("about.currentWorkLink")}
-        {/* {linkHover && ( */}
-        <div className="current-client-tooltip-container">
-          <div className="current-client-tooltip">
-            <img
-              className="current-client-tooltip-img"
-              src="images/nominapress.svg"
-            />
-          </div>
-        </div>
-        {/* )} */}
+        {linkHover && (
+          <motion.div
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            variants={linkFadeInOut}
+            className="current-client-tooltip-container"
+          >
+            <div className="current-client-tooltip">
+              <img
+                className="current-client-tooltip-img"
+                src="images/facial-recog-login.jpg"
+                alt={translation("about.nominapressImageAlt")}
+              />
+            </div>
+          </motion.div>
+        )}
       </Link>
     );
   };
 
   return (
-    <div className="about-container">
-      <div className="about-grid-item headshot" css={headshotImgStyles} />
-      <div className="about-grid-item about">
-        <FilterTags translation={translation} location="about" />
-        <div className="about-paragraph">
-          <span>{translation("about.paragraphPart1")} </span>
-          <span className="work-link-text">{currenWorkLink()}</span>
-          <span>{translation("about.paragraphPart2")}</span>
+    <div className="about-container max-width">
+      <div className="about-container-grid">
+        <div className="about-grid-item headshot" css={headshotImgStyles} />
+        <div className="about-grid-item about">
+          <FilterTags translation={translation} location="about" />
+          <div className="about-paragraph">
+            <span>{translation("about.paragraphPart1")} </span>
+            <span className="work-link-text">{currenWorkLink()}</span>
+            <span>{translation("about.paragraphPart2")}</span>
+          </div>
+          <SocialLinks />
         </div>
       </div>
     </div>

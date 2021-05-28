@@ -1,0 +1,56 @@
+@import "../../../../../../styles/main.scss";
+
+.active-hover {
+  .portal-icon {
+    .nav-bar {
+      animation: navbarSize 4s ease-in-out infinite;
+      transform-origin: 70px 50px;
+    }
+
+    @keyframes navbarSize {
+      0% {
+        transform: scaleX(1);
+      }
+      50% {
+        transform: scaleX(0.5);
+      }
+      100% {
+        transform: scaleX(1);
+      }
+    }
+
+    .content {
+      animation: contentSize 4s ease-in-out infinite;
+      transform-origin: 70px 50px;
+    }
+
+    @keyframes contentSize {
+      0% {
+        transform: scaleX(1);
+      }
+      50% {
+        transform: scaleX(0.64);
+      }
+      100% {
+        transform: scaleX(1);
+      }
+    }
+
+    .side-bar {
+      animation: sideBarSize 4s ease-in-out infinite;
+      transform-origin: 13px 65px;
+    }
+
+    @keyframes sideBarSize {
+      0% {
+        transform: scaleX(1);
+      }
+      50% {
+        transform: scaleX(3) scaleY(1.4);
+      }
+      100% {
+        transform: scaleX(1);
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@ import React from "react";
 import RandomShapes from "../../RandomShapes/RandomShapes";
 import colors from "../../../../styles/_colors.scss";
 import MusicLibrary from "../../MusicLibrary/MusicLibrary";
-import Gemini from "../../Gemini/Gemini";
+import Gemini from "../../../Gemini/Gemini";
 import Nominapress from "../../../Nominapress/Nominapress";
 
 const projectPreviewData = {

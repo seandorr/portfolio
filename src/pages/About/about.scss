@@ -1,81 +1,87 @@
 @import "../../styles/main.scss";
 
-.about-container-grid {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto auto;
-  @include tablet {
-    height: calc(100vh - 180px);
-    grid-gap: 50px;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto;
-    margin: 0 50px;
-    margin-top: 130px;
-  }
+.about-container {
+  .about-container-grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
 
-  .about-grid-item {
-    border-radius: $border-radius;
-
-    &.headshot {
-      width: 100%;
-      min-width: 300px;
-      height: auto;
-      min-height: 500px;
-      box-shadow: $box-shadow;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-      overflow: hidden;
-      transform: scaleX(-1);
+    @include tablet {
+      grid-gap: 50px;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: auto;
+      margin: 0 50px;
+      margin-top: 130px;
     }
 
-    &.about {
-      padding-top: 25px;
-      color: $dark-color;
+    @include smallScreen {
+      grid-template-columns: 1fr 1fr;
+    }
 
-      @include tablet {
-        padding-top: 0;
+    .about-grid-item {
+      border-radius: $border-radius;
+
+      &.headshot {
+        width: 100%;
+        min-width: 300px;
+        height: auto;
+        min-height: 500px;
+        box-shadow: $box-shadow;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        overflow: hidden;
+        transform: scaleX(-1);
       }
 
-      .about-paragraph {
-        .work-link-text {
-          display: inline-block;
+      &.about {
+        padding-top: 25px;
+        color: $dark-color;
 
-          .current-client-link {
-            color: $light-color;
-            padding: 1px 5px;
-            background-color: $nominapress-color;
-            border-radius: 5px;
-            position: relative;
+        @include tablet {
+          padding-top: 0;
+        }
 
-            .current-client-tooltip-container {
-              position: absolute;
-              left: 50%;
-              transform: translateX(-50%);
-              bottom: 30px;
+        .about-paragraph {
+          .work-link-text {
+            display: inline-block;
+
+            .current-client-link {
+              color: $light-color;
+              padding: 1px 5px;
               background-color: $nominapress-color;
-              padding: 20px;
-              border-radius: $border-radius;
-              transition: 0.3s ease-in-out;
+              border-radius: 5px;
+              position: relative;
 
-              &::after {
-                content: "";
+              .current-client-tooltip-container {
                 position: absolute;
-                bottom: -10px;
                 left: 50%;
                 transform: translateX(-50%);
-                width: 0;
-                height: 0;
-                border-left: 15px solid transparent;
-                border-right: 15px solid transparent;
-                border-top: 15px solid $nominapress-color;
-              }
+                bottom: 30px;
+                background-color: $nominapress-color;
+                padding: 20px;
+                border-radius: $border-radius;
+                transition: 0.3s ease-in-out;
 
-              .current-client-tooltip {
-                .current-client-tooltip-img {
-                  width: 300px;
-                  height: auto;
-                  border-radius: $border-radius;
+                &::after {
+                  content: "";
+                  position: absolute;
+                  bottom: -10px;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  width: 0;
+                  height: 0;
+                  border-left: 15px solid transparent;
+                  border-right: 15px solid transparent;
+                  border-top: 15px solid $nominapress-color;
+                }
+
+                .current-client-tooltip {
+                  .current-client-tooltip-img {
+                    width: 300px;
+                    height: auto;
+                    border-radius: $border-radius;
+                  }
                 }
               }
             }

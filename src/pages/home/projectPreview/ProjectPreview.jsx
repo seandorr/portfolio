@@ -21,7 +21,7 @@ const ProjectPreview = ({ project, translation }) => {
         {projectImage && (
           <img
             className="proj-img"
-            src={`/images/${projectImage}`}
+            src={`/images/home/${projectImage}`}
             alt={translation(`project.${projectName}.imageAlt`)}
           />
         )}

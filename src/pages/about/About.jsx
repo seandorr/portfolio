@@ -16,7 +16,7 @@ const About = ({ translation, setActiveProjectColor }) => {
   }, [setActiveProjectColor]);
 
   const backgroundImg = `${
-    process.env.PUBLIC_URL + `images/sean-headshot.JPG`
+    process.env.PUBLIC_URL + `images/about/sean-headshot.JPG`
   }`;
 
   const headshotImgStyles = css`
@@ -43,7 +43,7 @@ const About = ({ translation, setActiveProjectColor }) => {
             <div className="current-client-tooltip">
               <img
                 className="current-client-tooltip-img"
-                src="images/facial-recog-login.jpg"
+                src="images/nominapress/facial-recog-login.jpg"
                 alt={translation("about.nominapressImageAlt")}
               />
             </div>

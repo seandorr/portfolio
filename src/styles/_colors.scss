@@ -1,5 +1,6 @@
 $light-color: #fff;
-$dark-medium-color: #d1d1d1;
+$dark-light-color: #d1d1d1;
+$dark-medium-color: #333;
 $dark-color: #000;
 $nominapress-color: #233869;
 $random-shapes-color: #c672cc;
@@ -14,6 +15,7 @@ $music-library-color-4: #e5d1c1;
 
 :export {
   lightColor: $light-color;
+  darkLightColor: $dark-light-color;
   darkMediumColor: $dark-medium-color;
   darkColor: $dark-color;
   nominapressColor: $nominapress-color;

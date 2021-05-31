@@ -4,7 +4,7 @@ import colors from "../../../../styles/_colors.scss";
 import MusicLibrary from "../../MusicLibrary/MusicLibrary";
 import Gemini from "../../../Gemini/Gemini";
 import Nominapress from "../../../Nominapress/Nominapress";
-import Targetbase from "../../Targetbase/Targetbase";
+import Targetbase from "../../../Targetbase/Targetbase";
 
 const projectPreviewData = {
   musicLibrary: {

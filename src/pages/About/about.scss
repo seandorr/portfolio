@@ -4,13 +4,17 @@
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto auto auto;
+
   @include tablet {
-    height: calc(100vh - 180px);
     grid-gap: 50px;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto;
     margin: 0 50px;
     margin-top: 130px;
+  }
+
+  @include smallScreen {
+    grid-template-columns: 1fr 1fr;
   }
 
   .about-grid-item {

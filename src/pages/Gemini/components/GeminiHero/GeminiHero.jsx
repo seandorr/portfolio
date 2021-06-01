@@ -1,17 +1,23 @@
-import React from "react";
+/** @jsx jsx */
+import { jsx, css } from "@emotion/react";
 import useTranslation from "../../../../utils/customHooks/useTranslation";
-import GeminiLogo from "./assets/gemini-logo.svg";
-import Hamburger from "./assets/hamburger.svg";
 import "./gemini-hero.scss";
 
 const Gemini = () => {
   const { translation } = useTranslation();
+
+  const backgroundImg = `${process.env.PUBLIC_URL + `images/gemini/hero.jpg`}`;
+
+  const heroImg = css`
+    background-image: url(${backgroundImg});
+  `;
+
   return (
     <div className="gemini-container">
       <nav className="gemini-nav-bar" id="nav-bar">
         <div className="logo">
           <img
-            src={GeminiLogo}
+            src="images/gemini/gemini-logo.svg"
             alt={translation("project.gemini.imageAlts.logo")}
             width="auto"
             height="60px"
@@ -26,14 +32,14 @@ const Gemini = () => {
         </ul>
         <div className="nav-bar-icon">
           <img
-            src={Hamburger}
+            src="images/gemini/hamburger"
             alt={translation("project.gemini.imageAlts.menu")}
           />
         </div>
       </nav>
       <div className="gemini-hero">
         <div className="gemini-hero-container">
-          <div className="gemini-hero-img">
+          <div className="gemini-hero-img" css={heroImg}>
             <div className="gemini-hero-img-content-container">
               <h1>
                 Wave Away the Worries.

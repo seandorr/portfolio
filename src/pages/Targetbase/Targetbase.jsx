@@ -1,8 +1,11 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
+import useTranslation from "../../utils/customHooks/useTranslation";
 import "./targetbase.scss";
 
 const Targetbase = () => {
+  const { translation } = useTranslation();
+
   const backgroundImg = `${
     process.env.PUBLIC_URL + `images/targetbase/background_pattern.svg`
   }`;
@@ -17,7 +20,7 @@ const Targetbase = () => {
         <img
           className="logo"
           src="images/targetbase/tb_logo.svg"
-          alt="logo"
+          alt={translation("project.targetbase.imageAlts.logo")}
           height="60px"
         />
 
@@ -34,6 +37,7 @@ const Targetbase = () => {
       <img
         className="data-icon"
         src="images/targetbase/data_icon.svg"
+        alt={translation("project.targetbase.imageAlts.data")}
         width="750px"
         height="auto"
       />

@@ -37,8 +37,18 @@
         "bullet3": "Scheduling shifts",
         "bullet4": "Time off requests"
       },
-      "facialRecogValidationSlider": "Facial Recog Validation",
-      "facialRecogLoginSlider": "Facial Recog Login"
+      "facialRecogValidationSlider": {
+        "title": "Facial Recog Validation",
+        "imgAlts": {
+          "step1": "facial recognition validation step 1",
+          "step2": "facial recognition validation step 2",
+          "step3": "facial recognition validation step 3"
+        }
+      },
+      "facialRecogLoginSlider": {
+        "title": "Facial Recog Login",
+        "imgAlt": "facial recognition login"
+      }
     },
     "randomShapes": {
       "title": "Randomization",
@@ -79,7 +89,11 @@
         "CSS": "CSS",
         "JS": "JS"
       },
-      "imageAlt": "targetbase web design"
+      "imageAlt": "targetbase web design",
+      "imageAlts": {
+        "logo": "targetbase logo",
+        "data": "data icon"
+      }
     }
   },
   "about": {

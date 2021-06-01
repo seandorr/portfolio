@@ -79,7 +79,11 @@
         "CSS": "CSS",
         "JS": "JS"
       },
-      "imageAlt": "diseño web de targetbase"
+      "imageAlt": "diseño web de targetbase",
+      "imageAlts": {
+        "logo": "logo de targetbase",
+        "data": "icono de datos"
+      }
     }
   },
   "about": {

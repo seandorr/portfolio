@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./slideshow.scss";
+import useTranslation from "../../utils/customHooks/useTranslation";
 
 const Slideshow = ({
   className,
@@ -10,6 +11,8 @@ const Slideshow = ({
   projectColor,
 }) => {
   const [activeImgIndex, setActiveImgIndex] = useState(0);
+
+  const { translation } = useTranslation();
 
   const imageArrayLength = imageArray.length;
   const hasMoreThanOneImage = imageArrayLength > 1;
@@ -51,7 +54,8 @@ const Slideshow = ({
       )}
       <img
         className="slideshow-img"
-        src={`images/${projectDirectory}/${imageArray[activeImgIndex]}`}
+        src={`images/${projectDirectory}/${imageArray[activeImgIndex].image}`}
+        alt={translation(imageArray[activeImgIndex].alt)}
         style={{ border: `3px solid ${projectColor}` }}
       />
       {hasMoreThanOneImage && (

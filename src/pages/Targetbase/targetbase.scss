@@ -38,28 +38,9 @@
     font-weight: 400;
     font-style: normal;
     font-size: 24px;
-  }
-
-  .navbar ul li a {
     color: $light-color;
     text-decoration: none;
     position: relative;
-  }
-
-  /*	nav bar hover line effect */
-  .underline::before {
-    content: "";
-    width: 0;
-    bottom: -10px;
-    position: absolute;
-    border-bottom: 5px solid $targetbase-color;
-    transition: all 0.3s ease-in-out;
-  }
-
-  /*	nav bar hover line effect */
-  .underline:hover:before {
-    transform: scaleX(1);
-    width: 100%;
   }
   /*	end navbar */
 

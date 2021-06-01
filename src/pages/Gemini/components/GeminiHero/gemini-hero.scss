@@ -40,50 +40,21 @@
 
     li {
       margin-left: 0;
+      color: $dark-color;
+      font-size: 48px;
+      font-weight: 400;
+      font-style: normal;
+      opacity: 0.9;
 
       @include smallScreen {
         margin-left: 40px;
-      }
-
-      a {
-        color: $dark-color;
-        font-size: 48px;
-        font-weight: 400;
-        font-style: normal;
-        opacity: 0.9;
-
-        @include smallScreen {
-          font-size: 24px;
-        }
-      }
-
-      @media (hover) {
-        a:hover {
-          text-decoration: underline;
-          opacity: 1;
-        }
-      }
-
-      .active {
-        text-decoration: underline;
-        opacity: 1;
+        font-size: 24px;
       }
     }
 
-    .notHome {
-      @include smallScreen {
-        margin-right: 40px;
-      }
-    }
-
-    #quote a {
-      color: $dark-color;
-      font-weight: 400;
-
-      @include smallScreen {
-        color: $light-color;
-        font-weight: 700;
-      }
+    #quote {
+      color: $light-color;
+      font-weight: 700;
     }
 
     #quote {
@@ -119,16 +90,6 @@
       visibility: hidden;
     }
   }
-
-  .close-btn {
-    color: $dark-color;
-    font-size: 48px;
-    transform: rotate(45deg);
-    position: absolute;
-    right: 22px;
-    top: 23px;
-    visibility: hidden;
-  }
 }
 
 .nav-bar.responsive {
@@ -153,10 +114,6 @@
 
 .nav-bar-icon.responsive {
   opacity: 0;
-}
-
-.close-btn.responsive {
-  visibility: visible;
 }
 
 .gemini-hero {
@@ -235,10 +192,6 @@
         @include smallScreen {
           font-size: 36px;
           padding: 20px;
-        }
-
-        &:hover {
-          box-shadow: 0 0 0 4px $gemini-color;
         }
       }
     }

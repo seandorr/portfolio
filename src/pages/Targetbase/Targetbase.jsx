@@ -14,20 +14,15 @@ const Targetbase = () => {
   return (
     <div className="targetbase-project">
       <nav className="navbar">
-        <a href="#top">
-          <img
-            className="logo"
-            src="images/targetbase/tb_logo.svg"
-            alt="logo"
-            height="60px"
-          />
-        </a>
+        <img
+          className="logo"
+          src="images/targetbase/tb_logo.svg"
+          alt="logo"
+          height="60px"
+        />
+
         <ul>
-          <li>
-            <a href="#" className="underline">
-              MENU
-            </a>
-          </li>
+          <li>MENU</li>
         </ul>
       </nav>
       <section id="hero-image" className="section" css={heroImgPattern}>

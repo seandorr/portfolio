@@ -71,8 +71,12 @@ const DetailedProject = ({
         {projectDetailedComponent && (
           <div className="project-view">{projectDetailedComponent}</div>
         )}
+        <Footer
+          projects={projects}
+          project={project}
+          translation={translation}
+        />
       </div>
-      <Footer projects={projects} project={project} translation={translation} />
     </>
   );
 };

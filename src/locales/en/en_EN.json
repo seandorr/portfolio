@@ -62,7 +62,11 @@
         "JS": "JS"
       },
       "imageAlt": "gemini web design",
-      "description": "Gemini Diversified Services is a medical credentialing verification organization (CVO). Gemini wanted to position themselves unique against their competition, yet not stand out too different. Finding the right balance between these proved to be difficult; how far could we push the boundaries? In order to find equilibrium on the site, I used a mix of custom iconography, along with themed images and tag-lines dedicated to their California native sport - Surfing."
+      "description": "Gemini Diversified Services is a medical credentialing verification organization (CVO). Gemini wanted to position themselves unique against their competition, yet not stand out too different. Finding the right balance between these proved to be difficult; how far could we push the boundaries? In order to find equilibrium on the site, I used a mix of custom iconography, along with themed images and tag-lines dedicated to their California native sport - Surfing.",
+      "imageAlts": {
+        "logo": "gemini logo",
+        "menu": "menu icon"
+      }
     },
     "targetbase": {
       "title": "Targetbase",

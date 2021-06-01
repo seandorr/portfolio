@@ -1,14 +1,21 @@
 import React from "react";
+import useTranslation from "../../../../utils/customHooks/useTranslation";
 import GeminiLogo from "./assets/gemini-logo.svg";
 import Hamburger from "./assets/hamburger.svg";
 import "./gemini-hero.scss";
 
 const Gemini = () => {
+  const { translation } = useTranslation();
   return (
     <div className="gemini-container">
       <nav className="gemini-nav-bar" id="nav-bar">
         <div className="logo">
-          <img src={GeminiLogo} width="auto" height="60px" />
+          <img
+            src={GeminiLogo}
+            alt={translation("project.gemini.imageAlts.logo")}
+            width="auto"
+            height="60px"
+          />
         </div>
         <ul className="nav-bar-ul" id="nav-bar-ul">
           <li className="nav-bar-li">Services</li>
@@ -18,7 +25,10 @@ const Gemini = () => {
           </li>
         </ul>
         <div className="nav-bar-icon">
-          <img src={Hamburger} />
+          <img
+            src={Hamburger}
+            alt={translation("project.gemini.imageAlts.menu")}
+          />
         </div>
       </nav>
       <div className="gemini-hero">

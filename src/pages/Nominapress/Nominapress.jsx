@@ -30,6 +30,8 @@ const Nominapress = ({ projectColor }) => {
   );
 };
 
-Nominapress.propTypes = {};
+Nominapress.propTypes = {
+  projectColor: PropTypes.string.isRequired,
+};
 
 export default Nominapress;

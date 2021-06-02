@@ -5,21 +5,23 @@ import Safe from "../../icons/Safe/Safe";
 import Service from "../../icons/Service/Service";
 import Tech from "../../icons/Tech/Tech";
 
-export const geminiIcons = {
-  tech: {
+const geminiIcons = [
+  {
     key: generateRandomKey(),
     icon: <Tech />,
   },
-  safe: {
+  {
     key: generateRandomKey(),
     icon: <Safe />,
   },
-  portal: {
+  {
     key: generateRandomKey(),
     icon: <Portal />,
   },
-  service: {
+  {
     key: generateRandomKey(),
     icon: <Service />,
   },
-};
+];
+
+export default geminiIcons;

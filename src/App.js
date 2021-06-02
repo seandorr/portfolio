@@ -8,6 +8,7 @@ import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import DetailedProject from "./pages/DetailedProjects/components/DetailedProject";
 import generateRandomKey from "./utils/functions/generateRandomKey";
 import useTranslation from "./utils/customHooks/useTranslation";
+import "./styles/main.scss";
 
 const PROJECTS = Object.values(projectPreviewData);
 

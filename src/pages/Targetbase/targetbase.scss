@@ -1,4 +1,6 @@
-@import "../../styles/main.scss";
+@import "../../styles/mediaQueries";
+@import "../../styles/baseStyles";
+@import "../../styles/colors";
 
 .targetbase-project {
   background-color: $dark-medium-color;

@@ -5,14 +5,13 @@ import MusicLibraryItem from "./components/MusicLibraryItem";
 import "./music-library.scss";
 
 const MusicLibrary = () => {
-  const arraymusicLibraryItems = Object.keys(musicLibraryItems);
-  const numberOfItems = arraymusicLibraryItems.length;
-  const lastItem = arraymusicLibraryItems[arraymusicLibraryItems.length - 1];
+  const numberOfItems = musicLibraryItems.length;
+  const lastItem = musicLibraryItems[musicLibraryItems.length - 1];
   const [activeItem, setActiveItem] = useState(lastItem);
 
   return (
     <div className="music-library__main-container">
-      {Object.values(musicLibraryItems).map((item) => {
+      {musicLibraryItems.map((item) => {
         const { id, title, value, color } = item;
 
         return (

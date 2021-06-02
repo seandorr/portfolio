@@ -1,25 +1,29 @@
 import React, { useMemo } from "react";
 import PropTypes from "prop-types";
+import { projectsData } from "../../../Home/utils/constants/projectPreviewData";
 import { Link } from "react-router-dom";
 import { Tilt } from "../../../../components/CustomTilt/CustomTilt";
-import "./footer.scss";
 import useWindowSize from "../../../../utils/customHooks/useWindowSize";
+import "./footer.scss";
+import useTranslation from "../../../../utils/customHooks/useTranslation";
 
-const Footer = ({ projects, project, translation }) => {
+const Footer = ({ project }) => {
   const { projectId } = project;
+
+  const { translation } = useTranslation();
 
   const browserWidth = useWindowSize().width;
   const smallScreen = useMemo(() => browserWidth < 768, [browserWidth]);
 
-  let previousProject = projects[projectId - 2];
-  let nextProject = projects[projectId];
-  const lastProject = projects.length - 1;
+  let previousProject = projectsData[projectId - 2];
+  let nextProject = projectsData[projectId];
+  const lastProject = projectsData.length - 1;
   if (previousProject === undefined) {
-    previousProject = projects[lastProject];
+    previousProject = projectsData[lastProject];
   }
 
   if (nextProject === undefined) {
-    nextProject = projects[0];
+    nextProject = projectsData[0];
   }
 
   const prevProjectLinkStyles = {
@@ -54,9 +58,7 @@ const Footer = ({ projects, project, translation }) => {
 };
 
 Footer.propTypes = {
-  projects: PropTypes.arrayOf(Object).isRequired,
   project: PropTypes.object.isRequired,
-  translation: PropTypes.func.isRequired,
 };
 
 export default Footer;

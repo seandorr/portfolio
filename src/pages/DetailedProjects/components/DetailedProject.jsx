@@ -4,20 +4,18 @@ import generateRandomKey from "../../../utils/functions/generateRandomKey";
 import { isObjectWithValues } from "../../../utils/validators/objectValidator";
 import FilterTags from "../../../components/FilterTags/FilterTags";
 import Footer from "../components/Footer/Footer";
+import useTranslation from "../../../utils/customHooks/useTranslation";
 import "./detailed-project.scss";
 
-const DetailedProject = ({
-  translation,
-  projects,
-  project,
-  setActiveProjectColor,
-}) => {
+const DetailedProject = ({ project, setActiveProjectColor }) => {
   const { projectName, projectColor, gitLink, projectDetailedComponent } =
     project;
 
   useEffect(() => {
     setActiveProjectColor(projectColor);
   }, [projectColor, setActiveProjectColor]);
+
+  const { translation } = useTranslation();
 
   const descriptionBullets = translation(
     `project.${projectName}.descriptionBullets`,
@@ -61,34 +59,23 @@ const DetailedProject = ({
             className="project-details-grid-item stack"
             style={{ backgroundColor: projectColor }}
           >
-            <FilterTags
-              translation={translation}
-              projectName={projectName}
-              location="detailed"
-            />
+            <FilterTags projectName={projectName} location="detailed" />
           </div>
         </div>
         {projectDetailedComponent && (
           <div className="project-view">{projectDetailedComponent}</div>
         )}
-        <Footer
-          projects={projects}
-          project={project}
-          translation={translation}
-        />
+        <Footer project={project} />
       </div>
     </>
   );
 };
 
 DetailedProject.propTypes = {
-  translation: PropTypes.func,
-  project: PropTypes.objectOf(Object).isRequired,
   setActiveProjectColor: PropTypes.func,
 };
 
 DetailedProject.defaultProps = {
-  translation: undefined,
   setActiveProjectColor: undefined,
 };
 

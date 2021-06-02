@@ -1,13 +1,13 @@
 import React from "react";
-import RandomShapes from "../../RandomShapes/RandomShapes";
-import colors from "../../../../styles/_colors.scss";
 import MusicLibrary from "../../MusicLibrary/MusicLibrary";
-import Gemini from "../../../Gemini/Gemini";
 import Nominapress from "../../../Nominapress/Nominapress";
+import RandomShapes from "../../RandomShapes/RandomShapes";
+import Gemini from "../../../Gemini/Gemini";
 import Targetbase from "../../../Targetbase/Targetbase";
+import colors from "../../../../styles/_colors.scss";
 
-const projectPreviewData = {
-  musicLibrary: {
+const projectPreviewData = [
+  {
     projectId: 1,
     projectName: "musicLibrary",
     projectImage: "music-library.svg",
@@ -16,7 +16,7 @@ const projectPreviewData = {
     gitLink: "https://github.com/seandorr",
     projectDetailedComponent: <MusicLibrary />,
   },
-  nominapress: {
+  {
     projectId: 2,
     projectName: "nominapress",
     projectImage: "facial-recog-login.jpg",
@@ -26,7 +26,7 @@ const projectPreviewData = {
       <Nominapress projectColor={colors.nominapressColor} />
     ),
   },
-  randomShapes: {
+  {
     projectId: 3,
     projectName: "randomShapes",
     projectComponent: <RandomShapes type="preview" />,
@@ -34,7 +34,7 @@ const projectPreviewData = {
     projectLink: "random-shapes",
     projectDetailedComponent: <RandomShapes type="detailed" />,
   },
-  gemini: {
+  {
     projectId: 4,
     projectName: "gemini",
     projectImage: "gemini-hero.jpg",
@@ -42,7 +42,7 @@ const projectPreviewData = {
     projectLink: "gemini",
     projectDetailedComponent: <Gemini />,
   },
-  targetbase: {
+  {
     projectId: 5,
     projectName: "targetbase",
     projectImage: "targetbase-hero.jpg",
@@ -50,6 +50,6 @@ const projectPreviewData = {
     projectLink: "targetbase",
     projectDetailedComponent: <Targetbase />,
   },
-};
+];
 
-export default projectPreviewData;
+export { projectPreviewData as projectsData };

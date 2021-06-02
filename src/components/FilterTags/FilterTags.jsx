@@ -2,9 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import FilterTag from "./components/FilterTag/FilterTag";
 import generateRandomKey from "../../utils/functions/generateRandomKey";
+import useTranslation from "../../utils/customHooks/useTranslation";
 import "./filter-tags.scss";
 
-const FilterTags = ({ translation, projectName, location }) => {
+const FilterTags = ({ projectName, location }) => {
+  const { translation } = useTranslation();
   const tags = translation(`project.${projectName}.tags`, {
     returnObjects: true,
   });
@@ -23,13 +25,11 @@ const FilterTags = ({ translation, projectName, location }) => {
 };
 
 FilterTags.propTypes = {
-  translation: PropTypes.func,
   projectName: PropTypes.string,
   location: PropTypes.string.isRequired,
 };
 
 FilterTags.defaultProps = {
-  translation: undefined,
   projectName: undefined,
 };
 

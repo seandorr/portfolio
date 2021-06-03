@@ -50,9 +50,9 @@ const Home = ({ setActiveProjectColor, activeProjectColor }) => {
       {!isMobileSize && <GridLines activeProjectColor={activeProjectColor} />}
       <div className="projects-container">
         {projectsData.map((project) => {
-          return (
-            <ProjectPreview key={projectsData.projectId} project={project} />
-          );
+          const { projectId } = project;
+
+          return <ProjectPreview key={projectId} project={project} />;
         })}
       </div>
     </Suspense>

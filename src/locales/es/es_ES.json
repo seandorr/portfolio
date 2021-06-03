@@ -15,7 +15,8 @@
         "emotion": "emotion",
         "design": "diseño"
       },
-      "imageAlt": "diseño web de una biblioteca de música"
+      "imageAlt": "diseño web de una biblioteca de música",
+      "description": "add data"
     },
     "nominapress": {
       "title": "Nominapress",
@@ -28,7 +29,16 @@
         "translations": "i18n",
         "design": "diseño"
       },
-      "imageAlt": "diseño web de nominapress"
+      "imageAlt": "diseño web de nominapress",
+      "description": "add data",
+      "descriptionBullets": {
+        "bullet1": "Facial recognition login / validation",
+        "bullet2": "Job application board",
+        "bullet3": "Scheduling shifts",
+        "bullet4": "Time off requests"
+      },
+      "facialRecogValidationSlider": "Facial Recog Validation",
+      "facialRecogLoginSlider": "Facial Recog Login"
     },
     "randomShapes": {
       "title": "Aleatorización",
@@ -38,7 +48,8 @@
         "JSX": "JSX",
         "emotion": "emotion"
       },
-      "imageAlt": "formas aleatorias "
+      "imageAlt": "formas aleatorias",
+      "description": "add data"
     },
     "gemini": {
       "title": "Gemini Diversified Services",
@@ -50,7 +61,12 @@
         "SCSS": "SCSS",
         "JS": "JS"
       },
-      "imageAlt": "diseño web de gemini"
+      "imageAlt": "diseño web de gemini",
+      "description": "add data",
+      "imageAlts": {
+        "logo": "logo de gemini",
+        "menu": "icono del menú"
+      }
     },
     "targetbase": {
       "title": "Targetbase",
@@ -63,7 +79,11 @@
         "CSS": "CSS",
         "JS": "JS"
       },
-      "imageAlt": "diseño web de targetbase"
+      "imageAlt": "diseño web de targetbase",
+      "imageAlts": {
+        "logo": "logo de targetbase",
+        "data": "icono de datos"
+      }
     }
   },
   "about": {

@@ -4,13 +4,12 @@ import PropTypes from "prop-types";
 import colors from "../../../../styles/_colors.scss";
 
 const MusicLibraryActiveItemContent = ({
-  musicLibraryItems,
-  activeItem,
-  value,
   color,
+  playlistURL,
+  isActivePlaylist,
   largeScreenSize,
 }) => {
-  return musicLibraryItems[activeItem].value === value ? (
+  return isActivePlaylist ? (
     <div
       className="spotify-playlist"
       css={css`
@@ -19,7 +18,7 @@ const MusicLibraryActiveItemContent = ({
     >
       <iframe
         title="spotify-playlist"
-        src={`https://open.spotify.com/embed?uri=spotify:user:122367656:playlist:${musicLibraryItems[activeItem].playlistURL}`}
+        src={`https://open.spotify.com/embed?uri=spotify:user:122367656:playlist:${playlistURL}`}
         width="300"
         height={largeScreenSize ? "380" : "80"}
         frameBorder="0"
@@ -31,16 +30,17 @@ const MusicLibraryActiveItemContent = ({
 };
 
 MusicLibraryActiveItemContent.propTypes = {
-  musicLibraryItems: PropTypes.objectOf(Object).isRequired,
-  activeItem: PropTypes.string,
-  value: PropTypes.string,
   color: PropTypes.string,
+  playlistURL: PropTypes.string,
+  isActivePlaylist: PropTypes.bool,
+  largeScreenSize: PropTypes.bool,
 };
 
 MusicLibraryActiveItemContent.defaultProps = {
-  activeItem: undefined,
-  value: undefined,
   color: undefined,
+  playlistURL: undefined,
+  isActivePlaylist: false,
+  largeScreenSize: true,
 };
 
 export default MusicLibraryActiveItemContent;

@@ -1,4 +1,6 @@
-@import "../../styles/main.scss";
+@import "../../styles/mediaQueries";
+@import "../../styles/baseStyles";
+@import "../../styles/colors";
 
 .projects-container {
   transition: transform 0.25s;

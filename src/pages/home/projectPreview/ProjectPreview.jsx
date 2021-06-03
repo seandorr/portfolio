@@ -2,8 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import FilterTags from "../../../components/FilterTags/FilterTags";
+import useTranslation from "../../../utils/customHooks/useTranslation";
 
-const ProjectPreview = ({ project, translation }) => {
+const ProjectPreview = ({ project }) => {
   const {
     projectId,
     projectName,
@@ -11,6 +12,8 @@ const ProjectPreview = ({ project, translation }) => {
     projectComponent,
     projectLink,
   } = project;
+
+  const { translation } = useTranslation();
 
   return (
     <div
@@ -29,11 +32,7 @@ const ProjectPreview = ({ project, translation }) => {
       </div>
       <div className="content" id="col-right">
         <h1>{translation(`project.${projectName}.title`)}</h1>
-        <FilterTags
-          translation={translation}
-          projectName={projectName}
-          location="home"
-        />
+        <FilterTags projectName={projectName} location="home" />
         <Link to={projectLink} className="link project-link">
           {translation(`viewButton`)}
         </Link>

@@ -16,20 +16,24 @@ const Nominapress = ({ projectColor }) => {
         className="nominapress-grid-item"
         imageArray={facialRecogValidationImages}
         projectDirectory="nominapress"
-        title={translation("project.nominapress.facialRecogValidationSlider")}
+        title={translation(
+          "project.nominapress.facialRecogValidationSlider.title"
+        )}
         projectColor={projectColor}
       />
       <Slideshow
         className="nominapress-grid-item"
         imageArray={facialRecogLoginImage}
         projectDirectory="nominapress"
-        title={translation("project.nominapress.facialRecogLoginSlider")}
+        title={translation("project.nominapress.facialRecogLoginSlider.title")}
         projectColor={projectColor}
       />
     </div>
   );
 };
 
-Nominapress.propTypes = {};
+Nominapress.propTypes = {
+  projectColor: PropTypes.string.isRequired,
+};
 
 export default Nominapress;

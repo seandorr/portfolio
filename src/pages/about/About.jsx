@@ -8,12 +8,15 @@ import colors from "../../styles/_colors.scss";
 import { linkFadeInOut } from "./utils/constants/linkFadeInOut";
 import SocialLinks from "./components/SocialLinks/SocialLinks";
 import "./about.scss";
+import useTranslation from "../../utils/customHooks/useTranslation";
 
-const About = ({ translation, setActiveProjectColor }) => {
+const About = ({ setActiveProjectColor }) => {
   const [linkHover, setLinkHover] = useState(false);
   useEffect(() => {
     setActiveProjectColor(colors.aboutColor);
   }, [setActiveProjectColor]);
+
+  const { translation } = useTranslation();
 
   const backgroundImg = `${
     process.env.PUBLIC_URL + `images/about/sean-headshot.JPG`
@@ -58,7 +61,7 @@ const About = ({ translation, setActiveProjectColor }) => {
       <div className="about-container-grid">
         <div className="about-grid-item headshot" css={headshotImgStyles} />
         <div className="about-grid-item about">
-          <FilterTags translation={translation} location="about" />
+          <FilterTags location="about" />
           <div className="about-paragraph">
             <span>{translation("about.paragraphPart1")} </span>
             <span className="work-link-text">{currenWorkLink()}</span>

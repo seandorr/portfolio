@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { geminiIcons } from "./utils/constants/geminiIcons";
+import geminiIcons from "./utils/constants/geminiIcons";
 import "./gemini-icons.scss";
 
 const GeminiIcons = () => {
   const [hoveringOverIcon, setHoveringOverIcon] = useState(false);
-  const IconsArray = Object.values(geminiIcons);
 
   const handleOnMouseEnter = (key) => {
     setHoveringOverIcon(key);
@@ -12,7 +11,7 @@ const GeminiIcons = () => {
 
   return (
     <div className="gemini-icon-grid">
-      {IconsArray.map(({ icon, key }) => {
+      {geminiIcons.map(({ icon, key }) => {
         return (
           <div
             className={`gemini-icon ${

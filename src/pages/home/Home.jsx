@@ -2,14 +2,10 @@ import React, { useEffect, Suspense } from "react";
 import GridLines from "../../components/GridLines/GridLines";
 import ProjectPreview from "./ProjectPreview/ProjectPreview";
 import useWindowSize from "../../utils/customHooks/useWindowSize";
+import { projectsData } from "../Home/utils/constants/projectPreviewData";
 import "./home.scss";
 
-const Home = ({
-  translation,
-  projects,
-  setActiveProjectColor,
-  activeProjectColor,
-}) => {
+const Home = ({ setActiveProjectColor, activeProjectColor }) => {
   const getWindowHeight = useWindowSize().height;
   const getWindowWidth = useWindowSize().width;
   const isMobileSize = getWindowWidth < 768;
@@ -20,14 +16,14 @@ const Home = ({
         window.scrollY / (getWindowHeight / 1.2)
       );
 
-      if (projects[indexOfProjectCurrentlyInView] !== undefined) {
-        if (indexOfProjectCurrentlyInView < projects.length) {
+      if (projectsData[indexOfProjectCurrentlyInView] !== undefined) {
+        if (indexOfProjectCurrentlyInView < projectsData.length) {
           setActiveProjectColor(
-            projects[indexOfProjectCurrentlyInView].projectColor
+            projectsData[indexOfProjectCurrentlyInView].projectColor
           );
         } else {
-          const lastProject = projects.length - 1;
-          setActiveProjectColor(projects[lastProject].projectColor);
+          const lastProject = projectsData.length - 1;
+          setActiveProjectColor(projectsData[lastProject].projectColor);
         }
       }
     };
@@ -36,7 +32,7 @@ const Home = ({
 
     const handleProjectColors = () => {
       if (window.scrollY <= 1) {
-        setActiveProjectColor(projects[0].projectColor);
+        setActiveProjectColor(projectsData[0].projectColor);
       } else {
         window.addEventListener("scroll", handleScroll);
       }
@@ -47,20 +43,16 @@ const Home = ({
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [getWindowHeight, projects, setActiveProjectColor]);
+  }, [getWindowHeight, setActiveProjectColor]);
 
   return (
     <Suspense fallback="loading">
       {!isMobileSize && <GridLines activeProjectColor={activeProjectColor} />}
       <div className="projects-container">
-        {projects.map((project) => {
-          return (
-            <ProjectPreview
-              key={project.projectId}
-              project={project}
-              translation={translation}
-            />
-          );
+        {projectsData.map((project) => {
+          const { projectId } = project;
+
+          return <ProjectPreview key={projectId} project={project} />;
         })}
       </div>
     </Suspense>

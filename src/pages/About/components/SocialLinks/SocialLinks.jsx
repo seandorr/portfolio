@@ -5,15 +5,14 @@ import generateRandomKey from "../../../../utils/functions/generateRandomKey";
 import "./social-links.scss";
 
 const SocialLinks = () => {
-  const socialLinksArray = Object.values(socialLinks);
-  const socialLinksArrayLength = socialLinksArray.length;
+  const socialLinksArrayLength = socialLinks.length;
 
   return (
     <div
       className="social-links-container"
       style={{ width: socialLinksArrayLength * 50 }}
     >
-      {socialLinksArray.map((socialLink) => {
+      {socialLinks.map((socialLink) => {
         const { link, icon } = socialLink;
         return (
           <SocialLink link={link} key={generateRandomKey()}>

@@ -26,7 +26,6 @@
         top: 40px;
         left: 50%;
         transform: translate(-50%, -50%);
-        cursor: pointer;
 
         h1 {
           font-size: 36px;
@@ -44,6 +43,10 @@
           top: calc(50% + 20px);
           opacity: 1;
         }
+      }
+
+      &:not(.active-item) {
+        cursor: pointer;
       }
     }
 
@@ -92,7 +95,6 @@
         top: 50%;
         left: 40px;
         transform: translate(-50%, -50%);
-        cursor: pointer;
 
         h1 {
           font-size: 36px;
@@ -111,6 +113,10 @@
           top: 50%;
           opacity: 1;
         }
+      }
+
+      &:not(.active-item) {
+        cursor: pointer;
       }
     }
 

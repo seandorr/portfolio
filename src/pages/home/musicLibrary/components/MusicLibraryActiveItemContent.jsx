@@ -2,7 +2,6 @@
 import { jsx, css } from "@emotion/react";
 import PropTypes from "prop-types";
 import colors from "../../../../styles/_colors.scss";
-import useWindowSize from "../../../../utils/customHooks/useWindowSize";
 
 const MusicLibraryActiveItemContent = ({
   color,

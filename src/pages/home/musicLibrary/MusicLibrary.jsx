@@ -5,28 +5,29 @@ import MusicLibraryItem from "./components/MusicLibraryItem";
 import "./music-library.scss";
 
 const MusicLibrary = () => {
-  const arraymusicLibraryItems = Object.keys(musicLibraryItems);
-  const numberOfItems = arraymusicLibraryItems.length;
-  const lastItem = arraymusicLibraryItems[arraymusicLibraryItems.length - 1];
-  const [activeItem, setActiveItem] = useState(lastItem);
+  const numberOfItems = musicLibraryItems.length;
+  const lastItem = musicLibraryItems[musicLibraryItems.length - 1];
+  const [activeItemId, setActiveItemId] = useState(lastItem.id);
+  const calcSizeOfNotActivePlaylists = 80 * (numberOfItems - 1);
 
   return (
     <div className="music-library__main-container">
-      {Object.values(musicLibraryItems).map((item) => {
-        const { id, title, value, color } = item;
+      {musicLibraryItems.map((item) => {
+        const { id, title, color, playlistURL } = item;
+
+        const isActivePlaylist = id === activeItemId;
 
         return (
           <MusicLibraryItem
             id={id}
             title={title}
-            value={value}
             color={color}
+            playlistURL={playlistURL}
             key={id}
-            musicLibraryItems={musicLibraryItems}
+            isActivePlaylist={isActivePlaylist}
+            setActiveItem={setActiveItemId}
             numberOfItems={numberOfItems}
-            lastItem={lastItem}
-            activeItem={activeItem}
-            setActiveItem={setActiveItem}
+            calcSizeOfNotActivePlaylists={calcSizeOfNotActivePlaylists}
           />
         );
       })}

@@ -1,35 +1,31 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
 import PropTypes from "prop-types";
-import colors from "../../../../styles/_colors.scss";
 import MusicLibraryActiveItemContent from "./MusicLibraryActiveItemContent";
+import colors from "../../../../styles/_colors.scss";
 import useWindowSize from "../../../../utils/customHooks/useWindowSize";
 
-const MusicLibraryItem = (props) => {
-  const {
-    title,
-    value,
-    color,
-    musicLibraryItems,
-    numberOfItems,
-    activeItem,
-    setActiveItem,
-  } = props;
+const MusicLibraryItem = ({
+  id,
+  title,
+  color,
+  playlistURL,
+  setActiveItem,
+  isActivePlaylist,
+  calcSizeOfNotActivePlaylists,
+}) => {
+  const handleOnClickItem = (id) => {
+    setActiveItem(id);
+  };
 
   const getWindowWidth = useWindowSize().width;
   const largeScreenSize = getWindowWidth >= 768;
-
-  const handleOnClickItem = (value) => {
-    setActiveItem((prevactiveMenuItem) => {
-      return prevactiveMenuItem !== value ? value : value;
-    });
-  };
 
   const largeScreenStyles = css`
     background-color: ${colors[color]};
 
     &.active-item {
-      width: calc(100% - ${80 * (numberOfItems - 1)}px);
+      width: calc(100% - ${calcSizeOfNotActivePlaylists}px);
     }
   `;
 
@@ -37,29 +33,24 @@ const MusicLibraryItem = (props) => {
     background-color: ${colors[color]};
 
     &.active-item {
-      height: calc(100% - ${80 * (numberOfItems - 1)}px);
+      height: calc(100% - ${calcSizeOfNotActivePlaylists}px);
     }
   `;
 
   return (
     <div
       css={largeScreenSize ? largeScreenStyles : smallScreenStyles}
-      className={`music-library__item ${
-        activeItem && musicLibraryItems[activeItem].value === value
-          ? "active-item"
-          : ""
-      }`}
-      onClick={() => handleOnClickItem(value)}
+      className={`music-library__item ${isActivePlaylist ? "active-item" : ""}`}
+      onClick={() => handleOnClickItem(id)}
     >
       <div className="music-library__item-title-wrapper">
         <h1 className="music-library__item-title">{title}</h1>
       </div>
-      <div className={`music-library__selected-item-content ${activeItem}`}>
+      <div className={"music-library__selected-item-content"}>
         <MusicLibraryActiveItemContent
-          musicLibraryItems={musicLibraryItems}
-          activeItem={activeItem}
-          value={value}
+          playlistURL={playlistURL}
           color={color}
+          isActivePlaylist={isActivePlaylist}
           largeScreenSize={largeScreenSize}
         />
       </div>
@@ -70,13 +61,20 @@ const MusicLibraryItem = (props) => {
 MusicLibraryItem.propTypes = {
   id: PropTypes.number,
   title: PropTypes.string,
-  activeItem: PropTypes.string,
+  color: PropTypes.string,
+  playlistURL: PropTypes.string,
+  setActiveItem: PropTypes.func.isRequired,
+  isActivePlaylist: PropTypes.bool,
+  calcSizeOfNotActivePlaylists: PropTypes.number,
 };
 
 MusicLibraryItem.defaultProps = {
-  id: null,
+  id: undefined,
   title: undefined,
-  activeItem: undefined,
+  color: undefined,
+  playlistURL: undefined,
+  isActivePlaylist: false,
+  calcSizeOfNotActivePlaylists: undefined,
 };
 
 export default MusicLibraryItem;

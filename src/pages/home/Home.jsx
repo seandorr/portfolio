@@ -43,7 +43,7 @@ const Home = ({ setActiveProjectColor, activeProjectColor }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [getWindowHeight, projectsData, setActiveProjectColor]);
+  }, [getWindowHeight, setActiveProjectColor]);
 
   return (
     <Suspense fallback="loading">

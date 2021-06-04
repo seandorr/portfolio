@@ -32,7 +32,7 @@ const Gemini = () => {
         </ul>
         <div className="nav-bar-icon">
           <img
-            src="images/gemini/hamburger"
+            src="images/gemini/hamburger.svg"
             alt={translation("project.gemini.imageAlts.menu")}
           />
         </div>

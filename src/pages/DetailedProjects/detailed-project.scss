@@ -24,6 +24,17 @@
       border-radius: $border-radius;
       padding: 25px;
 
+      .project-title {
+        white-space: nowrap;
+        max-width: 275px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @include tablet {
+          max-width: 100%;
+        }
+      }
+
       .project-git-link {
         &.link {
           &::after {

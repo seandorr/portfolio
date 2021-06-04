@@ -13,7 +13,7 @@ const projectPreviewData = [
     projectImage: "music-library.svg",
     projectColor: colors.musicLibraryColor1,
     projectLink: "music-library",
-    gitLink: "https://github.com/seandorr",
+    gitLink: "https://github.com/seandorr/music-library",
     projectDetailedComponent: <MusicLibrary />,
   },
   {

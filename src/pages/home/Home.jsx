@@ -2,7 +2,7 @@ import React, { useEffect, Suspense } from "react";
 import GridLines from "../../components/GridLines/GridLines";
 import ProjectPreview from "./ProjectPreview/ProjectPreview";
 import useWindowSize from "../../utils/customHooks/useWindowSize";
-import { projectsData } from "../Home/utils/constants/projectPreviewData";
+import { projectsData } from "../../utils/constants/projectPreviewData";
 import "./home.scss";
 
 const Home = ({ setActiveProjectColor, activeProjectColor }) => {

@@ -1,7 +1,7 @@
 import React from "react";
-import SocialLink from "./SocialLink";
-import { socialLinks } from "../../utils/constants/socialLinks";
-import generateRandomKey from "../../../../utils/functions/generateRandomKey";
+import SocialLink from "./SocialLink/SocialLink";
+import { socialLinks } from "../utils/constants/socialLinks";
+import generateRandomKey from "../../../utils/functions/generateRandomKey";
 import "./social-links.scss";
 
 const SocialLinks = () => {

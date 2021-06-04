@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
 import PropTypes from "prop-types";
-import colors from "../../../../styles/_colors.scss";
+import colors from "../../../styles/_colors.scss";
 
 const MusicLibraryActiveItemContent = ({
   color,

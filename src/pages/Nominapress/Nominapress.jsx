@@ -4,7 +4,7 @@ import "./nominapress.scss";
 import {
   facialRecogValidationImages,
   facialRecogLoginImage,
-} from "./utils/facialRecogImages";
+} from "./utils/constants/facialRecogImages";
 import Slideshow from "../../components/Slideshow/Slideshow";
 import useTranslation from "../../utils/customHooks/useTranslation";
 

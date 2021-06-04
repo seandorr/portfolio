@@ -64,7 +64,7 @@ export const GenerateRandomShapes = ({ type }) => {
           transition: 40s ease-in-out;
           transform: ${`translate(${getRandomSizeAndPosition()}%, ${getRandomSizeAndPosition()}%)`};
         `}
-        key={generateRandomKey()}
+        key={type === "preview" ? generateRandomKey() : undefined}
       />
     );
   }

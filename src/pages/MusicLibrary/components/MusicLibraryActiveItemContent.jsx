@@ -12,9 +12,13 @@ const MusicLibraryActiveItemContent = ({
   return isActivePlaylist ? (
     <div
       className="spotify-playlist"
-      css={css`
-        border: 20px solid ${colors[color]};
-      `}
+      css={
+        largeScreenSize
+          ? css`
+              border: 20px solid ${colors[color]};
+            `
+          : ``
+      }
     >
       <iframe
         title="spotify-playlist"

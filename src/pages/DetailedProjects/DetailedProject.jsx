@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import generateRandomKey from "../../../utils/functions/generateRandomKey";
-import { isObjectWithValues } from "../../../utils/validators/objectValidator";
-import FilterTags from "../../../components/FilterTags/FilterTags";
-import Footer from "../components/Footer/Footer";
-import useTranslation from "../../../utils/customHooks/useTranslation";
+import generateRandomKey from "../../utils/functions/generateRandomKey";
+import { isObjectWithValues } from "../../utils/validators/objectValidator";
+import FilterTags from "../../components/FilterTags/FilterTags";
+import Footer from "./Footer/Footer";
+import useTranslation from "../../utils/customHooks/useTranslation";
 import "./detailed-project.scss";
 
 const DetailedProject = ({ project, setActiveProjectColor }) => {

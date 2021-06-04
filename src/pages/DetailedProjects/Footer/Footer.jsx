@@ -1,10 +1,10 @@
 import React, { useMemo } from "react";
-import PropTypes from "prop-types";
-import { projectsData } from "../../../../utils/constants/projectPreviewData";
 import { Link } from "react-router-dom";
-import { Tilt } from "../../../../components/CustomTilt/CustomTilt";
-import useWindowSize from "../../../../utils/customHooks/useWindowSize";
-import useTranslation from "../../../../utils/customHooks/useTranslation";
+import PropTypes from "prop-types";
+import { projectsData } from "../../../utils/constants/projectPreviewData";
+import { Tilt } from "../../../components/CustomTilt/CustomTilt";
+import useWindowSize from "../../../utils/customHooks/useWindowSize";
+import useTranslation from "../../../utils/customHooks/useTranslation";
 import "./footer.scss";
 
 const Footer = ({ project }) => {

@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 import FilterTags from "../../components/FilterTags/FilterTags";
 import colors from "../../styles/_colors.scss";
 import { linkFadeInOut } from "./utils/constants/linkFadeInOut";
-import SocialLinks from "./components/SocialLinks/SocialLinks";
-import "./about.scss";
+import SocialLinks from "./SocialLinks/SocialLinks";
 import useTranslation from "../../utils/customHooks/useTranslation";
+import "./about.scss";
 
 const About = ({ setActiveProjectColor }) => {
   const [linkHover, setLinkHover] = useState(false);

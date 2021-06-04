@@ -16,7 +16,7 @@
         "design": "design"
       },
       "imageAlt": "music library design",
-      "description": "You know this feeling when you discover a great song for the first time? This project aims to deliver this feeling by sharing tailored Spotify playlists ranging through all genres. I built the navigation in a way to resemble how you would flip through vinyls in a box or CDs on a shelf, which is all too familiar to a music lover."
+      "description": "You know that feeling when you discover a great song for the first time? This project aims to deliver this feeling by sharing tailored Spotify playlists ranging through all genres. I built the navigation in a way to resemble how you would flip through vinyls in a box or CDs on a shelf, which is all too familiar to a music lover."
     },
     "nominapress": {
       "title": "Nominapress",
@@ -25,6 +25,7 @@
         "react": "react",
         "JSX": "JSX",
         "SCSS": "SCSS",
+        "antd": "antd",
         "emotion": "emotion",
         "translations": "i18n",
         "design": "design"
@@ -35,7 +36,8 @@
         "bullet1": "Facial recognition login / validation",
         "bullet2": "Job application board",
         "bullet3": "Scheduling shifts",
-        "bullet4": "Time off requests"
+        "bullet4": "Time off requests",
+        "bullet5": "Custom client themes"
       },
       "facialRecogValidationSlider": {
         "title": "Facial Recog Validation",
@@ -93,7 +95,8 @@
       "imageAlts": {
         "logo": "targetbase logo",
         "data": "data icon"
-      }
+      },
+      "description": "Targetbase is a “data-driven” marketing and advertising company mostly working with clients in the auto and healthcare industries. As a company, Targetbase was experimenting with a rebrand and knew that they needed a more up-to-date website. They hired me on as a contractor for roughly five months to help them potentially rebrand and to help create their new site."
     }
   },
   "about": {

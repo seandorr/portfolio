@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NavBar from "./components/Navbar/NavBar";
 import Home from "./pages/Home/Home";
-import { projectsData } from "./pages/Home/utils/constants/projectPreviewData";
+import { projectsData } from "./utils/constants/projectPreviewData";
 import About from "./pages/About/About";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import DetailedProject from "./pages/DetailedProjects/components/DetailedProject";

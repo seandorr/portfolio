@@ -1,10 +1,10 @@
 import React from "react";
-import MusicLibrary from "../../MusicLibrary/MusicLibrary";
-import Nominapress from "../../../Nominapress/Nominapress";
-import RandomShapes from "../../RandomShapes/RandomShapes";
-import Gemini from "../../../Gemini/Gemini";
-import Targetbase from "../../../Targetbase/Targetbase";
-import colors from "../../../../styles/_colors.scss";
+import MusicLibrary from "../../pages/MusicLibrary/MusicLibrary";
+import Nominapress from "../../pages/Nominapress/Nominapress";
+import RandomShapes from "../../pages/RandomShapes/RandomShapes";
+import Gemini from "../../pages/Gemini/Gemini";
+import Targetbase from "../../pages/Targetbase/Targetbase";
+import colors from "../../styles/_colors.scss";
 
 const projectPreviewData = [
   {

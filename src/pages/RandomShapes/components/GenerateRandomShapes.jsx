@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
-import baseStyles from "../../../../styles/_baseStyles.scss";
-import useWindowSize from "../../../../utils/customHooks/useWindowSize";
-import generateRandomKey from "../../../../utils/functions/generateRandomKey";
+import useWindowSize from "../../../utils/customHooks/useWindowSize";
+import generateRandomKey from "../../../utils/functions/generateRandomKey";
+import baseStyles from "../../../styles/_baseStyles.scss";
 
 export const GenerateRandomShapes = ({ type }) => {
   const getWindowWidth = useWindowSize().width;

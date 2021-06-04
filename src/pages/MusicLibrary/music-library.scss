@@ -1,6 +1,6 @@
-@import "../../../styles/mediaQueries";
-@import "../../../styles/baseStyles";
-@import "../../../styles/colors";
+@import "../../styles/mediaQueries";
+@import "../../styles/baseStyles";
+@import "../../styles/colors";
 
 @include mobile {
   .music-library__main-container {

@@ -1,6 +1,6 @@
 {
   "navbar": {
-    "about": "Sobre mi",
+    "about": "Acerca de",
     "contact": "Contacto"
   },
   "project": {
@@ -16,7 +16,7 @@
         "design": "diseño"
       },
       "imageAlt": "diseño web de una biblioteca de música",
-      "description": "add data"
+      "description": "¿Conoces esa sensación cuando descubres una canción muy guay por la primera vez? Este proyecto intenta hacerlo compartiendo todo tipo de playlists de Spotify. Creé la navegación de manera que se sienta como estuviera mirando CD en un estante. Es muy conocido por una persona que ama la música."
     },
     "nominapress": {
       "title": "Nominapress",
@@ -25,20 +25,32 @@
         "react": "react",
         "JSX": "JSX",
         "SCSS": "SCSS",
+        "antd": "antd",
         "emotion": "emotion",
         "translations": "i18n",
         "design": "diseño"
       },
       "imageAlt": "diseño web de nominapress",
-      "description": "add data",
+      "description": "Sigo trabajando a tiempo completo para Nominapress. Desarrollamos y mantenemos una aplicación para ayudar a la gestión del departamento de RRHH. Algunas features notables en las que he trabajado son:",
       "descriptionBullets": {
-        "bullet1": "Facial recognition login / validation",
-        "bullet2": "Job application board",
-        "bullet3": "Scheduling shifts",
-        "bullet4": "Time off requests"
+        "bullet1": "Fichar con reconocimiento facial",
+        "bullet2": "Bolsa de trabajo",
+        "bullet3": "Programar turnos",
+        "bullet4": "Solicitudes de tiempo libre",
+        "bullet5": "Temas personalizados para clientes"
       },
-      "facialRecogValidationSlider": "Facial Recog Validation",
-      "facialRecogLoginSlider": "Facial Recog Login"
+      "facialRecogValidationSlider": {
+        "title": "Validación Reconocimiento Facial",
+        "imgAlts": {
+          "step1": "validación reconocimiento facial paso 1",
+          "step2": "validación reconocimiento facial paso 2",
+          "step3": "validación reconocimiento facial paso 3"
+        }
+      },
+      "facialRecogLoginSlider": {
+        "title": "Fichar con Reconocimiento Facial",
+        "imgAlt": "fichar con reconocimiento facial"
+      }
     },
     "randomShapes": {
       "title": "Aleatorización",
@@ -49,7 +61,7 @@
         "emotion": "emotion"
       },
       "imageAlt": "formas aleatorias",
-      "description": "add data"
+      "description": "Aprendo constantemente cómo hacer que el código sea más dinámico. Tuve la idea de intentar generar colores aleatorios. Después de darme cuenta de esto, llevé el concepto más allá y creé formas aleatorias de todos los tamaños y colores que se animan en caminos aleatorios. El método usa Math.floor (Math.random () * number) para generar los atributos aleatorios."
     },
     "gemini": {
       "title": "Gemini Diversified Services",
@@ -62,7 +74,7 @@
         "JS": "JS"
       },
       "imageAlt": "diseño web de gemini",
-      "description": "add data",
+      "description": "Gemini Diversified Services es una organización de verificación de credenciales médicas. Gemini quería posicionarse único frente a su competencia, pero no destacarse demasiado diferente. Encontrar el equilibrio adecuado entre estos resultó ser difícil; ¿Hasta dónde podríamos empujar los límites? Para encontrar el equilibrio en el sitio, utilicé una combinación de iconografía personalizada, junto con imágenes temáticas y frases dedicadas a su deporte nativo de California: el surf.",
       "imageAlts": {
         "logo": "logo de gemini",
         "menu": "icono del menú"
@@ -83,7 +95,8 @@
       "imageAlts": {
         "logo": "logo de targetbase",
         "data": "icono de datos"
-      }
+      },
+      "description": "Targetbase es una compañía de mercadeo y publicidad basada en datos que trabaja principalmente con clientes en las industrias automotriz y de salud. Como compañía, Targetbase estaba experimentando con un cambio de marca y sabía que necesitaban un sitio web más actualizado. Me contrataron como contratista durante aproximadamente cinco meses para ayudarles a cambiar de marca y para ayudarlos a crear su nuevo sitio."
     }
   },
   "about": {

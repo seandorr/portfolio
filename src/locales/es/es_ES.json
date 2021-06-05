@@ -1,6 +1,6 @@
 {
   "navbar": {
-    "about": "Acerca de",
+    "about": "Sobre mí",
     "contact": "Contacto"
   },
   "project": {
@@ -16,7 +16,7 @@
         "design": "diseño"
       },
       "imageAlt": "diseño web de una biblioteca de música",
-      "description": "¿Conoces esa sensación cuando descubres una canción muy guay por la primera vez? Este proyecto intenta hacerlo compartiendo todo tipo de playlists de Spotify. Creé la navegación de manera que se sienta como estuviera mirando CD en un estante. Es muy conocido por una persona que ama la música."
+      "description": "¿Conoces esa sensación cuando descubres una canción muy guay por primera vez? Este proyecto intenta hacerlo compartiendo todo tipo de playlists de Spotify. Creé la navegación de manera que se sienta como si estuvieras echando un vistazo a los CDs de una estantaría."
     },
     "nominapress": {
       "title": "Nominapress",
@@ -31,7 +31,7 @@
         "design": "diseño"
       },
       "imageAlt": "diseño web de nominapress",
-      "description": "Sigo trabajando a tiempo completo para Nominapress. Desarrollamos y mantenemos una aplicación para ayudar a la gestión del departamento de RRHH. Algunas features notables en las que he trabajado son:",
+      "description": "Sigo trabajando a tiempo completo para Nominapress. Desarrollamos y mantenemos una aplicación para ayudar a la gestión del departamento de RRHH. Algunas features notables en las que he trabajado:",
       "descriptionBullets": {
         "bullet1": "Fichar con reconocimiento facial",
         "bullet2": "Bolsa de trabajo",
@@ -61,7 +61,7 @@
         "emotion": "emotion"
       },
       "imageAlt": "formas aleatorias",
-      "description": "Aprendo constantemente cómo hacer que el código sea más dinámico. Tuve la idea de intentar generar colores aleatorios. Después de darme cuenta de esto, llevé el concepto más allá y creé formas aleatorias de todos los tamaños y colores que se animan en caminos aleatorios. El método usa Math.floor (Math.random () * number) para generar los atributos aleatorios."
+      "description": "Aprendo constantemente cómo hacer que el código sea más dinámico. Tuve la idea de intentar generar colores aleatorios. Después de comprobrar que se podía hacer, llevé el concepto más allá y creé formas aleatorias de todos los tamaños y colores que se animan en caminos aleatorios. El método usa Math.floor (Math.random () * number) para generar los atributos aleatorios."
     },
     "gemini": {
       "title": "Gemini Diversified Services",
@@ -74,7 +74,7 @@
         "JS": "JS"
       },
       "imageAlt": "diseño web de gemini",
-      "description": "Gemini Diversified Services es una organización de verificación de credenciales médicas. Gemini quería posicionarse único frente a su competencia, pero no destacarse demasiado diferente. Encontrar el equilibrio adecuado entre estos resultó ser difícil; ¿Hasta dónde podríamos empujar los límites? Para encontrar el equilibrio en el sitio, utilicé una combinación de iconografía personalizada, junto con imágenes temáticas y frases dedicadas a su deporte nativo de California: el surf.",
+      "description": "Gemini Diversified Services es una empresa que se encarga de la verificación de credenciales médicas. Gemini quería posicionarse como único frente a su competencia, pero no destacar demasiado. Encontrar el equilibrio adecuado resultó ser difícil. Para encontrar el equilibrio en el sitio web, utilicé una combinación de iconografía personalizada, junto con imágenes temáticas y frases dedicadas a su deporte nativo de California: el surf.",
       "imageAlts": {
         "logo": "logo de gemini",
         "menu": "icono del menú"
@@ -96,7 +96,7 @@
         "logo": "logo de targetbase",
         "data": "icono de datos"
       },
-      "description": "Targetbase es una compañía de mercadeo y publicidad basada en datos que trabaja principalmente con clientes en las industrias automotriz y de salud. Como compañía, Targetbase estaba experimentando con un cambio de marca y sabía que necesitaban un sitio web más actualizado. Me contrataron como contratista durante aproximadamente cinco meses para ayudarles a cambiar de marca y para ayudarlos a crear su nuevo sitio."
+      "description": "Targetbase es una compañía de mercadeo y publicidad basada en datos que trabaja principalmente con clientes en las industrias automotriz y de salud. Como compañía, Targetbase estaba experimentando con un cambio de marca y sabía que necesitaban un sitio web más actualizado. Contrataron mis servicios durante aproximadamente cinco meses para ayudarles a cambiar de marca y para ayudarlos a crear su nuevo sitio web."
     }
   },
   "about": {
@@ -112,12 +112,12 @@
       "runner": "🏃 corredor",
       "hiker": "🥾 excursionista"
     },
-    "paragraphPart1": "Hola, soy Sean. Soy un diseñador y desarrollador front-end en Madrid, España. En este momento, estoy trabajando a tiempo completo para una startup, ayudando a crear una aplicación de gestión de HHRR se llama ",
+    "paragraphPart1": "Hola, soy Sean. Soy un diseñador y desarrollador front-end en Madrid, España. En este momento, estoy trabajando a tiempo completo para una startup, ayudando a crear una aplicación de gestión de HHRR que se llama ",
     "currentWorkLink": "Nominapress",
     "paragraphPart2": ". Siempre estoy intentando aprender nuevas técnicas, tecnologías, y lenguajes de programación. Cuando no estoy trabajando o aprendiendo, puedes verme en las montañas haciendo senderismo, haciendo listas de Spotify, y hablando con extranjeros.",
     "nominapressImageAlt": "Imagen de vista previa del proyecto Nominapress"
   },
   "viewButton": "Ver Proyecto",
-  "prevButton": "Previo",
-  "nextButton": "Próximo"
+  "prevButton": "Anterior",
+  "nextButton": "Siguente"
 }

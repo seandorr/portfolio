@@ -22,11 +22,13 @@ const ProjectPreview = ({ project }) => {
     >
       <div className="content" id="col-left">
         {projectImage && (
-          <img
-            className="proj-img"
-            src={`/images/home/${projectImage}`}
-            alt={translation(`project.${projectName}.imageAlt`)}
-          />
+          <Link to={projectLink}>
+            <img
+              className="proj-img"
+              src={`/images/home/${projectImage}`}
+              alt={translation(`project.${projectName}.imageAlt`)}
+            />
+          </Link>
         )}
         {projectComponent && projectComponent}
       </div>

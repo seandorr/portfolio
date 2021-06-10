@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import SlideshowImg from "./SlideshowImg/SlideshowImg";
 import "./slideshow.scss";
-import useTranslation from "../../utils/customHooks/useTranslation";
 
 const Slideshow = ({
   className,
@@ -11,8 +11,6 @@ const Slideshow = ({
   projectColor,
 }) => {
   const [activeImgIndex, setActiveImgIndex] = useState(0);
-
-  const { translation } = useTranslation();
 
   const imageArrayLength = imageArray.length;
   const hasMoreThanOneImage = imageArrayLength > 1;
@@ -52,11 +50,11 @@ const Slideshow = ({
           &lt;
         </button>
       )}
-      <img
-        className="slideshow-img"
-        src={`images/${projectDirectory}/${imageArray[activeImgIndex].image}`}
-        alt={translation(imageArray[activeImgIndex].alt)}
-        style={{ border: `3px solid ${projectColor}` }}
+      <SlideshowImg
+        projectDirectory={projectDirectory}
+        imageArray={imageArray}
+        activeImgIndex={activeImgIndex}
+        projectColor={projectColor}
       />
       {hasMoreThanOneImage && (
         <button
@@ -74,13 +72,13 @@ const Slideshow = ({
 Slideshow.propTypes = {
   className: PropTypes.string,
   imageArray: PropTypes.array.isRequired,
-  projectDirectory: PropTypes.string,
+  projectDirectory: PropTypes.string.isRequired,
   title: PropTypes.string,
+  projectColor: PropTypes.string.isRequired,
 };
 
 Slideshow.defaultProps = {
   className: "",
-  projectDirectory: undefined,
   title: undefined,
 };
 

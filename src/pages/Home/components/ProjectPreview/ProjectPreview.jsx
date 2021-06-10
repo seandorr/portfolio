@@ -1,8 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import FilterTags from "../../../components/FilterTags/FilterTags";
-import useTranslation from "../../../utils/customHooks/useTranslation";
+import FilterTags from "../../../../components/FilterTags/FilterTags";
+import useTranslation from "../../../../utils/customHooks/useTranslation";
+import Loading from "../../../../components/Loading/Loading";
+
+const ProjectPreviewImg = React.lazy(() =>
+  import("../ProjectPreviewImg/ProjectPreviewImg")
+);
 
 const ProjectPreview = ({ project }) => {
   const {
@@ -22,13 +27,13 @@ const ProjectPreview = ({ project }) => {
     >
       <div className="content" id="col-left">
         {projectImage && (
-          <Link to={projectLink}>
-            <img
-              className="proj-img"
-              src={`/images/home/${projectImage}`}
-              alt={translation(`project.${projectName}.imageAlt`)}
+          <Loading type="image">
+            <ProjectPreviewImg
+              projectLink={projectLink}
+              projectImage={projectImage}
+              projectName={projectName}
             />
-          </Link>
+          </Loading>
         )}
         {projectComponent && projectComponent}
       </div>
@@ -46,19 +51,17 @@ const ProjectPreview = ({ project }) => {
 ProjectPreview.propTypes = {
   projectId: PropTypes.number,
   projectImage: PropTypes.string,
-  projectImageAlt: PropTypes.string,
-  projectTitle: PropTypes.string,
   projectTags: PropTypes.array,
   projectLink: PropTypes.string,
+  projectComponent: PropTypes.object,
 };
 
 ProjectPreview.defaultProps = {
   projectId: undefined,
   projectImage: undefined,
-  projectImageAlt: undefined,
-  projectTitle: undefined,
   projectTags: undefined,
   projectLink: undefined,
+  projectComponent: undefined,
 };
 
 export default ProjectPreview;

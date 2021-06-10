@@ -1,0 +1,43 @@
+@import "../../styles/colors";
+@import "../../styles/baseStyles";
+
+.loading {
+  width: inherit;
+  height: inherit;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(
+      90deg,
+      rgba($light-color, 0) 0,
+      rgba($light-color, 0.2) 20%,
+      rgba($light-color, 0.5) 60%,
+      rgba($light-color, 0)
+    );
+    animation: load 2s infinite;
+    content: "";
+  }
+
+  @keyframes load {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}
+
+.loading-img {
+  background-color: $dark-light-color;
+  border-radius: $border-radius;
+  position: relative;
+  width: 100%;
+  min-width: 300px;
+  height: auto;
+  padding-top: 56.25%;
+}

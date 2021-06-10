@@ -1,12 +1,17 @@
 import React, { Suspense } from "react";
 import PropTypes from "prop-types";
-import LoadingIcon from "./LoadingIcon/LoadingIcon";
+import LoadingImg from "./LoadingImg/LoadingImg";
 
-const Loading = ({ children }) => {
-  return <Suspense fallback={<LoadingIcon />}>{children}</Suspense>;
+const Loading = ({ style, type, children }) => {
+  return (
+    <Suspense fallback={type === "image" ? <LoadingImg /> : null} style={style}>
+      {children}
+    </Suspense>
+  );
 };
 
 Loading.propTypes = {
+  type: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.string,

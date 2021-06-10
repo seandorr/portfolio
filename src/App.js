@@ -14,7 +14,7 @@ const App = () => {
   const [activeTranslationBtn, setActiveTranslationBtn] = useState("english");
   const [activeProjectColor, setActiveProjectColor] = useState(undefined);
 
-  const { translation, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   const handleOnClickSpanishBtn = () => {
     i18n.changeLanguage("es");
@@ -34,7 +34,6 @@ const App = () => {
         activeTranslationBtn={activeTranslationBtn}
         handleOnClickSpanishBtn={handleOnClickSpanishBtn}
         handleOnClickEnglishBtn={handleOnClickEnglishBtn}
-        translation={translation}
       />
       <div className="page-content">
         <Switch>

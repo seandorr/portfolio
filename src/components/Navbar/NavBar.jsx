@@ -2,6 +2,7 @@
 import { jsx, css } from "@emotion/react";
 import { NavLink } from "react-router-dom";
 import colors from "../../styles/_colors.scss";
+import useTranslation from "../../utils/customHooks/useTranslation";
 import "./navbar.scss";
 
 const NavBar = (props) => {
@@ -9,9 +10,10 @@ const NavBar = (props) => {
     activeTranslationBtn,
     handleOnClickSpanishBtn,
     handleOnClickEnglishBtn,
-    translation,
     activeProjectColor,
   } = props;
+
+  const { translation } = useTranslation();
 
   const logoStyles = css`
     &.logo {

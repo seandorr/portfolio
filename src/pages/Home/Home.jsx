@@ -1,6 +1,6 @@
-import React, { useEffect, Suspense } from "react";
+import React, { useEffect } from "react";
 import GridLines from "../../components/GridLines/GridLines";
-import ProjectPreview from "./ProjectPreview/ProjectPreview";
+import ProjectPreview from "./components/ProjectPreview/ProjectPreview";
 import useWindowSize from "../../utils/customHooks/useWindowSize";
 import { projectsData } from "../../utils/constants/projectPreviewData";
 import "./home.scss";
@@ -46,7 +46,7 @@ const Home = ({ setActiveProjectColor, activeProjectColor }) => {
   }, [getWindowHeight, setActiveProjectColor]);
 
   return (
-    <Suspense fallback="loading">
+    <>
       {!isMobileSize && <GridLines activeProjectColor={activeProjectColor} />}
       <div className="projects-container">
         {projectsData.map((project) => {
@@ -55,7 +55,7 @@ const Home = ({ setActiveProjectColor, activeProjectColor }) => {
           return <ProjectPreview key={projectId} project={project} />;
         })}
       </div>
-    </Suspense>
+    </>
   );
 };
 

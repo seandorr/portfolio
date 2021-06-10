@@ -8,6 +8,7 @@
   overflow: hidden;
 
   &:before {
+    content: "";
     position: absolute;
     top: 0;
     right: 0;
@@ -21,8 +22,7 @@
       rgba($light-color, 0.5) 60%,
       rgba($light-color, 0)
     );
-    animation: load 2s infinite;
-    content: "";
+    animation: load 1.5s infinite;
   }
 
   @keyframes load {

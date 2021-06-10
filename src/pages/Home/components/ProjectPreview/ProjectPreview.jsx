@@ -27,7 +27,7 @@ const ProjectPreview = ({ project }) => {
     >
       <div className="content" id="col-left">
         {projectImage && (
-          <Loading type="image">
+          <Loading>
             <ProjectPreviewImg
               projectLink={projectLink}
               projectImage={projectImage}

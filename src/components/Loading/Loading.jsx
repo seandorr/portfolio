@@ -1,6 +1,7 @@
 import React, { useState, useEffect, Suspense } from "react";
 import PropTypes from "prop-types";
 import LoadingImg from "./LoadingImg/LoadingImg";
+import calcSeconds from "../../utils/functions/calcSeconds";
 
 const Loading = ({ children }) => {
   const [loading, setLoading] = useState(true);
@@ -8,7 +9,7 @@ const Loading = ({ children }) => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, calcSeconds(3));
   }, [loading]);
 
   return (

@@ -8,6 +8,7 @@ import colors from "../../styles/_colors.scss";
 import { linkFadeInOut } from "./utils/constants/linkFadeInOut";
 import SocialLinks from "./SocialLinks/SocialLinks";
 import useTranslation from "../../utils/customHooks/useTranslation";
+import Loading from "../../components/Loading/Loading";
 import "./about.scss";
 
 const About = ({ setActiveProjectColor }) => {
@@ -59,7 +60,9 @@ const About = ({ setActiveProjectColor }) => {
   return (
     <div className="about-container max-width">
       <div className="about-container-grid">
-        <div className="about-grid-item headshot" css={headshotImgStyles} />
+        <Loading>
+          <div className="about-grid-item headshot" css={headshotImgStyles} />
+        </Loading>
         <div className="about-grid-item about">
           <FilterTags location="about" />
           <div className="about-paragraph">

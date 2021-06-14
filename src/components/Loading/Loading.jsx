@@ -9,7 +9,7 @@ const Loading = ({ children }) => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, calcSeconds(3));
+    }, calcSeconds(2));
   }, [loading]);
 
   return (

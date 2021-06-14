@@ -20,7 +20,7 @@ const About = ({ setActiveProjectColor }) => {
   const { translation } = useTranslation();
 
   const backgroundImg = `${
-    process.env.PUBLIC_URL + `images/about/sean-headshot.JPG`
+    process.env.PUBLIC_URL + `images/about/sean-headshot.jpg`
   }`;
 
   const headshotImgStyles = css`
@@ -60,7 +60,7 @@ const About = ({ setActiveProjectColor }) => {
   return (
     <div className="about-container max-width">
       <div className="about-container-grid">
-        <Loading>
+        <Loading type="image">
           <div className="about-grid-item headshot" css={headshotImgStyles} />
         </Loading>
         <div className="about-grid-item about">

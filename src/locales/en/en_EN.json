@@ -117,6 +117,10 @@
     "paragraphPart2": ". I am a life-long student and I'm always trying to learn new techniques, technologies, and languages. When I'm not working or learning, you can catch me hiking the great outdoors, curating Spotify playlists, and sparking conversations with strangers.",
     "nominapressImageAlt": "Preview image of Nominapress project"
   },
+  "404": {
+    "message": "Whoops, this is awkward.",
+    "return": "Return Home"
+  },
   "viewButton": "View Project",
   "prevButton": "Previous",
   "nextButton": "Next"

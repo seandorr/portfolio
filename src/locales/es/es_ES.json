@@ -117,6 +117,10 @@
     "paragraphPart2": ". Siempre estoy intentando aprender nuevas técnicas, tecnologías, y lenguajes de programación. Cuando no estoy trabajando o aprendiendo, puedes verme en las montañas haciendo senderismo, haciendo listas de Spotify, y hablando con extranjeros.",
     "nominapressImageAlt": "Imagen de vista previa del proyecto Nominapress"
   },
+  "404": {
+    "message": "¡Ay! Esto es incómodo.",
+    "return": "Volver al Inicio"
+  },
   "viewButton": "Ver Proyecto",
   "prevButton": "Anterior",
   "nextButton": "Siguente"

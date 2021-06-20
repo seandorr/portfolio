@@ -9,6 +9,7 @@ import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import generateRandomKey from "./utils/functions/generateRandomKey";
 import useTranslation from "./utils/customHooks/useTranslation";
 import "./styles/main.scss";
+import PageNotFound from "./pages/PageNotFound/PageNotFound";
 
 const App = () => {
   const [activeTranslationBtn, setActiveTranslationBtn] = useState("english");
@@ -58,6 +59,9 @@ const App = () => {
               </Route>
             );
           })}
+          <Route>
+            <PageNotFound setActiveProjectColor={setActiveProjectColor} />
+          </Route>
         </Switch>
       </div>
     </Router>

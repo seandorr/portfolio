@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { jsx, css } from "@emotion/react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 import FilterTags from "../../components/FilterTags/FilterTags";
 import colors from "../../styles/_colors.scss";
 import { linkFadeInOut } from "./utils/constants/linkFadeInOut";
@@ -59,6 +60,9 @@ const About = ({ setActiveProjectColor }) => {
 
   return (
     <div className="about-container max-width">
+      <Helmet>
+        <title>Sean Dorr | {translation("metaTitles.about")}</title>
+      </Helmet>
       <div className="about-container-grid">
         <Loading type="image">
           <div className="about-grid-item headshot" css={headshotImgStyles} />

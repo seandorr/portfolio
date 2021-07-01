@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
 import generateRandomKey from "../../utils/functions/generateRandomKey";
 import { isObjectWithValues } from "../../utils/validators/objectValidator";
 import FilterTags from "../../components/FilterTags/FilterTags";
@@ -26,6 +27,9 @@ const DetailedProject = ({ project, setActiveProjectColor }) => {
 
   return (
     <>
+      <Helmet>
+        <title>Sean Dorr | {translation(`project.${projectName}.title`)}</title>
+      </Helmet>
       <div className="detailed-project-container max-width">
         <div className="project-details-grid">
           <div className="project-details-grid-item info">

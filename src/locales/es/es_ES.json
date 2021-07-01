@@ -1,4 +1,9 @@
 {
+  "metaTitles": {
+    "home": "Desarrollador React + Diseñador",
+    "about": "Sobre mí",
+    "pageNotFound": "Página No Encontrada"
+  },
   "navbar": {
     "about": "Sobre mí",
     "contact": "Contacto"

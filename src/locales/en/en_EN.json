@@ -1,4 +1,9 @@
 {
+  "metaTitles": {
+    "home": "React Developer + Designer",
+    "about": "About",
+    "pageNotFound": "Page Not Found"
+  },
   "navbar": {
     "about": "About",
     "contact": "Contact"

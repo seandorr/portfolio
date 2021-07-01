@@ -1,22 +1,9 @@
-import React, { useState, useEffect, Suspense } from "react";
+import React, { Suspense } from "react";
 import PropTypes from "prop-types";
 import LoadingImg from "./LoadingImg/LoadingImg";
-import calcSeconds from "../../utils/functions/calcSeconds";
 
 const Loading = ({ children }) => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, calcSeconds(2));
-  }, [loading]);
-
-  return (
-    <Suspense fallback={<LoadingImg />}>
-      {loading ? <LoadingImg /> : children}
-    </Suspense>
-  );
+  return <Suspense fallback={<LoadingImg />}>{children}</Suspense>;
 };
 
 Loading.propTypes = {

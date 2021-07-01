@@ -2,9 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import FilterTags from "../../../../components/FilterTags/FilterTags";
-import ProjectPreviewImg from "../ProjectPreviewImg/ProjectPreviewImg";
 import useTranslation from "../../../../utils/customHooks/useTranslation";
 import Loading from "../../../../components/Loading/Loading";
+
+const ProjectPreviewImg = React.lazy(() =>
+  import("../ProjectPreviewImg/ProjectPreviewImg")
+);
 
 const ProjectPreview = ({ project }) => {
   const {

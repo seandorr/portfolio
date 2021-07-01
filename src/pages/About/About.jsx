@@ -1,7 +1,6 @@
-/** @jsx jsx */
+import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { jsx, css } from "@emotion/react";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
 import FilterTags from "../../components/FilterTags/FilterTags";
@@ -12,6 +11,8 @@ import useTranslation from "../../utils/customHooks/useTranslation";
 import Loading from "../../components/Loading/Loading";
 import "./about.scss";
 
+const Headshot = React.lazy(() => import("./Headshot/Headshot"));
+
 const About = ({ setActiveProjectColor }) => {
   const [linkHover, setLinkHover] = useState(false);
   useEffect(() => {
@@ -19,14 +20,6 @@ const About = ({ setActiveProjectColor }) => {
   }, [setActiveProjectColor]);
 
   const { translation } = useTranslation();
-
-  const backgroundImg = `${
-    process.env.PUBLIC_URL + `images/about/sean-headshot.jpg`
-  }`;
-
-  const headshotImgStyles = css`
-    background-image: url(${backgroundImg});
-  `;
 
   const currenWorkLink = () => {
     return (
@@ -64,8 +57,8 @@ const About = ({ setActiveProjectColor }) => {
         <title>Sean Dorr | {translation("metaTitles.about")}</title>
       </Helmet>
       <div className="about-container-grid">
-        <Loading type="image">
-          <div className="about-grid-item headshot" css={headshotImgStyles} />
+        <Loading>
+          <Headshot />
         </Loading>
         <div className="about-grid-item about">
           <FilterTags location="about" />

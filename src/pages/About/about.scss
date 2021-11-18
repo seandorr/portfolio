@@ -51,7 +51,7 @@
             .current-client-link {
               color: $light-color;
               padding: 1px 5px;
-              background-color: $nominapress-color;
+              background-color: $basf-color;
               border-radius: 5px;
               position: relative;
 
@@ -60,7 +60,7 @@
                 left: 50%;
                 transform: translateX(-50%);
                 bottom: 30px;
-                background-color: $nominapress-color;
+                background-color: $basf-color;
                 padding: 20px;
                 border-radius: $border-radius;
                 transition: 0.3s ease-in-out;
@@ -75,7 +75,7 @@
                   height: 0;
                   border-left: 15px solid transparent;
                   border-right: 15px solid transparent;
-                  border-top: 15px solid $nominapress-color;
+                  border-top: 15px solid $basf-color;
                 }
 
                 .current-client-tooltip {

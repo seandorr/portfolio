@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
 import FilterTags from "../../components/FilterTags/FilterTags";
@@ -15,22 +14,25 @@ const Headshot = React.lazy(() => import("./Headshot/Headshot"));
 
 const About = ({ setActiveProjectColor }) => {
   const [linkHover, setLinkHover] = useState(false);
+  const [currentWork, setCurrentWork] = useState(undefined);
   useEffect(() => {
     setActiveProjectColor(colors.aboutColor);
+    setCurrentWork("basf");
   }, [setActiveProjectColor]);
 
   const { translation } = useTranslation();
 
   const currenWorkLink = () => {
     return (
-      <Link
+      <a
         className="current-client-link"
-        to="/nominapress"
+        target="_blank"
+        href="https://www.basf.com/es/es.html"
         onMouseEnter={() => setLinkHover(true)}
         onMouseLeave={() => setLinkHover(false)}
       >
         {translation("about.currentWorkLink")}
-        {linkHover && (
+        {linkHover && currentWork !== "basf" && (
           <motion.div
             initial="initial"
             animate="animate"
@@ -47,7 +49,7 @@ const About = ({ setActiveProjectColor }) => {
             </div>
           </motion.div>
         )}
-      </Link>
+      </a>
     );
   };
 

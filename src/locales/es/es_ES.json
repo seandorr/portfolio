@@ -36,7 +36,7 @@
         "design": "diseño"
       },
       "imageAlt": "diseño web de nominapress",
-      "description": "Sigo trabajando a tiempo completo para Nominapress. Desarrollamos y mantenemos una aplicación para ayudar a la gestión del departamento de RRHH. Algunas features notables en las que he trabajado:",
+      "description": "Ayudé a desarrollar y mantener una aplicación de recursos humanos. Algunas features notables en las que he trabajado:",
       "descriptionBullets": {
         "bullet1": "Fichar con reconocimiento facial",
         "bullet2": "Bolsa de trabajo",
@@ -117,9 +117,9 @@
       "runner": "🏃 corredor",
       "hiker": "🥾 excursionista"
     },
-    "paragraphPart1": "Hola, soy Sean. Soy un diseñador y desarrollador front-end en Madrid, España. En este momento, estoy trabajando a tiempo completo para una startup, ayudando a crear una aplicación de gestión de HHRR que se llama ",
-    "currentWorkLink": "Nominapress",
-    "paragraphPart2": ". Siempre estoy intentando aprender nuevas técnicas, tecnologías, y lenguajes de programación. Cuando no estoy trabajando o aprendiendo, puedes verme en las montañas haciendo senderismo, haciendo listas de Spotify, y hablando con extranjeros.",
+    "paragraphPart1": "Hola, soy Sean. Soy un diseñador y desarrollador front-end en Madrid, España. Trabajo a tiempo completo para ",
+    "currentWorkLink": "BASF",
+    "paragraphPart2": ", donde ayudo a los científicos de datos a crear aplicaciones más útiles y hermosas. Siempre estoy intentando aprender nuevas técnicas, tecnologías, y lenguajes de programación. Cuando no estoy trabajando o aprendiendo, puedes verme en las montañas haciendo senderismo, haciendo listas de Spotify, y hablando con extranjeros.",
     "nominapressImageAlt": "Imagen de vista previa del proyecto Nominapress"
   },
   "404": {

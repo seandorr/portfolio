@@ -8,23 +8,27 @@ import DetailedProject from "./pages/DetailedProjects/DetailedProject";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import generateRandomKey from "./utils/functions/generateRandomKey";
 import useTranslation from "./utils/customHooks/useTranslation";
-import "./styles/main.scss";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
+import useLocalStorage from "./utils/customHooks/useLocalStorage";
+import "./styles/main.scss";
 
 const App = () => {
-  const [activeTranslationBtn, setActiveTranslationBtn] = useState("english");
+  const [activeLanguage, setActiveLanguage] = useLocalStorage(
+    "activeLanguage",
+    ["english", "spanish"]
+  );
   const [activeProjectColor, setActiveProjectColor] = useState(undefined);
 
   const { i18n } = useTranslation();
 
   const handleOnClickSpanishBtn = () => {
     i18n.changeLanguage("es");
-    setActiveTranslationBtn("spanish");
+    setActiveLanguage("spanish");
   };
 
   const handleOnClickEnglishBtn = () => {
     i18n.changeLanguage("en");
-    setActiveTranslationBtn("english");
+    setActiveLanguage("english");
   };
 
   return (
@@ -32,7 +36,7 @@ const App = () => {
       <ScrollToTop />
       <NavBar
         activeProjectColor={activeProjectColor}
-        activeTranslationBtn={activeTranslationBtn}
+        activeLanguage={activeLanguage}
         handleOnClickSpanishBtn={handleOnClickSpanishBtn}
         handleOnClickEnglishBtn={handleOnClickEnglishBtn}
       />

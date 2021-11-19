@@ -7,7 +7,7 @@ import "./navbar.scss";
 
 const NavBar = (props) => {
   const {
-    activeTranslationBtn,
+    activeLanguage,
     handleOnClickSpanishBtn,
     handleOnClickEnglishBtn,
     activeProjectColor,
@@ -44,7 +44,7 @@ const NavBar = (props) => {
           <div className="nav-item btn-container">
             <button
               className={`translation-btn ${
-                activeTranslationBtn === "spanish" ? "active" : ""
+                activeLanguage === "spanish" ? "active" : ""
               }`}
               onClick={handleOnClickSpanishBtn}
             >
@@ -52,7 +52,7 @@ const NavBar = (props) => {
             </button>
             <button
               className={`translation-btn ${
-                activeTranslationBtn === "english" ? "active" : ""
+                activeLanguage === "english" ? "active" : ""
               }`}
               onClick={handleOnClickEnglishBtn}
             >

@@ -15,7 +15,7 @@ import "./styles/main.scss";
 const App = () => {
   const [activeLanguage, setActiveLanguage] = useLocalStorage(
     "activeLanguage",
-    ["english", "spanish"]
+    "spanish"
   );
   const [activeProjectColor, setActiveProjectColor] = useState(undefined);
 

@@ -9,6 +9,7 @@ import spanish from "./locales/es/es_ES.json";
 
 i18next.use(LanguageDetector).init({
   interpolation: { escapeValue: false },
+  fallbackLng: "en",
   resources: {
     en: {
       translation: english,

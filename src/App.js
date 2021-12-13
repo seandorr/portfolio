@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import i18next from "i18next";
 import NavBar from "./components/Navbar/NavBar";
 import Home from "./pages/Home/Home";
 import { projectsData } from "./utils/constants/projectPreviewData";
@@ -15,7 +16,7 @@ import "./styles/main.scss";
 const App = () => {
   const [activeLanguage, setActiveLanguage] = useLocalStorage(
     "activeLanguage",
-    "spanish"
+    i18next.language
   );
   const [activeProjectColor, setActiveProjectColor] = useState(undefined);
 
@@ -23,12 +24,12 @@ const App = () => {
 
   const handleOnClickSpanishBtn = () => {
     i18n.changeLanguage("es");
-    setActiveLanguage("spanish");
+    setActiveLanguage("es");
   };
 
   const handleOnClickEnglishBtn = () => {
     i18n.changeLanguage("en");
-    setActiveLanguage("english");
+    setActiveLanguage("en");
   };
 
   return (

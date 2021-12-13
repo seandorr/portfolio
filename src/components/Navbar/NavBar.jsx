@@ -2,6 +2,7 @@
 import { jsx, css } from "@emotion/react";
 import { NavLink } from "react-router-dom";
 import colors from "../../styles/_colors.scss";
+import { getEnglishLanguage } from "../../utils/constants/getEnglishLanguage";
 import useTranslation from "../../utils/customHooks/useTranslation";
 import "./navbar.scss";
 
@@ -44,7 +45,7 @@ const NavBar = (props) => {
           <div className="nav-item btn-container">
             <button
               className={`translation-btn ${
-                activeLanguage === "spanish" ? "active" : ""
+                activeLanguage === "es" ? "active" : ""
               }`}
               onClick={handleOnClickSpanishBtn}
             >
@@ -52,7 +53,7 @@ const NavBar = (props) => {
             </button>
             <button
               className={`translation-btn ${
-                activeLanguage === "english" ? "active" : ""
+                getEnglishLanguage(activeLanguage) === "en" ? "active" : ""
               }`}
               onClick={handleOnClickEnglishBtn}
             >

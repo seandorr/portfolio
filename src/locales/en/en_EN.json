@@ -9,6 +9,27 @@
     "contact": "Contact"
   },
   "project": {
+    "responsiveCarousel": {
+      "title": "Responsive Carousel",
+      "tags": {
+        "npm": "npm package",
+        "react": "react",
+        "JSX": "JSX",
+        "SCSS": "SCSS",
+        "emotion": "emotion"
+      },
+      "imageAlt": "responsive carousel component",
+      "description": "I was bored one day and decided to build a custom carousel componment. This was way easier than I expected, so I started to make it dynamic so that the carousel items would recalculate their width based on the browser size. This was cool, but I realized that this wasn't super useful if the items would be squished on smaller screens. In order to fix this, I created a set of media queries that could be targeted in the component prop to control how many carousel items could be visible inside each media query. I figured this could be useful for others and I've always wanted to learn how to publish a React component on npm, so I did just that.",
+      "carouselContent": {
+        "a": "A",
+        "nice": "nice",
+        "carousel": "looking, responsive carousel",
+        "add": "You can add",
+        "anything": "anything",
+        "desire": "you want as an item",
+        "confirmation": "Yes, anything..."
+      }
+    },
     "musicLibrary": {
       "title": "Music Library",
       "tags": {

@@ -5,10 +5,20 @@ import RandomShapes from "../../pages/RandomShapes/RandomShapes";
 import Gemini from "../../pages/Gemini/Gemini";
 import Targetbase from "../../pages/Targetbase/Targetbase";
 import colors from "../../styles/_colors.scss";
+import ResponsiveCarousel from "../../pages/ResponsiveCarousel/ResponsiveCarousel";
 
 const projectPreviewData = [
   {
     projectId: 1,
+    projectName: "responsiveCarousel",
+    projectComponent: <ResponsiveCarousel type="preview" />,
+    projectColor: colors.responsiveCarouselColor,
+    projectLink: "responsive-carousel",
+    gitLink: "https://github.com/seandorr/responsive-carousel",
+    projectDetailedComponent: <ResponsiveCarousel />,
+  },
+  {
+    projectId: 2,
     projectName: "musicLibrary",
     projectImage: "music-library.svg",
     projectColor: colors.musicLibraryColor1,
@@ -17,7 +27,7 @@ const projectPreviewData = [
     projectDetailedComponent: <MusicLibrary />,
   },
   {
-    projectId: 2,
+    projectId: 3,
     projectName: "nominapress",
     projectImage: "facial-recog-login.jpg",
     projectColor: colors.nominapressColor,
@@ -27,7 +37,7 @@ const projectPreviewData = [
     ),
   },
   {
-    projectId: 3,
+    projectId: 4,
     projectName: "randomShapes",
     projectComponent: <RandomShapes type="preview" />,
     projectColor: colors.randomShapesColor,
@@ -35,7 +45,7 @@ const projectPreviewData = [
     projectDetailedComponent: <RandomShapes type="detailed" />,
   },
   {
-    projectId: 4,
+    projectId: 5,
     projectName: "gemini",
     projectImage: "gemini-hero.jpg",
     projectColor: colors.geminiColor,
@@ -43,7 +53,7 @@ const projectPreviewData = [
     projectDetailedComponent: <Gemini />,
   },
   {
-    projectId: 5,
+    projectId: 6,
     projectName: "targetbase",
     projectImage: "targetbase-hero.jpg",
     projectColor: colors.targetbaseColor,

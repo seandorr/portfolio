@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/react";
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
 import { NavLink } from "react-router-dom";
 import colors from "../../styles/_colors.scss";
 import { getEnglishLanguage } from "../../utils/constants/getEnglishLanguage";

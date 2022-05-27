@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/react";
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
 import useWindowSize from "../../../utils/customHooks/useWindowSize";
 import generateRandomKey from "../../../utils/functions/generateRandomKey";
 import baseStyles from "../../../styles/_baseStyles.scss";

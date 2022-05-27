@@ -11,7 +11,7 @@ const projectPreviewData = [
   {
     projectId: 1,
     projectName: "responsiveCarousel",
-    projectComponent: <ResponsiveCarousel />,
+    projectComponent: <ResponsiveCarousel type="preview" />,
     projectColor: colors.responsiveCarouselColor,
     projectLink: "responsive-carousel",
     gitLink: "https://github.com/seandorr/responsive-carousel",

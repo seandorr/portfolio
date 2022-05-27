@@ -1,0 +1,36 @@
+@import "../../styles/baseStyles";
+@import "../../styles/colors";
+
+.responsive-carousel-showcase {
+  padding: 10px 0;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+  background-color: $light-color;
+
+  .carousel-item {
+    h1,
+    h2,
+    h3 {
+      color: #252525;
+      margin: 40px;
+    }
+
+    .carousel-image {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    .add-anything__item {
+      margin: 40px 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      h3 {
+        align-self: flex-end;
+      }
+    }
+  }
+}

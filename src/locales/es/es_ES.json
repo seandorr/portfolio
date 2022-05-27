@@ -9,6 +9,27 @@
     "contact": "Contacto"
   },
   "project": {
+    "responsiveCarousel": {
+      "title": "Carrusel Adaptado",
+      "tags": {
+        "npm": "npm package",
+        "react": "react",
+        "JSX": "JSX",
+        "SCSS": "SCSS",
+        "emotion": "emotion"
+      },
+      "imageAlt": "componente de carrusel adaptado",
+      "description": "Un día me aburrí, así que creé este componente de carrusel adaptado. Fue tan fácil, que poco a poco siguí desarrollando su capacidad para recalcular su ancho por el tamaño del browser. Fue chulo, pero me dí cuenta que no era utíl si no podía cambiar la cantidad de cosas visibles en un dispositivo más pequeño. Para arreglar esto, creé un par de media queries que podrían afectar un prop del componente para controlar cuántas cosas del carrusel podrían ser visibles por cada media query. Espero que este componente sea utíl para otros y tenía ganas de aprender como publicar un componente de React en NPM, entonces lo hice.",
+      "carouselContent": {
+        "a": "Un",
+        "nice": "bonito",
+        "carousel": "carrusel adaptado",
+        "add": "Puedes añadir",
+        "anything": "lo que quierás",
+        "desire": "como una cosa",
+        "confirmation": "Sí, todo lo que quierás..."
+      }
+    },
     "musicLibrary": {
       "title": "Biblioteca de Música",
       "tags": {

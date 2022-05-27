@@ -35,7 +35,7 @@ const ProjectPreview = ({ project }) => {
             />
           </Loading>
         )}
-        {projectComponent && projectComponent}
+        {projectComponent && <Link to={projectLink}>{projectComponent}</Link>}
       </div>
       <div className="content" id="col-right">
         <h1>{translation(`project.${projectName}.title`)}</h1>

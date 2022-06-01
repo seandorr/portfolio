@@ -4,5 +4,7 @@ export const getEnglishLanguage = (language) => {
       return "en";
     case "en-GB":
       return "en";
+
+    default:
   }
 };

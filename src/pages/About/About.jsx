@@ -12,7 +12,7 @@ import "./about.scss";
 
 const Headshot = React.lazy(() => import("./Headshot/Headshot"));
 
-const About = ({ setActiveProjectColor }) => {
+const About = ({ activeProjectColor, setActiveProjectColor }) => {
   const [linkHover, setLinkHover] = useState(false);
   const [currentWork, setCurrentWork] = useState(undefined);
   useEffect(() => {
@@ -22,11 +22,36 @@ const About = ({ setActiveProjectColor }) => {
 
   const { translation } = useTranslation();
 
+  const transition = {
+    duration: 1,
+    ease: [0.43, 0.13, 0.23, 0.96],
+  };
+
+  const animationConfiguration = {
+    initial: {
+      width: "100%",
+      height: "100vh",
+      position: "fixed",
+      left: 0,
+      bottom: 0,
+      zIndex: 3,
+      backgroundColor: activeProjectColor || colors.aboutColor,
+    },
+    animate: {
+      backgroundColor: colors.aboutColor,
+      height: 0,
+    },
+    exit: {
+      height: "100vh",
+    },
+  };
+
   const currenWorkLink = () => {
     return (
       <a
         className="current-client-link"
         target="_blank"
+        rel="noreferrer"
         href="https://www.basf.com/es/es.html"
         onMouseEnter={() => setLinkHover(true)}
         onMouseLeave={() => setLinkHover(false)}
@@ -54,25 +79,34 @@ const About = ({ setActiveProjectColor }) => {
   };
 
   return (
-    <div className="about-container max-width">
-      <Helmet>
-        <title>Sean Dorr | {translation("metaTitles.about")}</title>
-      </Helmet>
-      <div className="about-container-grid">
-        <Loading>
-          <Headshot />
-        </Loading>
-        <div className="about-grid-item about">
-          <FilterTags location="about" />
-          <div className="about-paragraph">
-            <span>{translation("about.paragraphPart1")} </span>
-            <span className="work-link-text">{currenWorkLink()}</span>
-            <span>{translation("about.paragraphPart2")}</span>
+    <>
+      <motion.div
+        variants={animationConfiguration}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={transition}
+      ></motion.div>
+      <div className="about-container max-width">
+        <Helmet>
+          <title>Sean Dorr | {translation("metaTitles.about")}</title>
+        </Helmet>
+        <div className="about-container-grid">
+          <Loading>
+            <Headshot />
+          </Loading>
+          <div className="about-grid-item about">
+            <FilterTags location="about" />
+            <div className="about-paragraph">
+              <span>{translation("about.paragraphPart1")} </span>
+              <span className="work-link-text">{currenWorkLink()}</span>
+              <span>{translation("about.paragraphPart2")}</span>
+            </div>
+            <SocialLinks />
           </div>
-          <SocialLinks />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -2,6 +2,10 @@
 @import "../../styles/baseStyles";
 @import "../../styles/colors";
 
+#color-column {
+  transition: background-color 0.5s ease-in-out;
+}
+
 .projects-container {
   transition: transform 0.25s;
   will-change: transform;

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
+import { motion } from "framer-motion";
 import GridLines from "../../components/GridLines/GridLines";
 import ProjectPreview from "./components/ProjectPreview/ProjectPreview";
 import useWindowSize from "../../utils/customHooks/useWindowSize";
@@ -49,12 +50,62 @@ const Home = ({ setActiveProjectColor, activeProjectColor }) => {
 
   const { translation } = useTranslation();
 
+  const transition = {
+    duration: 1,
+    ease: [0.43, 0.13, 0.23, 0.96],
+  };
+
+  const animationConfiguration = {
+    initial: {
+      width: "0%",
+      height: "100vh",
+      position: "fixed",
+      zIndex: 3,
+    },
+    exit: {
+      width: "100%",
+    },
+  };
+  const animationConfigurationGrid = {
+    initial: {
+      width: "100%",
+      height: "100vh",
+      position: "fixed",
+      zIndex: -1,
+    },
+    animate: {
+      width: "25%",
+    },
+  };
+
   return (
     <>
       <Helmet>
         <title>Sean Dorr | {translation("metaTitles.home")}</title>
       </Helmet>
-      {!isMobileSize && <GridLines activeProjectColor={activeProjectColor} />}
+      {!isMobileSize && (
+        <>
+          <GridLines />
+          <motion.div
+            style={{ backgroundColor: activeProjectColor }}
+            variants={!isMobileSize && animationConfiguration}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={transition}
+          ></motion.div>
+          <motion.div
+            id="color-column"
+            style={{ backgroundColor: activeProjectColor }}
+            variants={animationConfigurationGrid}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={transition}
+          ></motion.div>
+        </>
+      )}
+
       <div className="projects-container">
         {projectsData.map((project) => {
           const { projectId } = project;

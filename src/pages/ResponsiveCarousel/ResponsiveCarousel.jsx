@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { Carousel, CarouselItem } from "@sean_dorr/react-responsive-carousel";
+import { Carousel, CarouselItem } from "@sean_dorr/react-responsive-carousel-2";
 import { Slider } from "@mui/material";
 import useTranslation from "../../utils/customHooks/useTranslation";
 import "./responsive-carousel.scss";
@@ -31,35 +31,37 @@ const ResponsiveCarousel = ({ type }) => {
         type === "preview" ? "preview__container" : "details__container"
       } `}
     >
-      <form style={{ padding: 40 }}>
-        <label>
-          Height:
-          <Slider
-            aria-label="Carousel Item Height"
-            value={carouselItemHeightParameters.carouselItemHeight}
-            valueLabelDisplay="auto"
-            onChange={(e) => setCarouselItemHeightInput(e.target.value)}
-            step={20}
-            marks
-            min={carouselItemHeightParameters.minCarouselItemHeight}
-            max={carouselItemHeightParameters.maxCarouselItemHeight}
-          />
-        </label>
+      {type !== "preview" && (
+        <form style={{ padding: 40 }}>
+          <label>
+            Height:
+            <Slider
+              aria-label="Carousel Item Height"
+              value={carouselItemHeightParameters.carouselItemHeight}
+              valueLabelDisplay="auto"
+              onChange={(e) => setCarouselItemHeightInput(e.target.value)}
+              step={20}
+              marks
+              min={carouselItemHeightParameters.minCarouselItemHeight}
+              max={carouselItemHeightParameters.maxCarouselItemHeight}
+            />
+          </label>
 
-        <label>
-          Gap:
-          <Slider
-            aria-label="Carousel Item Gap"
-            value={carouselItemGapParameters.carouselItemGap}
-            valueLabelDisplay="auto"
-            onChange={(e) => setCarouselGapInput(e.target.value)}
-            step={5}
-            marks
-            min={carouselItemGapParameters.minCarouselItemGap}
-            max={carouselItemGapParameters.maxCarouselItemGap}
-          />
-        </label>
-      </form>
+          <label>
+            Gap:
+            <Slider
+              aria-label="Carousel Item Gap"
+              value={carouselItemGapParameters.carouselItemGap}
+              valueLabelDisplay="auto"
+              onChange={(e) => setCarouselGapInput(e.target.value)}
+              step={5}
+              marks
+              min={carouselItemGapParameters.minCarouselItemGap}
+              max={carouselItemGapParameters.maxCarouselItemGap}
+            />
+          </label>
+        </form>
+      )}
 
       <Carousel
         numberOfItemsShown={{ xs: 1, sm: 2, md: 3, lg: 4, xl: 5 }}

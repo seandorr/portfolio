@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import i18next from "i18next";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import NavBar from "./components/Navbar/NavBar";
 import AnimatedRoutes from "./components/AnimatedRoutes/AnimatedRoutes";
 import useTranslation from "./utils/customHooks/useTranslation";
@@ -12,7 +13,7 @@ const App = () => {
     "activeLanguage",
     i18next.language
   );
-  const [activeProjectColor, setActiveProjectColor] = useState(undefined);
+  const [activeProjectColor, setActiveProjectColor] = useState("#14402e");
 
   const { i18n } = useTranslation();
 
@@ -26,20 +27,34 @@ const App = () => {
     setActiveLanguage("en");
   };
 
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: activeProjectColor,
+      },
+    },
+  });
+  console.log(
+    "🚀 ~ file: App.js:35 ~ App ~ activeProjectColor",
+    activeProjectColor
+  );
+
   return (
     <Router>
-      <NavBar
-        activeProjectColor={activeProjectColor}
-        activeLanguage={activeLanguage}
-        handleOnClickSpanishBtn={handleOnClickSpanishBtn}
-        handleOnClickEnglishBtn={handleOnClickEnglishBtn}
-      />
-      <div className="page-content">
-        <AnimatedRoutes
-          setActiveProjectColor={setActiveProjectColor}
+      <ThemeProvider theme={theme}>
+        <NavBar
           activeProjectColor={activeProjectColor}
+          activeLanguage={activeLanguage}
+          handleOnClickSpanishBtn={handleOnClickSpanishBtn}
+          handleOnClickEnglishBtn={handleOnClickEnglishBtn}
         />
-      </div>
+        <div className="page-content">
+          <AnimatedRoutes
+            setActiveProjectColor={setActiveProjectColor}
+            activeProjectColor={activeProjectColor}
+          />
+        </div>
+      </ThemeProvider>
     </Router>
   );
 };

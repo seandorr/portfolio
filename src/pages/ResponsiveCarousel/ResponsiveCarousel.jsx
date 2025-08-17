@@ -79,10 +79,7 @@ const ResponsiveCarousel = ({ type }) => {
             <em>!</em>
           </h1>
         </CarouselItem>
-        <CarouselItem
-          style={{ overflow: "hidden" }}
-          onClick={() => window.open("/about", "_blank")}
-        >
+        <CarouselItem style={{ overflow: "hidden" }}>
           <img
             src="https://seandorr.com/images/about/sean-headshot.jpg"
             alt=""

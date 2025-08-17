@@ -53,7 +53,7 @@ const NavBar = (props) => {
             </button>
             <button
               className={`translation-btn ${
-                getEnglishLanguage(activeLanguage) === "en" ? "active" : ""
+                activeLanguage === "en" ? "active" : ""
               }`}
               onClick={handleOnClickEnglishBtn}
             >

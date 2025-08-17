@@ -13,6 +13,7 @@ const App = () => {
     "activeLanguage",
     i18next.language
   );
+
   const [activeProjectColor, setActiveProjectColor] = useState("#14402e");
 
   const { i18n } = useTranslation();
@@ -34,10 +35,6 @@ const App = () => {
       },
     },
   });
-  console.log(
-    "🚀 ~ file: App.js:35 ~ App ~ activeProjectColor",
-    activeProjectColor
-  );
 
   return (
     <Router>

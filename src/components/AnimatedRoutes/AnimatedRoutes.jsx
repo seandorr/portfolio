@@ -39,7 +39,7 @@ const AnimatedRoutes = ({ setActiveProjectColor, activeProjectColor }) => {
             </Route>
           );
         })}
-        <Route>
+        <Route path="*">
           <PageNotFound setActiveProjectColor={setActiveProjectColor} />
         </Route>
       </Switch>

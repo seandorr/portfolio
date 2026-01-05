@@ -30,10 +30,9 @@
         min-height: 500px;
         box-shadow: $box-shadow;
         background-repeat: no-repeat;
-        background-position: center center;
+        background-position: right center;
         background-size: cover;
         overflow: hidden;
-        transform: scaleX(-1);
       }
 
       &.about {

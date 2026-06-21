@@ -1,15 +1,24 @@
 import React from "react";
+import { Ascii } from "../../pages/Ascii";
+import ResponsiveCarousel from "../../pages/ResponsiveCarousel/ResponsiveCarousel";
 import MusicLibrary from "../../pages/MusicLibrary/MusicLibrary";
 import Nominapress from "../../pages/Nominapress/Nominapress";
 import RandomShapes from "../../pages/RandomShapes/RandomShapes";
 import Gemini from "../../pages/Gemini/Gemini";
 import Targetbase from "../../pages/Targetbase/Targetbase";
 import colors from "../../styles/_colors.scss";
-import ResponsiveCarousel from "../../pages/ResponsiveCarousel/ResponsiveCarousel";
 
 const projectPreviewData = [
   {
     projectId: 1,
+    projectName: "ascii",
+    projectImage: "ascii.jpg",
+    projectColor: colors.asciiColor,
+    projectLink: "ascii",
+    projectDetailedComponent: <Ascii />,
+  },
+  {
+    projectId: 2,
     projectName: "responsiveCarousel",
     projectComponent: <ResponsiveCarousel type="preview" />,
     projectColor: colors.responsiveCarouselColor,
@@ -18,7 +27,7 @@ const projectPreviewData = [
     projectDetailedComponent: <ResponsiveCarousel />,
   },
   {
-    projectId: 2,
+    projectId: 3,
     projectName: "musicLibrary",
     projectImage: "music-library.svg",
     projectColor: colors.musicLibraryColor1,
@@ -27,7 +36,7 @@ const projectPreviewData = [
     projectDetailedComponent: <MusicLibrary />,
   },
   {
-    projectId: 3,
+    projectId: 4,
     projectName: "nominapress",
     projectImage: "facial-recog-login.jpg",
     projectColor: colors.nominapressColor,
@@ -37,7 +46,7 @@ const projectPreviewData = [
     ),
   },
   {
-    projectId: 4,
+    projectId: 5,
     projectName: "randomShapes",
     projectComponent: <RandomShapes type="preview" />,
     projectColor: colors.randomShapesColor,
@@ -45,7 +54,7 @@ const projectPreviewData = [
     projectDetailedComponent: <RandomShapes type="detailed" />,
   },
   {
-    projectId: 5,
+    projectId: 6,
     projectName: "gemini",
     projectImage: "gemini-hero.jpg",
     projectColor: colors.geminiColor,
@@ -53,7 +62,7 @@ const projectPreviewData = [
     projectDetailedComponent: <Gemini />,
   },
   {
-    projectId: 6,
+    projectId: 7,
     projectName: "targetbase",
     projectImage: "targetbase-hero.jpg",
     projectColor: colors.targetbaseColor,

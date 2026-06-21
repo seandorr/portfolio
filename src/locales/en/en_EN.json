@@ -9,14 +9,38 @@
     "contact": "Contact"
   },
   "project": {
+    "ascii": {
+      "title": "ASCII",
+      "tags": {
+        "branding": "Branding",
+        "design": "UX/UI",
+        "frontEnd": "Front-end",
+        "nextjs": "Next.js",
+        "apollo": "Apollo",
+        "graphql": "GraphQL",
+        "agGrid": "AG Grid"
+      },
+      "imageAlt": "ASCII app - customer intelligence",
+      "description": "While working at BASF, I was given the opportunity to work on a project called ASCII. ASCII, a second-place digital award winner, is a customer intelligence application that helps businesses understand their customers better. The app allows users to visualize customer data in a way that is easy to understand and actionable.",
+      "branding": {
+        "title": "Branding: The Brief",
+        "description1": "The Project Manager asked me to create a logo and branding materials for a new app that we were developing. She already had an idea to use an iguana as the main mascot for the brand. The reasoning being that iguanas hide in plain sight, using their ability to change colors to blend in with their natural surroundings.",
+        "description2": "Much like an iguana, the app crawls the public internet, collecting data on customers and their behavior, and then use that data to help the business understand their customers better. The iguana is a perfect representation of the app's ability to crawl and collect data without being noticed."
+      },
+      "app": {
+        "title": "The App",
+        "description1": "After having a rough idea of the UI design in Figma, I was able to start developing the front-end of the app using Next.js, Apollo, and GraphQL. The front-end is comprised of a mixture of custom components, Mantine, and AG Grid for the data table.",
+        "description2": "I worked closely with a back-end developer that was responsible for creating the GraphQL APIs that would serve the data to the front-end. We had very close collaboration to ensure that the data was being presented in a meaningful way, and that the front-end was able to handle the data being returned from the API. He and I also worked closely with a team that handled the data crawling and collection."
+      }
+    },
     "responsiveCarousel": {
       "title": "Responsive Carousel",
       "tags": {
-        "npm": "npm package",
-        "react": "react",
+        "npm": "NPM package",
+        "react": "React",
         "JSX": "JSX",
         "SCSS": "SCSS",
-        "emotion": "emotion"
+        "emotion": "Emotion"
       },
       "imageAlt": "responsive carousel component",
       "description": "I was bored one day and decided to build a custom carousel componment. This was way easier than I expected, so I started to make it dynamic so that the carousel items would recalculate their width based on the browser size. This was cool, but I realized that this wasn't super useful if the items would be squished on smaller screens. In order to fix this, I created a set of media queries that could be targeted in the component prop to control how many carousel items could be visible inside each media query. I figured this could be useful for others and I've always wanted to learn how to publish a React component on npm, so I did just that.",
@@ -34,12 +58,12 @@
       "title": "Music Library",
       "tags": {
         "WIP": "WIP",
-        "frontEnd": "front-end",
-        "react": "react",
+        "frontEnd": "Front-end",
+        "react": "React",
         "JSX": "JSX",
         "SCSS": "SCSS",
-        "emotion": "emotion",
-        "design": "design"
+        "emotion": "Emotion",
+        "design": "Design"
       },
       "imageAlt": "music library design",
       "description": "You know that feeling when you discover a great song for the first time? This project aims to deliver this feeling by sharing tailored Spotify playlists ranging through all genres. I built the navigation in a way to resemble how you would flip through vinyls in a box or CDs on a shelf, which is all too familiar to a music lover."
@@ -47,14 +71,14 @@
     "nominapress": {
       "title": "Nominapress",
       "tags": {
-        "frontEnd": "front-end",
-        "react": "react",
+        "frontEnd": "Front-end",
+        "react": "React",
         "JSX": "JSX",
         "SCSS": "SCSS",
-        "antd": "antd",
-        "emotion": "emotion",
+        "antd": "Ant Design",
+        "emotion": "Emotion",
         "translations": "i18n",
-        "design": "design"
+        "design": "Design"
       },
       "imageAlt": "nominapress web design",
       "description": "I helped develop and maintain a human resources management app. Some notable features that I have worked on are:",
@@ -81,10 +105,10 @@
     "randomShapes": {
       "title": "Randomization",
       "tags": {
-        "frontEnd": "front-end",
-        "react": "react",
+        "frontEnd": "Front-end",
+        "react": "React",
         "JSX": "JSX",
-        "emotion": "emotion"
+        "emotion": "Emotion"
       },
       "imageAlt": "random shapes",
       "description": "I am constantly learning how to better make code more dynamic. I had the idea to try and generate random colors. After I figured this out, I took the concept further and created random shapes of all sizes and colors that animate on random paths. The method uses Math.floor(Math.random() * number) to generate the random attributes."
@@ -92,9 +116,9 @@
     "gemini": {
       "title": "Gemini Diversified Services",
       "tags": {
-        "branding": "branding",
-        "webDesign": "web design",
-        "frontEnd": "front-end",
+        "branding": "Branding",
+        "webDesign": "Web Design",
+        "frontEnd": "Front-end",
         "HTML": "HTML",
         "SCSS": "SCSS",
         "JS": "JS"
@@ -109,9 +133,9 @@
     "targetbase": {
       "title": "Targetbase",
       "tags": {
-        "webDesign": "web design",
-        "frontEnd": "front-end",
-        "wordpress": "wordpress",
+        "webDesign": "Web Design",
+        "frontEnd": "Front-end",
+        "wordpress": "WordPress",
         "PHP": "PHP",
         "HTML": "HTML",
         "CSS": "CSS",
@@ -131,17 +155,16 @@
       "visualDesigner": "🖋️ visual designer",
       "madrid": "📍 madrid",
       "nativeEnglish": "🇺🇸 native english",
-      "advancedSpanish": "🇪🇸 B2 level spanish",
+      "advancedSpanish": "🇪🇸 C1 level spanish",
       "petOwner": "🐶 🐈 pet owner",
       "musicGuru": "🎵 music guru",
       "beerLover": "🍺 beer lover",
       "runner": "🏃 runner",
       "hiker": "🥾 hiker"
     },
-    "paragraphPart1": "Hi, I'm Sean. I'm a designer and front-end developer based in Madrid, España. I currently work full-time for ",
+    "paragraphPart1": "Hi, I'm Sean. I'm a UX/UI Designer and Front-end Developer based in Madrid, España. I currently work full-time for ",
     "currentWorkLink": "BASF",
-    "paragraphPart2": " as a Product Owner, where I help build an internal developer platform.  I am a life-long student and I'm always trying to learn new techniques, technologies, and languages. When I'm not working or learning, you can catch me hiking the great outdoors, curating Spotify playlists, and sparking up conversations with strangers.",
-    "nominapressImageAlt": "Preview image of Nominapress project"
+    "paragraphPart2": " ,where I help build an internal developer platform. I am a life-long student and I'm always trying to learn new techniques, technologies, and languages. When I'm not working or learning, you can catch me hiking the great outdoors, curating Spotify playlists, and sparking up conversations with strangers."
   },
   "404": {
     "message": "Whoops, this is awkward.",

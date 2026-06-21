@@ -8,12 +8,12 @@ import EmailIcon from "@ant-design/icons/SendOutlined";
 
 export const socialLinks = [
   {
-    link: "https://gitlab.com/seandorr",
-    icon: <GitLabIcon />,
-  },
-  {
     link: "https://github.com/seandorr",
     icon: <GitHubIcon />,
+  },
+  {
+    link: "https://gitlab.com/seandorr",
+    icon: <GitLabIcon />,
   },
   {
     link: "https://dribbble.com/SeanDorr",

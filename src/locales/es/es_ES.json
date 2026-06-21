@@ -9,6 +9,30 @@
     "contact": "Contacto"
   },
   "project": {
+    "ascii": {
+      "title": "ASCII",
+      "tags": {
+        "branding": "Marca",
+        "design": "UX/UI",
+        "frontEnd": "Front-end",
+        "nextjs": "Next.js",
+        "apollo": "Apollo",
+        "graphql": "GraphQL",
+        "agGrid": "AG Grid"
+      },
+      "imageAlt": "ASCII app - inteligencia del cliente",
+      "description": "Durante mi etapa en BASF, tuve la oportunidad de trabajar en un proyecto llamado ASCII. ASCII, que obtuvo el segundo puesto en un premio digital, es una aplicación de inteligencia de clientes que ayuda a las empresas a comprender mejor a sus clientes. La aplicación permite a los usuarios visualizar los datos de los clientes de una forma clara y práctica.",
+      "branding": {
+        "title": "La Marca: La Breve",
+        "description1": "La jefa de proyecto me pidió que creara un logotipo y la identidad visual de una nueva aplicación que estábamos desarrollando. Ya tenía la idea de usar una iguana como mascota principal de la marca. El motivo era que las iguanas se camuflan a plena vista, utilizando su capacidad de cambiar de color para mimetizarse con su entorno natural.",
+        "description2": "Al igual que una iguana, la aplicación rastrea internet, recopilando datos sobre los clientes y su comportamiento, para luego usar esa información y ayudar a la empresa a comprender mejor a sus clientes. La iguana es un ejemplo perfecto de la capacidad de la aplicación para rastrear y recopilar datos sin ser detectada."
+      },
+      "app": {
+        "title": "La App",
+        "description1": "Tras tener una idea general del diseño de la interfaz de usuario en Figma, pude comenzar a desarrollar el front-end de la aplicación utilizando Next.js, Apollo y GraphQL. El front-end se compone de una combinación de componentes personalizados, Mantine y AG Grid para la tabla de datos.",
+        "description2": "Trabajé estrechamente con un desarrollador de back-end responsable de crear las API GraphQL que proporcionarían los datos al front-end. Colaboramos estrechamente para garantizar que los datos se presentaran de forma clara y comprensible, y que el front-end pudiera procesarlos correctamente. También trabajamos en estrecha colaboración con un equipo encargado del rastreo y la recopilación de datos."
+      }
+    },
     "responsiveCarousel": {
       "title": "Carrusel Adaptado",
       "tags": {
@@ -131,17 +155,16 @@
       "visualDesigner": "🖋️ diseñador visual",
       "madrid": "📍 madrid",
       "nativeEnglish": "🇺🇸 nativo de inglés",
-      "advancedSpanish": "🇪🇸 español nivel B2",
+      "advancedSpanish": "🇪🇸 español nivel C1",
       "petOwner": "🐶 🐈 dueño de mascotas",
       "musicGuru": "🎵 gurú de música",
       "beerLover": "🍺 amante de cerveza",
       "runner": "🏃 corredor",
       "hiker": "🥾 excursionista"
     },
-    "paragraphPart1": "Hola, soy Sean. Soy un diseñador y desarrollador front-end en Madrid, España. Trabajo a tiempo completo para ",
+    "paragraphPart1": "Hola, soy Sean. Soy un diseñador UX/UI y desarrollador front-end en Madrid, España. Trabajo a tiempo completo para ",
     "currentWorkLink": "BASF",
-    "paragraphPart2": " como Product Owner, donde ayudo a construir una platafora internal para desarolladores. Siempre estoy intentando aprender nuevas técnicas, tecnologías, y lenguajes de programación. Cuando no estoy trabajando o aprendiendo, puedes verme en las montañas haciendo senderismo, haciendo listas de Spotify, y hablando con extranjeros.",
-    "nominapressImageAlt": "Imagen de vista previa del proyecto Nominapress"
+    "paragraphPart2": " ,donde ayudo a construir una platafora internal para desarolladores. Siempre estoy intentando aprender nuevas técnicas, tecnologías, y lenguajes de programación. Cuando no estoy trabajando o aprendiendo, puedes verme en las montañas haciendo senderismo, haciendo listas de Spotify, y hablando con extranjeros."
   },
   "404": {
     "message": "¡Ay! Esto es incómodo.",

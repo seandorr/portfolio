@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
-import GridLines from "../../components/GridLines/GridLines";
-import ProjectPreview from "./components/ProjectPreview/ProjectPreview";
+import { GridLines } from "../../components/GridLines";
+import { ProjectPreview } from "./components/ProjectPreview";
 import useWindowSize from "../../utils/customHooks/useWindowSize";
 import { projectsData } from "../../utils/constants/projectPreviewData";
 import useTranslation from "../../utils/customHooks/useTranslation";
 import "./home.scss";
 
-const Home = ({ setActiveProjectColor, activeProjectColor }) => {
+export const Home = ({ setActiveProjectColor, activeProjectColor }) => {
   const getWindowHeight = useWindowSize().height;
   const getWindowWidth = useWindowSize().width;
   const isMobileSize = getWindowWidth < 768;
@@ -16,13 +16,13 @@ const Home = ({ setActiveProjectColor, activeProjectColor }) => {
   useEffect(() => {
     const handleScroll = () => {
       const indexOfProjectCurrentlyInView = Math.floor(
-        window.scrollY / (getWindowHeight / 1.2)
+        window.scrollY / (getWindowHeight / 1.2),
       );
 
       if (projectsData[indexOfProjectCurrentlyInView] !== undefined) {
         if (indexOfProjectCurrentlyInView < projectsData.length) {
           setActiveProjectColor(
-            projectsData[indexOfProjectCurrentlyInView].projectColor
+            projectsData[indexOfProjectCurrentlyInView].projectColor,
           );
         } else {
           const lastProject = projectsData.length - 1;
@@ -116,5 +116,3 @@ const Home = ({ setActiveProjectColor, activeProjectColor }) => {
     </>
   );
 };
-
-export default Home;

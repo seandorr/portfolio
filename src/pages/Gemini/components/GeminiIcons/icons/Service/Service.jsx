@@ -1,7 +1,7 @@
 import React from "react";
 import "./service.scss";
 
-const Service = () => {
+export const Service = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -49,5 +49,3 @@ const Service = () => {
     </svg>
   );
 };
-
-export default Service;

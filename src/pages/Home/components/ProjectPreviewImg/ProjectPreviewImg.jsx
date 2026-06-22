@@ -3,7 +3,11 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import useTranslation from "../../../../utils/customHooks/useTranslation";
 
-const ProjectPreviewImg = ({ projectLink, projectImage, projectName }) => {
+export const ProjectPreviewImg = ({
+  projectLink,
+  projectImage,
+  projectName,
+}) => {
   const { translation } = useTranslation();
 
   return (
@@ -22,5 +26,3 @@ ProjectPreviewImg.propTypes = {
   projectImage: PropTypes.string,
   projectName: PropTypes.string,
 };
-
-export default ProjectPreviewImg;

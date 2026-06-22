@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Tilt from "react-vanilla-tilt";
 
-const CustomTilt = ({ style, children }) => {
+export const CustomTilt = ({ style, children }) => {
   return <Tilt style={style}>{children}</Tilt>;
 };
 
@@ -16,5 +16,3 @@ CustomTilt.defaultProps = {
     boxShadow: "none",
   },
 };
-
-export { CustomTilt as Tilt };

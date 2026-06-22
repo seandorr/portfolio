@@ -2,12 +2,12 @@ import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { projectsData } from "../../../utils/constants/projectPreviewData";
-import { Tilt } from "../../../components/CustomTilt/CustomTilt";
+import { Tilt } from "../../../components/CustomTilt";
 import useWindowSize from "../../../utils/customHooks/useWindowSize";
 import useTranslation from "../../../utils/customHooks/useTranslation";
 import "./footer.scss";
 
-const Footer = ({ project }) => {
+export const Footer = ({ project }) => {
   const { projectId } = project;
 
   const { translation } = useTranslation();
@@ -60,5 +60,3 @@ const Footer = ({ project }) => {
 Footer.propTypes = {
   project: PropTypes.object.isRequired,
 };
-
-export default Footer;

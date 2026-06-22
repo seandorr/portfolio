@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { GenerateRandomShapes } from "./components/GenerateRandomShapes";
 import "./random-shapes.scss";
 
-const RandomShapesPreview = ({ type }) => {
+export const RandomShapes = ({ type }) => {
   const [, setReloadComponent] = useState(undefined);
 
   useEffect(() => {
@@ -15,5 +15,3 @@ const RandomShapesPreview = ({ type }) => {
     </div>
   );
 };
-
-export default RandomShapesPreview;

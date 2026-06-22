@@ -1,15 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import FilterTags from "../../../../components/FilterTags/FilterTags";
+import { FilterTags } from "../../../../components/FilterTags";
+import { Loading } from "../../../../components/Loading";
 import useTranslation from "../../../../utils/customHooks/useTranslation";
-import Loading from "../../../../components/Loading/Loading";
 
 const ProjectPreviewImg = React.lazy(() =>
-  import("../ProjectPreviewImg/ProjectPreviewImg")
+  import("../ProjectPreviewImg").then((module) => ({
+    default: module.ProjectPreviewImg,
+  })),
 );
 
-const ProjectPreview = ({ project }) => {
+export const ProjectPreview = ({ project }) => {
   const {
     projectId,
     projectName,
@@ -63,5 +65,3 @@ ProjectPreview.defaultProps = {
   projectLink: undefined,
   projectComponent: undefined,
 };
-
-export default ProjectPreview;

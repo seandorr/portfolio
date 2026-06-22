@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import useTranslation from "../../../utils/customHooks/useTranslation";
 
-const SlideshowImg = ({
+export const SlideshowImg = ({
   projectDirectory,
   imageArray,
   activeImgIndex,
@@ -30,5 +30,3 @@ SlideshowImg.propTypes = {
 SlideshowImg.defaultProps = {
   activeImgIndex: 0,
 };
-
-export default SlideshowImg;

@@ -6,7 +6,7 @@ import useTranslation from "../../utils/customHooks/useTranslation";
 import colors from "../../styles/_colors.scss";
 import "./page-not-found.scss";
 
-const PageNotFound = ({ setActiveProjectColor }) => {
+export const PageNotFound = ({ setActiveProjectColor }) => {
   useEffect(() => {
     setActiveProjectColor(colors.darkColor);
   }, [setActiveProjectColor]);
@@ -29,5 +29,3 @@ const PageNotFound = ({ setActiveProjectColor }) => {
 PageNotFound.propTypes = {
   setActiveProjectColor: PropTypes.func.isRequired,
 };
-
-export default PageNotFound;

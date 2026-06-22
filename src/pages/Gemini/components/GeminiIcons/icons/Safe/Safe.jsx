@@ -1,7 +1,7 @@
 import React from "react";
 import "./safe.scss";
 
-const Safe = () => {
+export const Safe = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -44,5 +44,3 @@ const Safe = () => {
     </svg>
   );
 };
-
-export default Safe;

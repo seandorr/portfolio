@@ -5,10 +5,10 @@ import {
   facialRecogValidationImages,
   facialRecogLoginImage,
 } from "./utils/constants/facialRecogImages";
-import Slideshow from "../../components/Slideshow/Slideshow";
+import { Slideshow } from "../../components/Slideshow";
 import useTranslation from "../../utils/customHooks/useTranslation";
 
-const Nominapress = ({ projectColor }) => {
+export const Nominapress = ({ projectColor }) => {
   const { translation } = useTranslation();
   return (
     <div className="nominapress-grid">
@@ -17,7 +17,7 @@ const Nominapress = ({ projectColor }) => {
         imageArray={facialRecogValidationImages}
         projectDirectory="nominapress"
         title={translation(
-          "project.nominapress.facialRecogValidationSlider.title"
+          "project.nominapress.facialRecogValidationSlider.title",
         )}
         projectColor={projectColor}
       />

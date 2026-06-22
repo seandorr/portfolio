@@ -4,7 +4,7 @@ import musicLibraryItems from "./utils/constants/musicLibraryItems";
 import MusicLibraryItem from "./components/MusicLibraryItem";
 import "./music-library.scss";
 
-const MusicLibrary = () => {
+export const MusicLibrary = () => {
   const numberOfItems = musicLibraryItems.length;
   const lastItem = musicLibraryItems[musicLibraryItems.length - 1];
   const [activeItemId, setActiveItemId] = useState(lastItem.id);
@@ -34,5 +34,3 @@ const MusicLibrary = () => {
     </div>
   );
 };
-
-export default MusicLibrary;

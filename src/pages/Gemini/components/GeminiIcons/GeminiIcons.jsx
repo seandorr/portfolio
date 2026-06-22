@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import geminiIcons from "./utils/constants/geminiIcons";
 import "./gemini-icons.scss";
 
-const GeminiIcons = () => {
+export const GeminiIcons = () => {
   const [hoveringOverIcon, setHoveringOverIcon] = useState(false);
 
   const handleOnMouseEnter = (key) => {
@@ -28,5 +28,3 @@ const GeminiIcons = () => {
     </div>
   );
 };
-
-export default GeminiIcons;

@@ -1,8 +1,6 @@
 import React from "react";
-import "../../Loading/loading.scss";
+import "../loading.scss";
 
-const LoadingImg = () => {
+export const LoadingImg = () => {
   return <div className="loading loading-img" />;
 };
-
-export default LoadingImg;

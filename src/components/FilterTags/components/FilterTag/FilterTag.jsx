@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const FilterTag = ({ tag }) => {
+export const FilterTag = ({ tag }) => {
   return <span className="filter-tag">{tag}</span>;
 };
 
@@ -12,5 +12,3 @@ FilterTag.propTypes = {
 FilterTag.defaultPropss = {
   tag: undefined,
 };
-
-export default FilterTag;

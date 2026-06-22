@@ -2,19 +2,22 @@ import React, { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import i18next from "i18next";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import NavBar from "./components/Navbar/NavBar";
-import AnimatedRoutes from "./components/AnimatedRoutes/AnimatedRoutes";
+import { NavBar } from "./components/Navbar";
+import { AnimatedRoutes } from "./components/AnimatedRoutes";
 import useTranslation from "./utils/customHooks/useTranslation";
 import useLocalStorage from "./utils/customHooks/useLocalStorage";
+import colors from "./styles/_colors.scss";
 import "./styles/main.scss";
 
 const App = () => {
   const [activeLanguage, setActiveLanguage] = useLocalStorage(
     "activeLanguage",
-    i18next.language
+    i18next.language,
   );
 
-  const [activeProjectColor, setActiveProjectColor] = useState("#14402e");
+  const [activeProjectColor, setActiveProjectColor] = useState(
+    colors.asciiColor,
+  );
 
   const { i18n } = useTranslation();
 

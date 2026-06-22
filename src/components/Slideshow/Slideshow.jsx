@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import SlideshowImg from "./SlideshowImg/SlideshowImg";
+import { SlideshowImg } from "./SlideshowImg";
 import "./slideshow.scss";
 
-const Slideshow = ({
+export const Slideshow = ({
   className,
   imageArray,
   projectDirectory,
@@ -81,5 +81,3 @@ Slideshow.defaultProps = {
   className: "",
   title: undefined,
 };
-
-export default Slideshow;

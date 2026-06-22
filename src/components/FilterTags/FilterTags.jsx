@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import FilterTag from "./components/FilterTag/FilterTag";
+import { FilterTag } from "./components/FilterTag";
 import generateRandomKey from "../../utils/functions/generateRandomKey";
 import useTranslation from "../../utils/customHooks/useTranslation";
 import "./filter-tags.scss";
 
-const FilterTags = ({ projectName, location }) => {
+export const FilterTags = ({ projectName, location }) => {
   const { translation } = useTranslation();
   const tags = translation(`project.${projectName}.tags`, {
     returnObjects: true,
@@ -32,5 +32,3 @@ FilterTags.propTypes = {
 FilterTags.defaultProps = {
   projectName: undefined,
 };
-
-export default FilterTags;

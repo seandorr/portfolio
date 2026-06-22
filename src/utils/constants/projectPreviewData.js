@@ -1,11 +1,11 @@
 import React from "react";
 import { Ascii } from "../../pages/Ascii";
-import ResponsiveCarousel from "../../pages/ResponsiveCarousel/ResponsiveCarousel";
-import MusicLibrary from "../../pages/MusicLibrary/MusicLibrary";
-import Nominapress from "../../pages/Nominapress/Nominapress";
-import RandomShapes from "../../pages/RandomShapes/RandomShapes";
-import Gemini from "../../pages/Gemini/Gemini";
-import Targetbase from "../../pages/Targetbase/Targetbase";
+import { ResponsiveCarousel } from "../../pages/ResponsiveCarousel";
+import { MusicLibrary } from "../../pages/MusicLibrary";
+import { Nominapress } from "../../pages/Nominapress";
+import { RandomShapes } from "../../pages/RandomShapes";
+import { Gemini } from "../../pages/Gemini";
+import { Targetbase } from "../../pages/Targetbase";
 import colors from "../../styles/_colors.scss";
 
 const projectPreviewData = [

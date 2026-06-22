@@ -1,8 +1,8 @@
 import React from "react";
-import GeminiHero from "./components/GeminiHero/GeminiHero";
-import GeminiIcons from "./components/GeminiIcons/GeminiIcons";
+import { GeminiHero } from "./components/GeminiHero";
+import { GeminiIcons } from "./components/GeminiIcons";
 
-const Gemini = () => {
+export const Gemini = () => {
   return (
     <div className="gemini-main-container">
       <GeminiHero />
@@ -10,5 +10,3 @@ const Gemini = () => {
     </div>
   );
 };
-
-export default Gemini;

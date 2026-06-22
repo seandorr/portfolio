@@ -1,7 +1,7 @@
 import React from "react";
 import "./portal.scss";
 
-const Portal = () => {
+export const Portal = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -55,5 +55,3 @@ const Portal = () => {
     </svg>
   );
 };
-
-export default Portal;

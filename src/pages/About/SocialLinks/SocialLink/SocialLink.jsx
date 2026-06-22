@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const SocialLink = ({ link, children }) => {
+export const SocialLink = ({ link, children }) => {
   return (
     <a
       className="social-link"
@@ -27,5 +27,3 @@ SocialLink.propTypes = {
 SocialLink.defaultProps = {
   children: undefined,
 };
-
-export default SocialLink;

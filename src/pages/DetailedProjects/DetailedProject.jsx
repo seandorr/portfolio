@@ -4,12 +4,12 @@ import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import generateRandomKey from "../../utils/functions/generateRandomKey";
 import { isObjectWithValues } from "../../utils/validators/objectValidator";
-import FilterTags from "../../components/FilterTags/FilterTags";
-import Footer from "./Footer/Footer";
+import { FilterTags } from "../../components/FilterTags";
+import { Footer } from "./Footer";
 import useTranslation from "../../utils/customHooks/useTranslation";
 import "./detailed-project.scss";
 
-const DetailedProject = ({ project, setActiveProjectColor }) => {
+export const DetailedProject = ({ project, setActiveProjectColor }) => {
   const { projectName, projectColor, gitLink, projectDetailedComponent } =
     project;
 
@@ -24,7 +24,7 @@ const DetailedProject = ({ project, setActiveProjectColor }) => {
     `project.${projectName}.descriptionBullets`,
     {
       returnObjects: true,
-    }
+    },
   );
 
   const transition = {
@@ -133,5 +133,3 @@ DetailedProject.propTypes = {
 DetailedProject.defaultProps = {
   setActiveProjectColor: undefined,
 };
-
-export default DetailedProject;

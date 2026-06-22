@@ -2,15 +2,19 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
-import FilterTags from "../../components/FilterTags/FilterTags";
+import { FilterTags } from "../../components/FilterTags";
 import colors from "../../styles/_colors.scss";
 import { linkFadeInOut } from "./utils/constants/linkFadeInOut";
-import SocialLinks from "./SocialLinks/SocialLinks";
+import { Loading } from "../../components/Loading";
+import { SocialLinks } from "./SocialLinks";
 import useTranslation from "../../utils/customHooks/useTranslation";
-import Loading from "../../components/Loading/Loading";
 import "./about.scss";
 
-const Headshot = React.lazy(() => import("./Headshot/Headshot"));
+const Headshot = React.lazy(() =>
+  import("./Headshot").then((module) => ({
+    default: module.Headshot,
+  })),
+);
 
 const About = ({ activeProjectColor, setActiveProjectColor }) => {
   const [linkHover, setLinkHover] = useState(false);

@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 import useTranslation from "../../utils/customHooks/useTranslation";
 import "./targetbase.scss";
 
-const Targetbase = () => {
+export const Targetbase = () => {
   const { translation } = useTranslation();
 
   const backgroundImg = `${
@@ -44,5 +44,3 @@ const Targetbase = () => {
     </div>
   );
 };
-
-export default Targetbase;

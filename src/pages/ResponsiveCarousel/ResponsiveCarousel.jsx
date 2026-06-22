@@ -5,7 +5,7 @@ import { Slider } from "@mui/material";
 import useTranslation from "../../utils/customHooks/useTranslation";
 import "./responsive-carousel.scss";
 
-const ResponsiveCarousel = ({ type }) => {
+export const ResponsiveCarousel = ({ type }) => {
   const { translation } = useTranslation();
 
   const [carouselItemHeightInput, setCarouselItemHeightInput] = useState(400);
@@ -92,7 +92,7 @@ const ResponsiveCarousel = ({ type }) => {
               {translation("project.responsiveCarousel.carouselContent.add")}{" "}
               <em>
                 {translation(
-                  "project.responsiveCarousel.carouselContent.anything"
+                  "project.responsiveCarousel.carouselContent.anything",
                 )}
               </em>{" "}
               {translation("project.responsiveCarousel.carouselContent.desire")}
@@ -100,7 +100,7 @@ const ResponsiveCarousel = ({ type }) => {
             </h2>
             <h3>
               {translation(
-                "project.responsiveCarousel.carouselContent.confirmation"
+                "project.responsiveCarousel.carouselContent.confirmation",
               )}
             </h3>
           </div>
@@ -122,5 +122,3 @@ ResponsiveCarousel.propTypes = {
 ResponsiveCarousel.defaultProps = {
   type: "detailed",
 };
-
-export default ResponsiveCarousel;

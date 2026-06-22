@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 import useTranslation from "../../../../utils/customHooks/useTranslation";
 import "./gemini-hero.scss";
 
-const Gemini = () => {
+export const GeminiHero = () => {
   const { translation } = useTranslation();
 
   const backgroundImg = `${process.env.PUBLIC_URL + `images/gemini/hero.jpg`}`;
@@ -54,5 +54,3 @@ const Gemini = () => {
     </div>
   );
 };
-
-export default Gemini;

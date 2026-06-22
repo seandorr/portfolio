@@ -1,9 +1,9 @@
 import React from "react";
 import generateRandomKey from "../../../../../../utils/functions/generateRandomKey";
-import Portal from "../../icons/Portal/Portal";
-import Safe from "../../icons/Safe/Safe";
-import Service from "../../icons/Service/Service";
-import Tech from "../../icons/Tech/Tech";
+import { Portal } from "../../icons/Portal";
+import { Safe } from "../../icons/Safe";
+import { Service } from "../../icons/Service";
+import { Tech } from "../../icons/Tech";
 
 const geminiIcons = [
   {

@@ -1,7 +1,7 @@
 import React from "react";
 import "./gridlines.scss";
 
-const GridLines = () => {
+export const GridLines = () => {
   return (
     <div className="gridline-container">
       <div className="gridline"></div>
@@ -11,5 +11,3 @@ const GridLines = () => {
     </div>
   );
 };
-
-export default GridLines;

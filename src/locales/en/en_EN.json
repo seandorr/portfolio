@@ -27,8 +27,13 @@
         "description1": "The Project Manager asked me to create a logo and branding materials for a new app that we were developing. She already had an idea to use an iguana as the main mascot for the brand. The reasoning being that iguanas hide in plain sight, using their ability to change colors to blend in with their natural surroundings.",
         "description2": "Much like an iguana, the app crawls the public internet, collecting data on customers and their behavior, and then use that data to help the business understand their customers better. The iguana is a perfect representation of the app's ability to crawl and collect data without being noticed."
       },
+      "design": {
+        "title": "Design: The Process",
+        "description1": "The design process for ASCII started with collecting user needs and requirements from various stakeholders, including business leaders, data analysts, and potential users. I conducted user research to understand the pain points and goals of our target audience, which helped inform the design decisions.",
+        "description2": "The final design incorporated feedback from the stakeholders and underwent several iterations to ensure it met the needs of our target audience. This process was extremely valuable because the data model was unclear and the design had to be flexible enough to scale with the changes in the data structure. The end result was a user-friendly interface that effectively visualized complex customer data and provided actionable insights for businesses."
+      },
       "app": {
-        "title": "The App",
+        "title": "The App: Production",
         "description1": "After having a rough idea of the UI design in Figma, I was able to start developing the front-end of the app using Next.js, Apollo, and GraphQL. The front-end is comprised of a mixture of custom components, Mantine, and AG Grid for the data table.",
         "description2": "I worked closely with a back-end developer that was responsible for creating the GraphQL APIs that would serve the data to the front-end. We had very close collaboration to ensure that the data was being presented in a meaningful way, and that the front-end was able to handle the data being returned from the API. He and I also worked closely with a team that handled the data crawling and collection."
       }

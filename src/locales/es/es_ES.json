@@ -27,8 +27,13 @@
         "description1": "La jefa de proyecto me pidió que creara un logotipo y la identidad visual de una nueva aplicación que estábamos desarrollando. Ya tenía la idea de usar una iguana como mascota principal de la marca. El motivo era que las iguanas se camuflan a plena vista, utilizando su capacidad de cambiar de color para mimetizarse con su entorno natural.",
         "description2": "Al igual que una iguana, la aplicación rastrea internet, recopilando datos sobre los clientes y su comportamiento, para luego usar esa información y ayudar a la empresa a comprender mejor a sus clientes. La iguana es un ejemplo perfecto de la capacidad de la aplicación para rastrear y recopilar datos sin ser detectada."
       },
+      "design": {
+        "title": "Diseño: El Proceso",
+        "description1": "El proceso de diseño de ASCII comenzó con la recopilación de necesidades y requisitos de los usuarios, incluyendo a líderes empresariales, analistas de datos y usuarios potenciales. Realicé una investigación de usuarios para comprender los problemas y objetivos de nuestro público objetivo, lo que me ayudó a tomar decisiones de diseño.",
+        "description2": "El diseño final incorporó las opiniones de las partes interesadas y se sometió a varias iteraciones para garantizar que satisficiera las necesidades de nuestro público objetivo. Este proceso fue sumamente valioso, ya que el modelo de datos no estaba claro y el diseño debía ser lo suficientemente flexible como para adaptarse a los cambios en la estructura de datos. El resultado final fue una interfaz intuitiva que visualizaba eficazmente datos complejos de clientes y proporcionaba información útil para las empresas."
+      },
       "app": {
-        "title": "La App",
+        "title": "La App: Producción",
         "description1": "Tras tener una idea general del diseño de la interfaz de usuario en Figma, pude comenzar a desarrollar el front-end de la aplicación utilizando Next.js, Apollo y GraphQL. El front-end se compone de una combinación de componentes personalizados, Mantine y AG Grid para la tabla de datos.",
         "description2": "Trabajé estrechamente con un desarrollador de back-end responsable de crear las API GraphQL que proporcionarían los datos al front-end. Colaboramos estrechamente para garantizar que los datos se presentaran de forma clara y comprensible, y que el front-end pudiera procesarlos correctamente. También trabajamos en estrecha colaboración con un equipo encargado del rastreo y la recopilación de datos."
       }

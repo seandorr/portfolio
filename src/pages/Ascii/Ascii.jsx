@@ -21,6 +21,19 @@ export const Ascii = () => {
       </div>
       <div className={styles.asciiMainContainer}>
         <img
+          className={styles.asciiUi}
+          src="/images/ascii/ascii-ui.jpg"
+          alt="ASCII UI design"
+        />
+        <h2 className={styles.asciiTitle}>
+          {translation("project.ascii.design.title")}
+        </h2>
+        <p>{translation("project.ascii.design.description1")}</p>
+        <br />
+        <p>{translation("project.ascii.design.description2")}</p>
+      </div>
+      <div className={styles.asciiMainContainer}>
+        <img
           className={styles.asciiApp}
           src="/images/ascii/ascii-app.png"
           alt="ASCII app - customer intelligence"

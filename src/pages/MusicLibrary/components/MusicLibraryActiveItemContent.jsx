@@ -21,13 +21,17 @@ const MusicLibraryActiveItemContent = ({
       }
     >
       <iframe
-        title="spotify-playlist"
-        src={`https://open.spotify.com/embed?uri=spotify:user:122367656:playlist:${playlistURL}`}
-        width="300"
-        height={largeScreenSize ? "380" : "80"}
+        title="apple-music-playlist"
+        allow="autoplay *; encrypted-media *;"
         frameBorder="0"
-        allowtransparency="true"
-        allow="encrypted-media"
+        height={largeScreenSize ? "380" : "150"}
+        style={{
+          width: "300px",
+          overflow: "hidden",
+          background: "transparent",
+        }}
+        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+        src={`https://embed.music.apple.com/es/playlist/${playlistURL}?l=en`}
       />
     </div>
   ) : null;

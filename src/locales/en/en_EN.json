@@ -71,7 +71,7 @@
         "design": "Design"
       },
       "imageAlt": "music library design",
-      "description": "You know that feeling when you discover a great song for the first time? This project aims to deliver this feeling by sharing tailored Spotify playlists ranging through all genres. I built the navigation in a way to resemble how you would flip through vinyls in a box or CDs on a shelf, which is all too familiar to a music lover."
+      "description": "You know that feeling when you discover a great song for the first time? This project aims to deliver this feeling by sharing tailored playlists ranging through all genres. I built the navigation in a way to resemble how you would flip through vinyls in a box or CDs on a shelf, which is all too familiar to a music lover."
     },
     "nominapress": {
       "title": "Nominapress",

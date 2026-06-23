@@ -99,6 +99,20 @@ export const DetailedProject = ({ project, setActiveProjectColor }) => {
                 </a>
               )}
             </div>
+            {projectName === "ascii" && (
+              <>
+                <p>
+                  <strong>Role:</strong>{" "}
+                  {translation(`project.${projectName}.role`)}
+                </p>
+                <p>
+                  <strong>Impact:</strong>{" "}
+                  {translation(`project.${projectName}.impact`)}
+                </p>
+                <br />
+                <br />
+              </>
+            )}
             <p className="project-about-details">
               {translation(`project.${projectName}.description`)}
             </p>

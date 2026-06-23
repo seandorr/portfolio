@@ -11,6 +11,8 @@
   "project": {
     "ascii": {
       "title": "ASCII",
+      "role": "Lead UX/UI Designer & Front-End Developer",
+      "impact": "2nd Place Winner, BASF Company-Wide Digital Award",
       "tags": {
         "branding": "Branding",
         "design": "UX/UI",
@@ -21,21 +23,24 @@
         "agGrid": "AG Grid"
       },
       "imageAlt": "ASCII app - customer intelligence",
-      "description": "While working at BASF, I was given the opportunity to work on a project called ASCII. ASCII, a second-place digital award winner, is a customer intelligence application that helps businesses understand their customers better. The app allows users to visualize customer data in a way that is easy to understand and actionable.",
+      "description": "ASCII is an enterprise customer intelligence application engineered to aggregate, structure, and visualize public web data. Built to solve the challenge of fragmented market signals, the application crawls open-source web ecosystems and translates dense behavioral datasets into highly actionable, intuitive business insights.",
       "branding": {
-        "title": "Branding: The Brief",
-        "description1": "The Project Manager asked me to create a logo and branding materials for a new app that we were developing. She already had an idea to use an iguana as the main mascot for the brand. The reasoning being that iguanas hide in plain sight, using their ability to change colors to blend in with their natural surroundings.",
-        "description2": "Much like an iguana, the app crawls the public internet, collecting data on customers and their behavior, and then use that data to help the business understand their customers better. The iguana is a perfect representation of the app's ability to crawl and collect data without being noticed."
+        "title": "Brand Strategy & Identity",
+        "description1": "The branding brief required an identity that captured the core mechanics of the platform: data aggregation and environmental adaptability.",
+        "description2": "Utilizing an iguana as the central mascot, the visual identity mirrors the platform's primary technical capability—discreetly crawling the public internet, blending into complex data environments, and surfacing critical behavioral patterns that typically hide in plain sight."
       },
       "design": {
-        "title": "Design: The Process",
-        "description1": "The design process for ASCII started with collecting user needs and requirements from various stakeholders, including business leaders, data analysts, and potential users. I conducted user research to understand the pain points and goals of our target audience, which helped inform the design decisions.",
-        "description2": "The final design incorporated feedback from the stakeholders and underwent several iterations to ensure it met the needs of our target audience. This process was extremely valuable because the data model was unclear and the design had to be flexible enough to scale with the changes in the data structure. The end result was a user-friendly interface that effectively visualized complex customer data and provided actionable insights for businesses."
+        "title": "UX/UI Architecture & Shifting Data Structures",
+        "description1": "The discovery phase involved synthesizing conflicting requirements from business leaders, data engineers, and market analysts.",
+        "description2": "The primary UX challenge was architectural ambiguity: the underlying data model was highly fluid and constantly evolving. To mitigate this risk, I designed an exceptionally adaptive UI system in Figma. By focusing on modular, agnostic layouts rather than rigid page structures, I ensured the interface could seamlessly scale alongside rapid back-end data schema mutations without degrading the user experience."
       },
       "app": {
-        "title": "The App: Production",
-        "description1": "After having a rough idea of the UI design in Figma, I was able to start developing the front-end of the app using Next.js, Apollo, and GraphQL. The front-end is comprised of a mixture of custom components, Mantine, and AG Grid for the data table.",
-        "description2": "I worked closely with a back-end developer that was responsible for creating the GraphQL APIs that would serve the data to the front-end. We had very close collaboration to ensure that the data was being presented in a meaningful way, and that the front-end was able to handle the data being returned from the API. He and I also worked closely with a team that handled the data crawling and collection."
+        "title": "Front-End Implementation & API Co-Design",
+        "description1": "Transitioning from design to production, I engineered the front-end architecture utilizing Next.js and Apollo Client.",
+        "description2": {
+          "part1": "Data Density Management: Implemented AG Grid paired with Mantine to construct a high-performance, responsive data workspace capable of rendering complex multi-dimensional datasets with zero performance bottlenecks.",
+          "part2": "GraphQL Integration: Collaborated intensely with back-end and data-crawling engineering teams to co-design the GraphQL API contracts. This cross-functional alignment ensured that the front-end dynamically resolved nested queries, elegantly handled latency during live data aggregation, and structured incoming payloads into highly semantic UI states."
+        }
       }
     },
     "responsiveCarousel": {
@@ -62,7 +67,6 @@
     "musicLibrary": {
       "title": "Music Library",
       "tags": {
-        "WIP": "WIP",
         "frontEnd": "Front-end",
         "react": "React",
         "JSX": "JSX",

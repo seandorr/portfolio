@@ -11,6 +11,8 @@
   "project": {
     "ascii": {
       "title": "ASCII",
+      "role": "Diseñador UX/UI Principal y Desarrollador Front-End",
+      "impact": "Segundo Puesto en el Premio Digital de BASF a Nivel Corporativo",
       "tags": {
         "branding": "Marca",
         "design": "UX/UI",
@@ -21,21 +23,24 @@
         "agGrid": "AG Grid"
       },
       "imageAlt": "ASCII app - inteligencia del cliente",
-      "description": "Durante mi etapa en BASF, tuve la oportunidad de trabajar en un proyecto llamado ASCII. ASCII, que obtuvo el segundo puesto en un premio digital, es una aplicación de inteligencia de clientes que ayuda a las empresas a comprender mejor a sus clientes. La aplicación permite a los usuarios visualizar los datos de los clientes de una forma clara y práctica.",
+      "description": "ASCII es una aplicación empresarial de inteligencia de clientes diseñada para agregar, estructurar y visualizar datos web públicos. Creada para resolver el desafío de las señales de mercado fragmentadas, la aplicación rastrea ecosistemas web de código abierto y transforma conjuntos de datos de comportamiento densos en información empresarial intuitiva y altamente práctica.",
       "branding": {
-        "title": "La Marca: La Breve",
-        "description1": "La jefa de proyecto me pidió que creara un logotipo y la identidad visual de una nueva aplicación que estábamos desarrollando. Ya tenía la idea de usar una iguana como mascota principal de la marca. El motivo era que las iguanas se camuflan a plena vista, utilizando su capacidad de cambiar de color para mimetizarse con su entorno natural.",
-        "description2": "Al igual que una iguana, la aplicación rastrea internet, recopilando datos sobre los clientes y su comportamiento, para luego usar esa información y ayudar a la empresa a comprender mejor a sus clientes. La iguana es un ejemplo perfecto de la capacidad de la aplicación para rastrear y recopilar datos sin ser detectada."
+        "title": "Estrategia e Identidad de la Marca",
+        "description1": "El briefing de marca requería una identidad que capturara la mecánica central de la plataforma: agregación de datos y adaptabilidad al entorno.",
+        "description2": "Utilizando una iguana como mascota principal, la identidad visual refleja la principal capacidad técnica de la plataforma: rastrear discretamente la internet pública, integrarse en entornos de datos complejos y sacar a la luz patrones de comportamiento críticos que normalmente pasan desapercibidos."
       },
       "design": {
-        "title": "Diseño: El Proceso",
-        "description1": "El proceso de diseño de ASCII comenzó con la recopilación de necesidades y requisitos de los usuarios, incluyendo a líderes empresariales, analistas de datos y usuarios potenciales. Realicé una investigación de usuarios para comprender los problemas y objetivos de nuestro público objetivo, lo que me ayudó a tomar decisiones de diseño.",
-        "description2": "El diseño final incorporó las opiniones de las partes interesadas y se sometió a varias iteraciones para garantizar que satisficiera las necesidades de nuestro público objetivo. Este proceso fue sumamente valioso, ya que el modelo de datos no estaba claro y el diseño debía ser lo suficientemente flexible como para adaptarse a los cambios en la estructura de datos. El resultado final fue una interfaz intuitiva que visualizaba eficazmente datos complejos de clientes y proporcionaba información útil para las empresas."
+        "title": "Arquitectura UX/UI y Estructuras de Datos Cambiantes",
+        "description1": "La fase de descubrimiento consistió en sintetizar los requisitos contradictorios de los líderes empresariales, los ingenieros de datos y los analistas de mercado.",
+        "description2": "El principal desafío de la experiencia de usuario (UX) radicaba en la ambigüedad arquitectónica: el modelo de datos subyacente era muy flexible y evolucionaba constantemente. Para mitigar este riesgo, diseñé un sistema de interfaz de usuario excepcionalmente adaptable en Figma. Al centrarme en diseños modulares e independientes del sistema, en lugar de estructuras de página rígidas, me aseguré de que la interfaz pudiera escalar sin problemas junto con las rápidas modificaciones del esquema de datos del backend sin que la experiencia del usuario se viera afectada."
       },
       "app": {
-        "title": "La App: Producción",
-        "description1": "Tras tener una idea general del diseño de la interfaz de usuario en Figma, pude comenzar a desarrollar el front-end de la aplicación utilizando Next.js, Apollo y GraphQL. El front-end se compone de una combinación de componentes personalizados, Mantine y AG Grid para la tabla de datos.",
-        "description2": "Trabajé estrechamente con un desarrollador de back-end responsable de crear las API GraphQL que proporcionarían los datos al front-end. Colaboramos estrechamente para garantizar que los datos se presentaran de forma clara y comprensible, y que el front-end pudiera procesarlos correctamente. También trabajamos en estrecha colaboración con un equipo encargado del rastreo y la recopilación de datos."
+        "title": "Implementación de Interfaz de Usuario y Codiseño de API",
+        "description1": "En la transición del diseño a la producción, desarrollé la arquitectura de la interfaz de usuario utilizando Next.js y Apollo Client.",
+        "description2": {
+          "part1": "Gestión de la densidad de datos: Se implementó AG Grid junto con Mantine para construir un espacio de trabajo de datos de alto rendimiento y gran capacidad de respuesta, capaz de representar conjuntos de datos multidimensionales complejos sin cuellos de botella en el rendimiento.",
+          "part2": "Integración de GraphQL: Colaboré intensamente con los equipos de ingeniería de back-end y de extracción de datos para diseñar conjuntamente los contratos de la API GraphQL. Esta colaboración interfuncional garantizó que el front-end resolviera dinámicamente las consultas anidadas, gestionara con eficacia la latencia durante la agregación de datos en tiempo real y estructurara las cargas útiles entrantes en estados de interfaz de usuario altamente semánticos."
+        }
       }
     },
     "responsiveCarousel": {
@@ -62,7 +67,6 @@
     "musicLibrary": {
       "title": "Biblioteca de Música",
       "tags": {
-        "WIP": "trabajo en progreso",
         "frontEnd": "front-end",
         "react": "react",
         "JSX": "JSX",

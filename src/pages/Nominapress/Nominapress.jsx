@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
 import "./nominapress.scss";
 import {
   facialRecogValidationImages,
@@ -11,23 +12,30 @@ import useTranslation from "../../utils/customHooks/useTranslation";
 export const Nominapress = ({ projectColor }) => {
   const { translation } = useTranslation();
   return (
-    <div className="nominapress-grid">
-      <Slideshow
-        className="nominapress-grid-item"
-        imageArray={facialRecogValidationImages}
-        projectDirectory="nominapress"
-        title={translation(
-          "project.nominapress.facialRecogValidationSlider.title",
-        )}
-        projectColor={projectColor}
-      />
-      <Slideshow
-        className="nominapress-grid-item"
-        imageArray={facialRecogLoginImage}
-        projectDirectory="nominapress"
-        title={translation("project.nominapress.facialRecogLoginSlider.title")}
-        projectColor={projectColor}
-      />
+    <div>
+      <Helmet>
+        <title>Sean Dorr | {translation("metaTitles.nominapress")}</title>
+      </Helmet>
+      <div className="nominapress-grid">
+        <Slideshow
+          className="nominapress-grid-item"
+          imageArray={facialRecogValidationImages}
+          projectDirectory="nominapress"
+          title={translation(
+            "project.nominapress.facialRecogValidationSlider.title",
+          )}
+          projectColor={projectColor}
+        />
+        <Slideshow
+          className="nominapress-grid-item"
+          imageArray={facialRecogLoginImage}
+          projectDirectory="nominapress"
+          title={translation(
+            "project.nominapress.facialRecogLoginSlider.title",
+          )}
+          projectColor={projectColor}
+        />
+      </div>
     </div>
   );
 };

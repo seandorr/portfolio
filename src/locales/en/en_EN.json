@@ -1,8 +1,15 @@
 {
   "metaTitles": {
-    "home": "React Developer + Designer",
+    "home": "Senior Frontend Developer & UX/UI Architect",
     "about": "About",
-    "pageNotFound": "Page Not Found"
+    "pageNotFound": "Page Not Found",
+    "ascii": "ASCII",
+    "gemini": "Gemini",
+    "musicLibrary": "Music Library",
+    "nominapress": "Nominapress",
+    "randomShapes": "Random Shapes",
+    "responsiveCarousel": "Responsive Carousel",
+    "targetbase": "Targetbase"
   },
   "navbar": {
     "about": "About",

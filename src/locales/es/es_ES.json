@@ -1,8 +1,15 @@
 {
   "metaTitles": {
-    "home": "Desarrollador React + Diseñador",
+    "home": "Desarrollador Frontend Senior & Arquitecto UX/UI",
     "about": "Sobre mí",
-    "pageNotFound": "Página No Encontrada"
+    "pageNotFound": "Página No Encontrada",
+    "ascii": "ASCII",
+    "gemini": "Gemini",
+    "musicLibrary": "Librería de Música",
+    "nominapress": "Nominapress",
+    "randomShapes": "Formas Aleatorias",
+    "responsiveCarousel": "Carrusel Responsivo",
+    "targetbase": "Targetbase"
   },
   "navbar": {
     "about": "Sobre mí",

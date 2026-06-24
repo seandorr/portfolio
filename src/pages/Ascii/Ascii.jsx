@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import styles from "./ascii.module.scss";
 import useTranslation from "../../utils/customHooks/useTranslation";
 import generateRandomKey from "../../utils/functions/generateRandomKey";
@@ -11,6 +12,9 @@ export const Ascii = () => {
   });
   return (
     <div>
+      <Helmet>
+        <title>Sean Dorr | {translation("metaTitles.ascii")}</title>
+      </Helmet>
       <div className={styles.asciiMainContainer}>
         <h2 className={styles.asciiTitle}>
           {translation("project.ascii.branding.title")}

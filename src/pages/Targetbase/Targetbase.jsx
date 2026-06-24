@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
+import { Helmet } from "react-helmet";
 import useTranslation from "../../utils/customHooks/useTranslation";
 import "./targetbase.scss";
 
@@ -15,32 +16,37 @@ export const Targetbase = () => {
   `;
 
   return (
-    <div className="targetbase-project">
-      <nav className="navbar">
-        <img
-          className="logo"
-          src="images/targetbase/tb_logo.svg"
-          alt={translation("project.targetbase.imageAlts.logo")}
-          height="60px"
-        />
+    <div>
+      <Helmet>
+        <title>Sean Dorr | {translation("metaTitles.targetbase")}</title>
+      </Helmet>
+      <div className="targetbase-project">
+        <nav className="navbar">
+          <img
+            className="logo"
+            src="images/targetbase/tb_logo.svg"
+            alt={translation("project.targetbase.imageAlts.logo")}
+            height="60px"
+          />
 
-        <ul>
-          <li>MENU</li>
-        </ul>
-      </nav>
-      <section id="hero-image" className="section" css={heroImgPattern}>
-        <h1 className="hero-text">
-          intelligence
-          <br /> in action
-        </h1>
-      </section>
-      <img
-        className="data-icon"
-        src="images/targetbase/data_icon.svg"
-        alt={translation("project.targetbase.imageAlts.data")}
-        width="750px"
-        height="auto"
-      />
+          <ul>
+            <li>MENU</li>
+          </ul>
+        </nav>
+        <section id="hero-image" className="section" css={heroImgPattern}>
+          <h1 className="hero-text">
+            intelligence
+            <br /> in action
+          </h1>
+        </section>
+        <img
+          className="data-icon"
+          src="images/targetbase/data_icon.svg"
+          alt={translation("project.targetbase.imageAlts.data")}
+          width="750px"
+          height="auto"
+        />
+      </div>
     </div>
   );
 };

@@ -14,9 +14,11 @@ export const RandomShapes = ({ type }) => {
 
   return (
     <div>
-      <Helmet>
-        <title>Sean Dorr | {translation("metaTitles.randomShapes")}</title>
-      </Helmet>
+      {type !== "preview" && (
+        <Helmet>
+          <title>Sean Dorr | {translation("metaTitles.randomShapes")}</title>
+        </Helmet>
+      )}
       <div className="random-shapes__container">
         <GenerateRandomShapes type={type} />
       </div>

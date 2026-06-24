@@ -28,11 +28,13 @@ export const ResponsiveCarousel = ({ type }) => {
 
   return (
     <div>
-      <Helmet>
-        <title>
-          Sean Dorr | {translation("metaTitles.responsiveCarousel")}
-        </title>
-      </Helmet>
+      {type !== "preview" && (
+        <Helmet>
+          <title>
+            Sean Dorr | {translation("metaTitles.responsiveCarousel")}
+          </title>
+        </Helmet>
+      )}
       <div
         className={`main-container ${
           type === "preview" ? "preview__container" : "details__container"

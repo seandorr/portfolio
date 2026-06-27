@@ -7,10 +7,19 @@ import { RandomShapes } from "../../pages/RandomShapes";
 import { Gemini } from "../../pages/Gemini";
 import { Targetbase } from "../../pages/Targetbase";
 import colors from "../../styles/_colors.scss";
+import Week from "../../pages/Recipes/pages/week/Week.tsx";
 
 const projectPreviewData = [
   {
     projectId: 1,
+    projectName: "recipeApp",
+    projectImage: "recipe-app.png",
+    projectColor: colors.asciiColor,
+    projectLink: "recipe-app",
+    projectDetailedComponent: <Week />,
+  },
+  {
+    projectId: 2,
     projectName: "ascii",
     projectImage: "ascii.jpg",
     projectColor: colors.asciiColor,
@@ -18,7 +27,7 @@ const projectPreviewData = [
     projectDetailedComponent: <Ascii />,
   },
   {
-    projectId: 2,
+    projectId: 3,
     projectName: "responsiveCarousel",
     projectComponent: <ResponsiveCarousel type="preview" />,
     projectColor: colors.responsiveCarouselColor,
@@ -27,7 +36,7 @@ const projectPreviewData = [
     projectDetailedComponent: <ResponsiveCarousel />,
   },
   {
-    projectId: 3,
+    projectId: 4,
     projectName: "musicLibrary",
     projectImage: "music-library.svg",
     projectColor: colors.musicLibraryColor1,
@@ -36,7 +45,7 @@ const projectPreviewData = [
     projectDetailedComponent: <MusicLibrary />,
   },
   {
-    projectId: 4,
+    projectId: 5,
     projectName: "nominapress",
     projectImage: "facial-recog-login.jpg",
     projectColor: colors.nominapressColor,
@@ -46,7 +55,7 @@ const projectPreviewData = [
     ),
   },
   {
-    projectId: 5,
+    projectId: 6,
     projectName: "randomShapes",
     projectComponent: <RandomShapes type="preview" />,
     projectColor: colors.randomShapesColor,
@@ -54,7 +63,7 @@ const projectPreviewData = [
     projectDetailedComponent: <RandomShapes type="detailed" />,
   },
   {
-    projectId: 6,
+    projectId: 7,
     projectName: "gemini",
     projectImage: "gemini-hero.jpg",
     projectColor: colors.geminiColor,
@@ -62,7 +71,7 @@ const projectPreviewData = [
     projectDetailedComponent: <Gemini />,
   },
   {
-    projectId: 7,
+    projectId: 8,
     projectName: "targetbase",
     projectImage: "targetbase-hero.jpg",
     projectColor: colors.targetbaseColor,

@@ -7,16 +7,16 @@ import { RandomShapes } from "../../pages/RandomShapes";
 import { Gemini } from "../../pages/Gemini";
 import { Targetbase } from "../../pages/Targetbase";
 import colors from "../../styles/_colors.scss";
-import Week from "../../pages/Recipes/pages/week/Week.tsx";
+import { Recipes } from "../../pages/Recipes/pages";
 
 const projectPreviewData = [
   {
     projectId: 1,
     projectName: "recipeApp",
     projectImage: "recipe-app.png",
-    projectColor: colors.asciiColor,
+    projectColor: colors.recipesColor,
     projectLink: "recipe-app",
-    projectDetailedComponent: <Week />,
+    projectDetailedComponent: <Recipes />,
   },
   {
     projectId: 2,

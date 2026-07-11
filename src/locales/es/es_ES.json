@@ -16,6 +16,19 @@
     "contact": "Contacto"
   },
   "project": {
+    "recipeApp": {
+      "title": "Aplicación de Recetas",
+      "tags": {
+        "wip": "Trabajo en Curso",
+        "react": "React",
+        "JSX": "JSX",
+        "SCSS": "SCSS",
+        "design": "Diseño",
+        "frontend": "Front-end"
+      },
+      "imageAlt": "",
+      "description": ""
+    },
     "ascii": {
       "title": "ASCII",
       "role": "Diseñador UX/UI Principal y Desarrollador Front-End",

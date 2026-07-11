@@ -3,6 +3,7 @@
     "home": "Senior Frontend Developer & UX/UI Architect",
     "about": "About",
     "pageNotFound": "Page Not Found",
+    "recipeApp": "Recipe App",
     "ascii": "ASCII",
     "gemini": "Gemini",
     "musicLibrary": "Music Library",
@@ -16,6 +17,19 @@
     "contact": "Contact"
   },
   "project": {
+    "recipeApp": {
+      "title": "Recipe App",
+      "tags": {
+        "wip": "WIP",
+        "react": "React",
+        "JSX": "JSX",
+        "SCSS": "SCSS",
+        "design": "Design",
+        "frontend": "Front-end"
+      },
+      "imageAlt": "",
+      "description": "My partner and I are in a long-distance relationship, yet we create a weekly meal plan together. I wanted to create a simple app that would allow us to share our meal plan and recipes with each other."
+    },
     "ascii": {
       "title": "ASCII",
       "role": "Lead UX/UI Designer & Front-End Developer",

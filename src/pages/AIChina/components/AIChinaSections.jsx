@@ -5,6 +5,7 @@ import useWindowSize from "../../../utils/customHooks/useWindowSize";
 export const UserJourneySection = ({ type, title, src, description }) => {
   const browserWidth = useWindowSize().width;
   const smallScreen = React.useMemo(() => browserWidth < 768, [browserWidth]);
+  const shouldShowIframe = Boolean(src) && !smallScreen;
 
   return (
     <section className={styles.userJourneySection}>
@@ -13,21 +14,19 @@ export const UserJourneySection = ({ type, title, src, description }) => {
       ) : (
         <h3 className={styles.aiChinaSubtitle}>{title}:</h3>
       )}
-      {smallScreen ? (
+      {shouldShowIframe ? (
+        <iframe
+          title={title}
+          className={styles.aiChinaFigmaEmbed}
+          src={src}
+          allowFullScreen
+        ></iframe>
+      ) : (
         <div className={styles.placeholder}>
           <span className={styles.placeholderText}>
             Figma preview will appear here on larger screens.
           </span>
         </div>
-      ) : (
-        src && (
-          <iframe
-            title={title}
-            className={styles.aiChinaFigmaEmbed}
-            src={src}
-            allowFullScreen
-          ></iframe>
-        )
       )}
 
       <p className={styles.aiChinaDescription}>{description}</p>

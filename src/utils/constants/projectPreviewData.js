@@ -1,4 +1,3 @@
-import React from "react";
 import { AIChina } from "../../pages/AIChina";
 import { Ascii } from "../../pages/Ascii";
 import { ResponsiveCarousel } from "../../pages/ResponsiveCarousel";
@@ -7,8 +6,8 @@ import { Nominapress } from "../../pages/Nominapress";
 import { RandomShapes } from "../../pages/RandomShapes";
 import { Gemini } from "../../pages/Gemini";
 import { Targetbase } from "../../pages/Targetbase";
-import colors from "../../styles/_colors.scss";
 import { Recipes } from "../../pages/Recipes/pages";
+import colors from "../../styles/_colors.scss";
 
 const projectPreviewData = [
   {

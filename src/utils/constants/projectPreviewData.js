@@ -1,4 +1,5 @@
 import React from "react";
+import { AIChina } from "../../pages/AIChina";
 import { Ascii } from "../../pages/Ascii";
 import { ResponsiveCarousel } from "../../pages/ResponsiveCarousel";
 import { MusicLibrary } from "../../pages/MusicLibrary";
@@ -12,6 +13,14 @@ import { Recipes } from "../../pages/Recipes/pages";
 const projectPreviewData = [
   {
     projectId: 1,
+    projectName: "aiInChina",
+    projectImage: "ai-in-china.jpg",
+    projectColor: colors.aiInChinaColor,
+    projectLink: "ai-in-china",
+    projectDetailedComponent: <AIChina />,
+  },
+  {
+    projectId: 2,
     projectName: "recipeApp",
     projectImage: "recipe-app.png",
     projectColor: colors.recipesColor,

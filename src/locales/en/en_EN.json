@@ -3,6 +3,7 @@
     "home": "Senior Frontend Developer & UX/UI Architect",
     "about": "About",
     "pageNotFound": "Page Not Found",
+    "aiInChina": "AI in China",
     "recipeApp": "Recipe App",
     "ascii": "ASCII",
     "gemini": "Gemini",
@@ -13,8 +14,7 @@
     "targetbase": "Targetbase"
   },
   "navbar": {
-    "about": "About",
-    "contact": "Contact"
+    "about": "About"
   },
   "project": {
     "recipeApp": {
@@ -29,6 +29,54 @@
       },
       "imageAlt": "",
       "description": "My partner and I are in a long-distance relationship, yet we create a weekly meal plan together. I wanted to create a simple app that would allow us to share our meal plan and recipes with each other."
+    },
+    "aiInChina": {
+      "title": "AI in China",
+      "role": "Lead UX/UI Designer & Front-End Developer",
+      "impact": "Improved data compliance & governance",
+      "tags": {
+        "WIP": "WIP",
+        "research": "Research",
+        "design": "UX/UI",
+        "frontEnd": "Front-end"
+      },
+      "description": "An internal developer platform provisions infrastructure in Europe to a global footprint. Due to Chinese regulations, the platform was unable to operate in China adhering to local regulations. I led the research, UX/UI and development of a solution that would allow users to provision infrastructure in China while adhering to local regulations.",
+      "ux": {
+        "title": "UX: Research and User Journey Mapping",
+        "asIs": {
+          "title": "As-is User Journey",
+          "description": "Before diving into the design and development phases, I conducted extensive research to understand the current state of the platform. There are three layers of abstractions within the platform infrastructure that affects the user experience: Workspace, Product, and Resources. Below is the as-is user journey mapping for the features that we want to enable in China, which includes what steps a user takes and what infrastructure gets provisioned at which layer (behind the scenes)."
+        },
+        "toBe": {
+          "title": "To-be Options",
+          "description": "With a clear understanding of the current state, I started to explore the potential user journeys and options based on the technical restraints and requirements. I was in constant communication with internal stakeholders, data compliance teams, and the engineering team to ensure that the proposed solutions were feasible and aligned with the overall product strategy."
+        },
+        "key": "Represents changes",
+        "proposalA": {
+          "title": "Proposal A",
+          "description": "Proposal A includes deploying the Workspace infrastructure in China as well. As a worst-case scenario, this is the solution that we would implement if the technical requirements and constraints are too difficult to meet. This solution would require a lot of additional work to maintain and manage, and it would not align with our overall product strategy as it would effectively be a new platform just for China."
+        },
+        "proposalB": {
+          "title": "Proposal B",
+          "description": "Proposal B is our target solution. It is a more simplified approach that allows us to deploy a full Product with it's resources all in China without having to manage and maintain a complex global setup. This solution limits the resources available until we build more deployable infrastructure in China, but it aligns with our overall product strategy and meets the requirements of the data compliance and security teams."
+        },
+        "proposalC": {
+          "title": "Proposal C",
+          "description": "Proposal C would have been the most ideal solution as it would mean deploying a Product with a mixture of resources provisioned globally and in China. Although the data compliance and security teams deemed this solution okay, we ultimately decided against it due to the complexity of managing and maintaining such a setup."
+        }
+      },
+      "ui": {
+        "title": "UI: High Fidelity Prototypes",
+        "proposalA": {
+          "title": "Proposal A",
+          "description": "A Workspace is the highest level of abstraction in the platform infrastructure. It is a collection of Products and Resources that are provisioned together. In Proposal A, we would have to provision the Workspace infrastructure in China. A major flaw with this approach is that users often wouldn't know during the Workspace creation process if they would need infrastructure in China. This could lead to confusion and frustration for the user."
+        },
+        "proposalB": {
+          "title": "Proposal B",
+          "description1": "The first change in the Developer Portal would be an additional choice for the user to select the security level of the Product they are creating. This would determine what resources are available and where they would be provisioned.",
+          "description2": "Since the resources would be provisioned in China, the user would not be able to select resources that are not available in China. This would be reflected in the UI by having a limited set of options as we build out the infrastructure for other resources."
+        }
+      }
     },
     "ascii": {
       "title": "ASCII",

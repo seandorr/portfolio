@@ -12,8 +12,7 @@
     "targetbase": "Targetbase"
   },
   "navbar": {
-    "about": "Sobre mí",
-    "contact": "Contacto"
+    "about": "Sobre mí"
   },
   "project": {
     "recipeApp": {
@@ -28,6 +27,54 @@
       },
       "imageAlt": "",
       "description": ""
+    },
+    "aiInChina": {
+      "title": "IA en China",
+      "role": "Diseñador Principal UX/UI y Desarrollador Front-End",
+      "impact": "Mejora del cumplimiento normativo y la gobernanza de datos",
+      "tags": {
+        "WIP": "Trabajo en Curso",
+        "research": "Investigación",
+        "design": "UX/UI",
+        "frontEnd": "Front-end"
+      },
+      "description": "Una plataforma interna para desarrolladores proporciona infraestructura en Europa con presencia global. Debido a la normativa china, la plataforma no podía operar en China cumpliendo con las regulaciones locales. Lideré la investigación, el diseño de la experiencia de usuario (UX/UI) y el desarrollo de una solución que permitiera a los usuarios proporcionar infraestructura en China respetando la normativa local.",
+      "ux": {
+        "title": "UX: Investigación y Mapeo del Recorrido del Usuario",
+        "asIs": {
+          "title": "Recorrido del Usuario Actual",
+          "description": "Antes de entrar en las fases de diseño y desarrollo, realicé una investigación exhaustiva para comprender el estado actual de la plataforma. Existen tres capas de abstracción dentro de la infraestructura de la plataforma que afectan la experiencia de usuario: Espacio de Trabajo, Producto y Recursos. A continuación se muestra el mapeo del recorrido del usuario actual para las funciones que queremos habilitar en China, lo que incluye qué pasos sigue un usuario y qué infraestructura se aprovisiona en cada capa (detrás de escena)."
+        },
+        "toBe": {
+          "title": "Opciones de Futuro",
+          "description": "Con una comprensión clara del estado actual, comencé a explorar los recorridos de usuario y las opciones potenciales en función de las restricciones y requisitos técnicos. Mantuve una comunicación constante con las partes interesadas internas, los equipos de cumplimiento de datos y el equipo de ingeniería para asegurar que las soluciones propuestas fueran viables y coherentes con la estrategia general del producto."
+        },
+        "key": "Representa cambios",
+        "proposalA": {
+          "title": "Propuesta A",
+          "description": "La propuesta A incluye aprovisionar también la infraestructura del espacio de trabajo en China. Como escenario de peor caso, esta es la solución que implementaríamos si los requisitos y restricciones técnicas fueran demasiado difíciles de cumplir. Esta solución requeriría mucho trabajo adicional para mantener y gestionar, y no se alinearía con nuestra estrategia general de producto, ya que equivaldría a una nueva plataforma solo para China."
+        },
+        "proposalB": {
+          "title": "Propuesta B",
+          "description": "La propuesta B es nuestra solución objetivo. Es un enfoque más simplificado que permite aprovisionar un producto completo con todos sus recursos en China sin tener que gestionar y mantener una configuración global compleja. Esta solución limita los recursos disponibles hasta que construyamos más infraestructura aprovisionable en China, pero se alinea con nuestra estrategia general de producto y cumple con los requisitos de los equipos de cumplimiento de datos y seguridad."
+        },
+        "proposalC": {
+          "title": "Propuesta C",
+          "description": "La propuesta C habría sido la solución más ideal, ya que significaría aprovisionar un producto con una combinación de recursos distribuidos globalmente y en China. Aunque los equipos de cumplimiento de datos y seguridad consideraron esta solución aceptable, finalmente decidimos no adoptarla debido a la complejidad de gestionar y mantener una configuración así."
+        }
+      },
+      "ui": {
+        "title": "UI: Prototipos de Alta Fidelidad",
+        "proposalA": {
+          "title": "Propuesta A",
+          "description": "Un espacio de trabajo es el nivel más alto de abstracción en la infraestructura de la plataforma. Es una colección de productos y recursos que se aprovisionan juntos. En la propuesta A, tendríamos que aprovisionar la infraestructura del espacio de trabajo en China. Un fallo importante de este enfoque es que los usuarios a menudo no sabrían durante el proceso de creación del espacio de trabajo si necesitarían infraestructura en China. Esto podría generar confusión y frustración en el usuario."
+        },
+        "proposalB": {
+          "title": "Propuesta B",
+          "description1": "El primer cambio en el portal del desarrollador sería una opción adicional para que el usuario seleccione el nivel de seguridad del producto que está creando. Esto determinaría qué recursos están disponibles y dónde se aprovisionarían.",
+          "description2": "Dado que los recursos se aprovisionarían en China, el usuario no podría seleccionar recursos que no estuvieran disponibles en China. Esto se reflejaría en la interfaz mostrando un conjunto limitado de opciones a medida que ampliemos la infraestructura para otros recursos."
+        }
+      }
     },
     "ascii": {
       "title": "ASCII",

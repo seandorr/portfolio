@@ -1,0 +1,102 @@
+@import "../../styles/baseStyles";
+@import "../../styles/colors";
+
+.aiChinaMainContainer {
+  padding: 25px;
+  background-color: $light-color;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  margin-bottom: 50px;
+
+  .aiChinaTitle {
+    margin-bottom: 2rem;
+  }
+
+  .aiChinaSubtitle {
+    margin-bottom: 1rem;
+  }
+
+  .aiChinaDescription {
+    margin: 1rem 0;
+  }
+
+  .keyContainer {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 10px;
+    background-color: $light-color;
+    border: 2px solid $dark-light-color;
+    border-radius: $border-radius;
+
+    .key {
+      width: 24px;
+      height: 24px;
+      background-color: #ffebb7;
+      border: 2px solid #ffd777;
+      border-radius: $border-radius;
+    }
+
+    span {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.aiChinaFigmaEmbed,
+.placeholder {
+  width: 100%;
+  height: 500px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: $border-radius;
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.03);
+  border: 2px dashed rgba(0, 0, 0, 0.12);
+
+  .placeholderText {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 0 2rem;
+  }
+}
+
+.aiChinaImage {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: $border-radius;
+}
+
+.userJourneySection {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &:first-of-type {
+    margin-bottom: 4rem;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2rem;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $dark-light-color;
+    }
+  }
+}
+
+.uiSection {
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}

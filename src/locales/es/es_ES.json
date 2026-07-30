@@ -15,19 +15,6 @@
     "about": "Sobre mí"
   },
   "project": {
-    "recipeApp": {
-      "title": "Aplicación de Recetas",
-      "tags": {
-        "wip": "Trabajo en Curso",
-        "react": "React",
-        "JSX": "JSX",
-        "SCSS": "SCSS",
-        "design": "Diseño",
-        "frontend": "Front-end"
-      },
-      "imageAlt": "",
-      "description": ""
-    },
     "aiInChina": {
       "title": "IA en China",
       "role": "Diseñador Principal UX/UI y Desarrollador Front-End",
@@ -74,6 +61,23 @@
           "description1": "El primer cambio en el portal del desarrollador sería una opción adicional para que el usuario seleccione el nivel de seguridad del producto que está creando. Esto determinaría qué recursos están disponibles y dónde se aprovisionarían.",
           "description2": "Dado que los recursos se aprovisionarían en China, el usuario no podría seleccionar recursos que no estuvieran disponibles en China. Esto se reflejaría en la interfaz mostrando un conjunto limitado de opciones a medida que ampliemos la infraestructura para otros recursos."
         }
+      }
+    },
+    "recipeApp": {
+      "title": "Aplicación de Recetas",
+      "tags": {
+        "wip": "Trabajo en Curso",
+        "react": "React",
+        "JSX": "JSX",
+        "SCSS": "SCSS",
+        "design": "Diseño",
+        "frontend": "Front-end"
+      },
+      "imageAlt": "",
+      "description": "Mi pareja y yo estamos en una relación a distancia, pero creamos un plan de comidas semanal juntos. Quería crear una aplicación simple que nos permitiera compartir nuestro plan de comidas y recetas.",
+      "sandbox": {
+        "title": "Sandbox Reactivo",
+        "description": "La aplicación todavía está en desarrollo, pero ya hay funcionalidad para agregar, duplicar, eliminar y arrastrar y soltar recetas."
       }
     },
     "ascii": {

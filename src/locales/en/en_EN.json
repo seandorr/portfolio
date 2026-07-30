@@ -17,19 +17,6 @@
     "about": "About"
   },
   "project": {
-    "recipeApp": {
-      "title": "Recipe App",
-      "tags": {
-        "wip": "WIP",
-        "react": "React",
-        "JSX": "JSX",
-        "SCSS": "SCSS",
-        "design": "Design",
-        "frontend": "Front-end"
-      },
-      "imageAlt": "",
-      "description": "My partner and I are in a long-distance relationship, yet we create a weekly meal plan together. I wanted to create a simple app that would allow us to share our meal plan and recipes with each other."
-    },
     "aiInChina": {
       "title": "AI in China",
       "role": "Lead UX/UI Designer & Front-End Developer",
@@ -76,6 +63,23 @@
           "description1": "The first change in the Developer Portal would be an additional choice for the user to select the security level of the Product they are creating. This would determine what resources are available and where they would be provisioned.",
           "description2": "Since the resources would be provisioned in China, the user would not be able to select resources that are not available in China. This would be reflected in the UI by having a limited set of options as we build out the infrastructure for other resources."
         }
+      }
+    },
+    "recipeApp": {
+      "title": "Recipe App",
+      "tags": {
+        "wip": "WIP",
+        "react": "React",
+        "JSX": "JSX",
+        "SCSS": "SCSS",
+        "design": "Design",
+        "frontend": "Front-end"
+      },
+      "imageAlt": "",
+      "description": "My partner and I are in a long-distance relationship, yet we create a weekly meal plan together. I wanted to create a simple app that would allow us to share our meal plan and recipes with each other.",
+      "sandbox": {
+        "title": "Reactive sandbox",
+        "description": "The app is still a work in progress, but there is already functionality to add, duplicate, remove, and drag and drop recipes."
       }
     },
     "ascii": {

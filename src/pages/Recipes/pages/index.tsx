@@ -11,11 +11,10 @@ export const Recipes = () => {
         <title>Sean Dorr | {translation("metaTitles.recipeApp")}</title>
       </Helmet>
       <div className={styles.recipesMainContainer}>
-        <h2 className={styles.recipesTitle}>Reactive sandbox</h2>
-        <p>
-          The app is still a work in progress, but there is already
-          functionality to add, duplicate, remove, and drag and drop recipes.
-        </p>
+        <h2 className={styles.recipesTitle}>
+          {translation("project.recipeApp.sandbox.title")}
+        </h2>
+        <p>{translation("project.recipeApp.sandbox.description")}</p>
         <Week />
       </div>
     </div>

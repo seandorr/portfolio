@@ -7,6 +7,29 @@ export const UserJourneySection = ({ type, title, src, description }) => {
   const smallScreen = React.useMemo(() => browserWidth < 768, [browserWidth]);
   const shouldShowIframe = Boolean(src) && !smallScreen;
 
+  const renderPreview = () => {
+    if (!src) return null;
+
+    if (shouldShowIframe) {
+      return (
+        <iframe
+          title={title}
+          className={styles.aiChinaFigmaEmbed}
+          src={src}
+          allowFullScreen
+        ></iframe>
+      );
+    }
+
+    return (
+      <div className={styles.placeholder}>
+        <span className={styles.placeholderText}>
+          Figma preview will appear here on larger screens.
+        </span>
+      </div>
+    );
+  };
+
   return (
     <section className={styles.userJourneySection}>
       {type === "proposal" ? (
@@ -14,20 +37,7 @@ export const UserJourneySection = ({ type, title, src, description }) => {
       ) : (
         <h3 className={styles.aiChinaSubtitle}>{title}:</h3>
       )}
-      {shouldShowIframe ? (
-        <iframe
-          title={title}
-          className={styles.aiChinaFigmaEmbed}
-          src={src}
-          allowFullScreen
-        ></iframe>
-      ) : (
-        <div className={styles.placeholder}>
-          <span className={styles.placeholderText}>
-            Figma preview will appear here on larger screens.
-          </span>
-        </div>
-      )}
+      {renderPreview()}
 
       <p className={styles.aiChinaDescription}>{description}</p>
     </section>

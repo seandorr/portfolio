@@ -28,7 +28,7 @@ const projectPreviewData = [
     projectDetailedComponent: <Recipes />,
   },
   {
-    projectId: 2,
+    projectId: 3,
     projectName: "ascii",
     projectImage: "ascii.jpg",
     projectColor: colors.asciiColor,
@@ -36,7 +36,7 @@ const projectPreviewData = [
     projectDetailedComponent: <Ascii />,
   },
   {
-    projectId: 3,
+    projectId: 4,
     projectName: "responsiveCarousel",
     projectComponent: <ResponsiveCarousel type="preview" />,
     projectColor: colors.responsiveCarouselColor,
@@ -45,7 +45,7 @@ const projectPreviewData = [
     projectDetailedComponent: <ResponsiveCarousel />,
   },
   {
-    projectId: 4,
+    projectId: 5,
     projectName: "musicLibrary",
     projectImage: "music-library.svg",
     projectColor: colors.musicLibraryColor1,
@@ -54,7 +54,7 @@ const projectPreviewData = [
     projectDetailedComponent: <MusicLibrary />,
   },
   {
-    projectId: 5,
+    projectId: 6,
     projectName: "nominapress",
     projectImage: "facial-recog-login.jpg",
     projectColor: colors.nominapressColor,
@@ -64,7 +64,7 @@ const projectPreviewData = [
     ),
   },
   {
-    projectId: 6,
+    projectId: 7,
     projectName: "randomShapes",
     projectComponent: <RandomShapes type="preview" />,
     projectColor: colors.randomShapesColor,
@@ -72,7 +72,7 @@ const projectPreviewData = [
     projectDetailedComponent: <RandomShapes type="detailed" />,
   },
   {
-    projectId: 7,
+    projectId: 8,
     projectName: "gemini",
     projectImage: "gemini-hero.jpg",
     projectColor: colors.geminiColor,
@@ -80,7 +80,7 @@ const projectPreviewData = [
     projectDetailedComponent: <Gemini />,
   },
   {
-    projectId: 8,
+    projectId: 9,
     projectName: "targetbase",
     projectImage: "targetbase-hero.jpg",
     projectColor: colors.targetbaseColor,
